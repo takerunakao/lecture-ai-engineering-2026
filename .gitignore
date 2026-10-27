@@ -12,3 +12,7 @@ learning_log/
 
 # macOS
 .DS_Store
+
+# Day2 model weights and checkpoints
+lectures/02/results/*/adapter/
+lectures/02/results/*/checkpoints/

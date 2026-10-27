@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "kind": "embedded_source_baseline_before_runtime_outputs",
+  "source_bundle_sha256": "c177ffda63e5650f5920a9afaa1df1b6351d3f21e9311325c3d13631e04e897b",
+  "packed_bundle_sha256": "87aec73ac998f828088961a20a7041ac351a3f805040886e627faffdf2633441",
+  "source_repository": "https://github.com/takerunakao/lecture-ai-engineering-2026",
+  "base_repository_commit": "f9ab3d5288ba5d4cd6fecd5e30515192a5cb05b6",
+  "intended_branch": "lec02",
+  "source_description": "Verified local Day2 additions; these additions were not published to GitHub at packaging time.",
+  "git_commit": null,
+  "files": {
+    ".gitignore": {
+      "sha256": "aa7bd675bf97724978fc4ed05965a6ba47046381a612f17bf06d933d463f787f",
+      "bytes": 412
+    },
+    "app/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "app/day2_eval.py": {
+      "sha256": "06d53c6b160f83ce01fc5b67c460724e942817d875203edb866e4a1d787c79e7",
+      "bytes": 7518
+    },
+    "data/glossary.json": {
+      "sha256": "4b614a08a754bf6cf714f905f185ad5ef22e0957c7e64434a4b418edb68c2319",
+      "bytes": 31120
+    },
+    "lectures/02/README_ADVANCED.md": {
+      "sha256": "5ebdc2d381a4df45d22783784bc2ee7b4d75014537c9d5525f20f796498b19b4",
+      "bytes": 18671
+    },
+    "lectures/02/answer.md": {
+      "sha256": "4ed161872a2162c26c0c6791718c24da152c8dd3cf8a64e13690060220d21f8a",
+      "bytes": 20578
+    },
+    "lectures/02/data/eval_cases.json": {
+      "sha256": "9cd0dcc85f28d3f0b26b56b80218c57755e6e0cc979af8a1a97067dadcdbfd42",
+      "bytes": 23524
+    },
+    "lectures/02/data/glossary_sft.jsonl": {
+      "sha256": "2a6640b47d51df67d45a7d09779b7685fe8514074af1720dfb074728328590ab",
+      "bytes": 119029
+    },
+    "lectures/02/data/glossary_sft_raw.jsonl": {
+      "sha256": "af6ac820e0331d8d9af376e3b4cccff1b31f2f0f8bb462839752e3282bbd1081",
+      "bytes": 48374
+    },
+    "lectures/02/data/gold.json": {
+      "sha256": "86b3b0d8e8529090bb5e9343636c97c15f3a68a82b4ecf42f538921cbb2221b3",
+      "bytes": 7588
+    },
+    "lectures/02/data/manifest.json": {
+      "sha256": "8eb36f307c665e5f275fd0896b790d9a9979bd27cc8eb8724aa8a1c8baf16f40",
+      "bytes": 2205
+    },
+    "lectures/02/data/search_baseline.json": {
+      "sha256": "97c06a3fd1d6540b54d199e540232314a92429a4271f80ee05db9625e0c75e87",
+      "bytes": 26645
+    },
+    "lectures/02/data/test.jsonl": {
+      "sha256": "06222325793a4757ed1daa4881b2e7aae43f5b1c8888576b20879865998e6681",
+      "bytes": 4218
+    },
+    "lectures/02/data/tokenizer_validation.json": {
+      "sha256": "11df5236a3c31ab200541d9d1ee7a1abe8b3ab4e79a5b5ad0acda308e3173884",
+      "bytes": 76188
+    },
+    "lectures/02/problem.md": {
+      "sha256": "9f7f8f6f1027bd2d4df6186e6e8a67b1818beadeadc0a8771894d1eafdea503e",
+      "bytes": 6512
+    },
+    "scripts/make_sft_dataset.py": {
+      "sha256": "d048bac47de883d9c97ab9f24e912f54e086c508d509820866d6483d2a74635e",
+      "bytes": 1148
+    },
+    "scripts/prepare_day2_answer.py": {
+      "sha256": "3fc2d48fbe766f348259b28138e3a0b0bb6765bae0e2f73a611e63b1b144aaad",
+      "bytes": 22444
+    },
+    "scripts/prepare_day2_data.py": {
+      "sha256": "eb3b1c63bee6cb9c58030a76bac7ea40707bafed51309c1a99daaaf7037fdd7b",
+      "bytes": 8293
+    },
+    "scripts/run_day2_training.py": {
+      "sha256": "ff208b357bf71951ba7da0f09a4f7e4f4cc9a80c53c3fbe1765a2c3db4158b9b",
+      "bytes": 25533
+    },
+    "tests/test_day2_advanced.py": {
+      "sha256": "2da050bd3f77a9013bed769cb9bc4af3ec568ce9b9ef89d3f831d95e16c6fc75",
+      "bytes": 10866
+    }
+  }
+}

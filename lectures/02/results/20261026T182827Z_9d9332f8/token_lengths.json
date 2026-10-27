@@ -1,0 +1,601 @@
+{
+  "max_seq_len": 512,
+  "training": [
+    {
+      "row": 1,
+      "tokens": 195
+    },
+    {
+      "row": 2,
+      "tokens": 195
+    },
+    {
+      "row": 3,
+      "tokens": 215
+    },
+    {
+      "row": 4,
+      "tokens": 215
+    },
+    {
+      "row": 5,
+      "tokens": 184
+    },
+    {
+      "row": 6,
+      "tokens": 184
+    },
+    {
+      "row": 7,
+      "tokens": 191
+    },
+    {
+      "row": 8,
+      "tokens": 191
+    },
+    {
+      "row": 9,
+      "tokens": 180
+    },
+    {
+      "row": 10,
+      "tokens": 180
+    },
+    {
+      "row": 11,
+      "tokens": 163
+    },
+    {
+      "row": 12,
+      "tokens": 163
+    },
+    {
+      "row": 13,
+      "tokens": 178
+    },
+    {
+      "row": 14,
+      "tokens": 178
+    },
+    {
+      "row": 15,
+      "tokens": 166
+    },
+    {
+      "row": 16,
+      "tokens": 166
+    },
+    {
+      "row": 17,
+      "tokens": 198
+    },
+    {
+      "row": 18,
+      "tokens": 198
+    },
+    {
+      "row": 19,
+      "tokens": 156
+    },
+    {
+      "row": 20,
+      "tokens": 156
+    },
+    {
+      "row": 21,
+      "tokens": 193
+    },
+    {
+      "row": 22,
+      "tokens": 193
+    },
+    {
+      "row": 23,
+      "tokens": 176
+    },
+    {
+      "row": 24,
+      "tokens": 176
+    },
+    {
+      "row": 25,
+      "tokens": 189
+    },
+    {
+      "row": 26,
+      "tokens": 189
+    },
+    {
+      "row": 27,
+      "tokens": 181
+    },
+    {
+      "row": 28,
+      "tokens": 181
+    },
+    {
+      "row": 29,
+      "tokens": 173
+    },
+    {
+      "row": 30,
+      "tokens": 173
+    },
+    {
+      "row": 31,
+      "tokens": 182
+    },
+    {
+      "row": 32,
+      "tokens": 182
+    },
+    {
+      "row": 33,
+      "tokens": 160
+    },
+    {
+      "row": 34,
+      "tokens": 160
+    },
+    {
+      "row": 35,
+      "tokens": 174
+    },
+    {
+      "row": 36,
+      "tokens": 174
+    },
+    {
+      "row": 37,
+      "tokens": 183
+    },
+    {
+      "row": 38,
+      "tokens": 183
+    },
+    {
+      "row": 39,
+      "tokens": 181
+    },
+    {
+      "row": 40,
+      "tokens": 181
+    },
+    {
+      "row": 41,
+      "tokens": 171
+    },
+    {
+      "row": 42,
+      "tokens": 171
+    },
+    {
+      "row": 43,
+      "tokens": 191
+    },
+    {
+      "row": 44,
+      "tokens": 191
+    },
+    {
+      "row": 45,
+      "tokens": 164
+    },
+    {
+      "row": 46,
+      "tokens": 164
+    },
+    {
+      "row": 47,
+      "tokens": 198
+    },
+    {
+      "row": 48,
+      "tokens": 198
+    },
+    {
+      "row": 49,
+      "tokens": 177
+    },
+    {
+      "row": 50,
+      "tokens": 177
+    },
+    {
+      "row": 51,
+      "tokens": 174
+    },
+    {
+      "row": 52,
+      "tokens": 174
+    },
+    {
+      "row": 53,
+      "tokens": 209
+    },
+    {
+      "row": 54,
+      "tokens": 209
+    },
+    {
+      "row": 55,
+      "tokens": 173
+    },
+    {
+      "row": 56,
+      "tokens": 173
+    },
+    {
+      "row": 57,
+      "tokens": 205
+    },
+    {
+      "row": 58,
+      "tokens": 205
+    },
+    {
+      "row": 59,
+      "tokens": 170
+    },
+    {
+      "row": 60,
+      "tokens": 170
+    },
+    {
+      "row": 61,
+      "tokens": 169
+    },
+    {
+      "row": 62,
+      "tokens": 169
+    },
+    {
+      "row": 63,
+      "tokens": 159
+    },
+    {
+      "row": 64,
+      "tokens": 159
+    },
+    {
+      "row": 65,
+      "tokens": 164
+    },
+    {
+      "row": 66,
+      "tokens": 164
+    },
+    {
+      "row": 67,
+      "tokens": 168
+    },
+    {
+      "row": 68,
+      "tokens": 168
+    },
+    {
+      "row": 69,
+      "tokens": 173
+    },
+    {
+      "row": 70,
+      "tokens": 173
+    },
+    {
+      "row": 71,
+      "tokens": 193
+    },
+    {
+      "row": 72,
+      "tokens": 193
+    },
+    {
+      "row": 73,
+      "tokens": 196
+    },
+    {
+      "row": 74,
+      "tokens": 196
+    },
+    {
+      "row": 75,
+      "tokens": 192
+    },
+    {
+      "row": 76,
+      "tokens": 192
+    },
+    {
+      "row": 77,
+      "tokens": 176
+    },
+    {
+      "row": 78,
+      "tokens": 176
+    },
+    {
+      "row": 79,
+      "tokens": 193
+    },
+    {
+      "row": 80,
+      "tokens": 193
+    },
+    {
+      "row": 81,
+      "tokens": 198
+    },
+    {
+      "row": 82,
+      "tokens": 198
+    },
+    {
+      "row": 83,
+      "tokens": 194
+    },
+    {
+      "row": 84,
+      "tokens": 194
+    },
+    {
+      "row": 85,
+      "tokens": 195
+    },
+    {
+      "row": 86,
+      "tokens": 195
+    },
+    {
+      "row": 87,
+      "tokens": 203
+    },
+    {
+      "row": 88,
+      "tokens": 203
+    },
+    {
+      "row": 89,
+      "tokens": 181
+    },
+    {
+      "row": 90,
+      "tokens": 181
+    },
+    {
+      "row": 91,
+      "tokens": 179
+    },
+    {
+      "row": 92,
+      "tokens": 179
+    },
+    {
+      "row": 93,
+      "tokens": 195
+    },
+    {
+      "row": 94,
+      "tokens": 195
+    },
+    {
+      "row": 95,
+      "tokens": 195
+    },
+    {
+      "row": 96,
+      "tokens": 195
+    },
+    {
+      "row": 97,
+      "tokens": 190
+    },
+    {
+      "row": 98,
+      "tokens": 190
+    },
+    {
+      "row": 99,
+      "tokens": 187
+    },
+    {
+      "row": 100,
+      "tokens": 187
+    },
+    {
+      "row": 101,
+      "tokens": 197
+    },
+    {
+      "row": 102,
+      "tokens": 197
+    },
+    {
+      "row": 103,
+      "tokens": 191
+    },
+    {
+      "row": 104,
+      "tokens": 191
+    },
+    {
+      "row": 105,
+      "tokens": 214
+    },
+    {
+      "row": 106,
+      "tokens": 214
+    },
+    {
+      "row": 107,
+      "tokens": 206
+    },
+    {
+      "row": 108,
+      "tokens": 206
+    },
+    {
+      "row": 109,
+      "tokens": 211
+    },
+    {
+      "row": 110,
+      "tokens": 211
+    },
+    {
+      "row": 111,
+      "tokens": 221
+    },
+    {
+      "row": 112,
+      "tokens": 221
+    },
+    {
+      "row": 113,
+      "tokens": 229
+    },
+    {
+      "row": 114,
+      "tokens": 229
+    },
+    {
+      "row": 115,
+      "tokens": 203
+    },
+    {
+      "row": 116,
+      "tokens": 203
+    },
+    {
+      "row": 117,
+      "tokens": 151
+    },
+    {
+      "row": 118,
+      "tokens": 150
+    },
+    {
+      "row": 119,
+      "tokens": 153
+    },
+    {
+      "row": 120,
+      "tokens": 154
+    },
+    {
+      "row": 121,
+      "tokens": 152
+    },
+    {
+      "row": 122,
+      "tokens": 151
+    },
+    {
+      "row": 123,
+      "tokens": 150
+    },
+    {
+      "row": 124,
+      "tokens": 152
+    }
+  ],
+  "evaluation": [
+    {
+      "id": "known_lora",
+      "input_tokens": 127
+    },
+    {
+      "id": "known_peft",
+      "input_tokens": 127
+    },
+    {
+      "id": "known_sft",
+      "input_tokens": 134
+    },
+    {
+      "id": "known_quantization",
+      "input_tokens": 127
+    },
+    {
+      "id": "known_learning_rate",
+      "input_tokens": 127
+    },
+    {
+      "id": "known_overfitting",
+      "input_tokens": 127
+    },
+    {
+      "id": "known_context_window",
+      "input_tokens": 130
+    },
+    {
+      "id": "known_mcp",
+      "input_tokens": 131
+    },
+    {
+      "id": "paraphrase_lora",
+      "input_tokens": 139
+    },
+    {
+      "id": "paraphrase_peft",
+      "input_tokens": 144
+    },
+    {
+      "id": "paraphrase_sft",
+      "input_tokens": 129
+    },
+    {
+      "id": "paraphrase_quantization",
+      "input_tokens": 128
+    },
+    {
+      "id": "paraphrase_learning_rate",
+      "input_tokens": 140
+    },
+    {
+      "id": "paraphrase_overfitting",
+      "input_tokens": 131
+    },
+    {
+      "id": "paraphrase_context_window",
+      "input_tokens": 130
+    },
+    {
+      "id": "paraphrase_mcp",
+      "input_tokens": 139
+    },
+    {
+      "id": "out_of_glossary_dora",
+      "input_tokens": 125
+    },
+    {
+      "id": "out_of_glossary_adalora",
+      "input_tokens": 126
+    },
+    {
+      "id": "out_of_glossary_dpo",
+      "input_tokens": 125
+    },
+    {
+      "id": "out_of_glossary_rlhf",
+      "input_tokens": 125
+    },
+    {
+      "id": "out_of_glossary_rope",
+      "input_tokens": 125
+    },
+    {
+      "id": "out_of_glossary_knowledge_distillation",
+      "input_tokens": 126
+    },
+    {
+      "id": "out_of_glossary_mixture_of_experts",
+      "input_tokens": 130
+    },
+    {
+      "id": "out_of_glossary_beam_search",
+      "input_tokens": 126
+    }
+  ],
+  "all_fit": true,
+  "exceeds_limit": []
+}

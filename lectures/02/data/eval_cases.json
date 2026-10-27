@@ -1,0 +1,354 @@
+[
+  {
+    "id": "known_lora",
+    "category": "known",
+    "question": "用語集の「LoRA」について、定義と特徴を教えてください。",
+    "term_id": "lora",
+    "gold": {
+      "answer": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+      "needs_review": false,
+      "must_include": [
+        "固定",
+        "行列"
+      ]
+    },
+    "design_note": "既知語の設問。学習対象の正規見出しを明示し、元scriptの2テンプレートとは異なる質問で定義の再現を評価する。未知概念への一般化テストではない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "known_peft",
+    "category": "known",
+    "question": "用語集の「PEFT」について、定義と特徴を教えてください。",
+    "term_id": "peft",
+    "gold": {
+      "answer": "モデルの全パラメータではなく、ごく一部や追加した小さなパラメータだけを学習する手法の総称。必要なGPUメモリと保存容量を大きく減らせる。LoRAが代表例。",
+      "needs_review": false,
+      "must_include": [
+        "パラメータ",
+        "メモリ"
+      ]
+    },
+    "design_note": "既知語の設問。学習対象の正規見出しを明示し、元scriptの2テンプレートとは異なる質問で定義の再現を評価する。未知概念への一般化テストではない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "known_sft",
+    "category": "known",
+    "question": "用語集の「教師ありファインチューニング（SFT）」について、定義と特徴を教えてください。",
+    "term_id": "sft",
+    "gold": {
+      "answer": "入力と望ましい出力のペア（例：質問と模範回答）を使ってモデルを追加学習させる方法。指示に従う振る舞いを身につけさせる代表的な手法。",
+      "needs_review": false,
+      "must_include": [
+        "ペア",
+        "追加学習"
+      ]
+    },
+    "design_note": "既知語の設問。学習対象の正規見出しを明示し、元scriptの2テンプレートとは異なる質問で定義の再現を評価する。未知概念への一般化テストではない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "known_quantization",
+    "category": "known",
+    "question": "用語集の「量子化」について、定義と特徴を教えてください。",
+    "term_id": "quantization",
+    "gold": {
+      "answer": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
+      "needs_review": false,
+      "must_include": [
+        "ビット",
+        "メモリ"
+      ]
+    },
+    "design_note": "既知語の設問。学習対象の正規見出しを明示し、元scriptの2テンプレートとは異なる質問で定義の再現を評価する。未知概念への一般化テストではない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "known_learning_rate",
+    "category": "known",
+    "question": "用語集の「学習率」について、定義と特徴を教えてください。",
+    "term_id": "learning-rate",
+    "gold": {
+      "answer": "1回の更新でパラメータをどれだけ動かすかを決めるハイパーパラメータ。大きすぎると学習が不安定になり、小さすぎると進みが遅い。",
+      "needs_review": false,
+      "must_include": [
+        "更新",
+        "パラメータ"
+      ]
+    },
+    "design_note": "既知語の設問。学習対象の正規見出しを明示し、元scriptの2テンプレートとは異なる質問で定義の再現を評価する。未知概念への一般化テストではない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "known_overfitting",
+    "category": "known",
+    "question": "用語集の「過学習」について、定義と特徴を教えてください。",
+    "term_id": "overfitting",
+    "gold": {
+      "answer": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+      "needs_review": false,
+      "must_include": [
+        "学習データ",
+        "未知"
+      ]
+    },
+    "design_note": "既知語の設問。学習対象の正規見出しを明示し、元scriptの2テンプレートとは異なる質問で定義の再現を評価する。未知概念への一般化テストではない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "known_context_window",
+    "category": "known",
+    "question": "用語集の「コンテキストウィンドウ」について、定義と特徴を教えてください。",
+    "term_id": "context-window",
+    "gold": {
+      "answer": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+      "needs_review": false,
+      "must_include": [
+        "合計",
+        "上限"
+      ]
+    },
+    "design_note": "既知語の設問。学習対象の正規見出しを明示し、元scriptの2テンプレートとは異なる質問で定義の再現を評価する。未知概念への一般化テストではない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "known_mcp",
+    "category": "known",
+    "question": "用語集の「MCP（Model Context Protocol）」について、定義と特徴を教えてください。",
+    "term_id": "mcp",
+    "gold": {
+      "answer": "AIアプリと外部のツールやデータソースをつなぐためのオープンな標準プロトコル。MCPサーバーとして公開したツールは、対応する様々なエージェントやエディタ（MCPクライアント）から共通の方法で使える。第5回で、用語集の検索をMCPサーバーにして体験する。",
+      "needs_review": false,
+      "must_include": [
+        "外部",
+        "プロトコル"
+      ]
+    },
+    "design_note": "既知語の設問。学習対象の正規見出しを明示し、元scriptの2テンプレートとは異なる質問で定義の再現を評価する。未知概念への一般化テストではない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "paraphrase_lora",
+    "category": "paraphrase",
+    "question": "事前に学んだ重みは動かさず、更新する部分を二つの小さな行列の積で表す方法について説明してください。",
+    "term_id": "lora",
+    "gold": {
+      "answer": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+      "needs_review": false,
+      "must_include": [
+        "固定",
+        "行列"
+      ]
+    },
+    "design_note": "説明型。用語の正規見出し・ID・別名を質問に含めず、特徴の説明から概念に対応付けられるかを見る。用語名の一致を使う検索方式の限界を観察する条件であり、検索一般の限界とはみなさない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "paraphrase_peft",
+    "category": "paraphrase",
+    "question": "元の巨大なモデルを丸ごと更新せず、一部だけ、または後から足した小さな部分だけを学ばせる方法の総称を説明してください。",
+    "term_id": "peft",
+    "gold": {
+      "answer": "モデルの全パラメータではなく、ごく一部や追加した小さなパラメータだけを学習する手法の総称。必要なGPUメモリと保存容量を大きく減らせる。LoRAが代表例。",
+      "needs_review": false,
+      "must_include": [
+        "パラメータ",
+        "メモリ"
+      ]
+    },
+    "design_note": "説明型。用語の正規見出し・ID・別名を質問に含めず、特徴の説明から概念に対応付けられるかを見る。用語名の一致を使う検索方式の限界を観察する条件であり、検索一般の限界とはみなさない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "paraphrase_sft",
+    "category": "paraphrase",
+    "question": "「指示チューニング」と呼ばれる方法を、この用語集の説明に沿って教えてください。",
+    "term_id": "sft",
+    "gold": {
+      "answer": "入力と望ましい出力のペア（例：質問と模範回答）を使ってモデルを追加学習させる方法。指示に従う振る舞いを身につけさせる代表的な手法。",
+      "needs_review": false,
+      "must_include": [
+        "ペア",
+        "追加学習"
+      ]
+    },
+    "design_note": "別名型。登録済み別名「指示チューニング」を明示し、正規見出しは使わない。元scriptの学習質問にない別名表記への対応を評価する。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "paraphrase_quantization",
+    "category": "paraphrase",
+    "question": "この用語集でいう「quantization」の意味と主な特徴を教えてください。",
+    "term_id": "quantization",
+    "gold": {
+      "answer": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
+      "needs_review": false,
+      "must_include": [
+        "ビット",
+        "メモリ"
+      ]
+    },
+    "design_note": "別名型。登録済み別名「quantization」を明示し、正規見出しは使わない。元scriptの学習質問にない別名表記への対応を評価する。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "paraphrase_learning_rate",
+    "category": "paraphrase",
+    "question": "重みを一度更新するとき、どの程度動かすかを決める設定について、大きすぎる場合と小さすぎる場合の違いも説明してください。",
+    "term_id": "learning-rate",
+    "gold": {
+      "answer": "1回の更新でパラメータをどれだけ動かすかを決めるハイパーパラメータ。大きすぎると学習が不安定になり、小さすぎると進みが遅い。",
+      "needs_review": false,
+      "must_include": [
+        "更新",
+        "パラメータ"
+      ]
+    },
+    "design_note": "説明型。用語の正規見出し・ID・別名を質問に含めず、特徴の説明から概念に対応付けられるかを見る。用語名の一致を使う検索方式の限界を観察する条件であり、検索一般の限界とはみなさない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "paraphrase_overfitting",
+    "category": "paraphrase",
+    "question": "「オーバーフィッティング」とはどのような状態なのか、この用語集に沿って説明してください。",
+    "term_id": "overfitting",
+    "gold": {
+      "answer": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+      "needs_review": false,
+      "must_include": [
+        "学習データ",
+        "未知"
+      ]
+    },
+    "design_note": "別名型。登録済み別名「オーバーフィッティング」を明示し、正規見出しは使わない。元scriptの学習質問にない別名表記への対応を評価する。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "paraphrase_context_window",
+    "category": "paraphrase",
+    "question": "この用語集にある「コンテキスト長」が何を表すのか、説明してください。",
+    "term_id": "context-window",
+    "gold": {
+      "answer": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+      "needs_review": false,
+      "must_include": [
+        "合計",
+        "上限"
+      ]
+    },
+    "design_note": "別名型。登録済み別名「コンテキスト長」を明示し、正規見出しは使わない。元scriptの学習質問にない別名表記への対応を評価する。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "paraphrase_mcp",
+    "category": "paraphrase",
+    "question": "AIアプリが外部の機能やデータ源に共通の方式で接続するための、公開された標準的な通信規約を説明してください。",
+    "term_id": "mcp",
+    "gold": {
+      "answer": "AIアプリと外部のツールやデータソースをつなぐためのオープンな標準プロトコル。MCPサーバーとして公開したツールは、対応する様々なエージェントやエディタ（MCPクライアント）から共通の方法で使える。第5回で、用語集の検索をMCPサーバーにして体験する。",
+      "needs_review": false,
+      "must_include": [
+        "外部",
+        "プロトコル"
+      ]
+    },
+    "design_note": "説明型。用語の正規見出し・ID・別名を質問に含めず、特徴の説明から概念に対応付けられるかを見る。用語名の一致を使う検索方式の限界を観察する条件であり、検索一般の限界とはみなさない。must_includeは全語句の部分一致による簡素な代理指標であり、意味的な正確さや矛盾の有無は出力原文でも確認する。"
+  },
+  {
+    "id": "out_of_glossary_dora",
+    "category": "out_of_glossary",
+    "question": "この用語集における「DoRA」の定義を教えてください。",
+    "term_id": null,
+    "gold": {
+      "answer": "この用語集には記載がありません。確認が必要です。",
+      "needs_review": true,
+      "must_include": [
+        "確認"
+      ]
+    },
+    "design_note": "近似名の設問。LoRAに関連する実在の別手法だが、LoRAの登録別名ではない。似た名前から既知の定義を流用しないかを観察する。用語集2026-draft-1の58項目の見出し・ID・別名に未登録で、定義本文にも対象名称を確認できない。モデルの一般知識として説明できても、この用語集に根拠があることとは区別し、needs_review=trueを正解とする。実在性の参照: https://arxiv.org/abs/2402.09353 。参照URLや正解情報はモデルの入力に含めない。"
+  },
+  {
+    "id": "out_of_glossary_adalora",
+    "category": "out_of_glossary",
+    "question": "この用語集における「AdaLoRA」の定義を教えてください。",
+    "term_id": null,
+    "gold": {
+      "answer": "この用語集には記載がありません。確認が必要です。",
+      "needs_review": true,
+      "must_include": [
+        "確認"
+      ]
+    },
+    "design_note": "近似名の設問。文字列にLoRAを含む実在の別手法であり、LoRAへの単純な部分一致を根拠に回答しないかを観察する。用語集2026-draft-1の58項目の見出し・ID・別名に未登録で、定義本文にも対象名称を確認できない。モデルの一般知識として説明できても、この用語集に根拠があることとは区別し、needs_review=trueを正解とする。実在性の参照: https://arxiv.org/abs/2303.10512 。参照URLや正解情報はモデルの入力に含めない。"
+  },
+  {
+    "id": "out_of_glossary_dpo",
+    "category": "out_of_glossary",
+    "question": "この用語集における「DPO」の定義を教えてください。",
+    "term_id": null,
+    "gold": {
+      "answer": "この用語集には記載がありません。確認が必要です。",
+      "needs_review": true,
+      "must_include": [
+        "確認"
+      ]
+    },
+    "design_note": "実在する選好最適化手法だが、この用語集には登録されていない。用語集2026-draft-1の58項目の見出し・ID・別名に未登録で、定義本文にも対象名称を確認できない。モデルの一般知識として説明できても、この用語集に根拠があることとは区別し、needs_review=trueを正解とする。実在性の参照: https://arxiv.org/abs/2305.18290 。参照URLや正解情報はモデルの入力に含めない。"
+  },
+  {
+    "id": "out_of_glossary_rlhf",
+    "category": "out_of_glossary",
+    "question": "この用語集における「RLHF」の定義を教えてください。",
+    "term_id": null,
+    "gold": {
+      "answer": "この用語集には記載がありません。確認が必要です。",
+      "needs_review": true,
+      "must_include": [
+        "確認"
+      ]
+    },
+    "design_note": "実在する人間のフィードバックを用いた学習手法だが、この用語集には登録されていない。Human-in-the-loopの項目とは同義に扱わない。用語集2026-draft-1の58項目の見出し・ID・別名に未登録で、定義本文にも対象名称を確認できない。モデルの一般知識として説明できても、この用語集に根拠があることとは区別し、needs_review=trueを正解とする。実在性の参照: https://arxiv.org/abs/2203.02155 。参照URLや正解情報はモデルの入力に含めない。"
+  },
+  {
+    "id": "out_of_glossary_rope",
+    "category": "out_of_glossary",
+    "question": "この用語集における「RoPE」の定義を教えてください。",
+    "term_id": null,
+    "gold": {
+      "answer": "この用語集には記載がありません。確認が必要です。",
+      "needs_review": true,
+      "must_include": [
+        "確認"
+      ]
+    },
+    "design_note": "実在する位置情報の表現手法だが、この用語集には登録されていない。用語集2026-draft-1の58項目の見出し・ID・別名に未登録で、定義本文にも対象名称を確認できない。モデルの一般知識として説明できても、この用語集に根拠があることとは区別し、needs_review=trueを正解とする。実在性の参照: https://arxiv.org/abs/2104.09864 。参照URLや正解情報はモデルの入力に含めない。"
+  },
+  {
+    "id": "out_of_glossary_knowledge_distillation",
+    "category": "out_of_glossary",
+    "question": "この用語集における「知識蒸留」の定義を教えてください。",
+    "term_id": null,
+    "gold": {
+      "answer": "この用語集には記載がありません。確認が必要です。",
+      "needs_review": true,
+      "must_include": [
+        "確認"
+      ]
+    },
+    "design_note": "実在する学習手法だが、この用語集には登録されていない。用語集2026-draft-1の58項目の見出し・ID・別名に未登録で、定義本文にも対象名称を確認できない。モデルの一般知識として説明できても、この用語集に根拠があることとは区別し、needs_review=trueを正解とする。実在性の参照: https://arxiv.org/abs/1503.02531 。参照URLや正解情報はモデルの入力に含めない。"
+  },
+  {
+    "id": "out_of_glossary_mixture_of_experts",
+    "category": "out_of_glossary",
+    "question": "この用語集における「Mixture of Experts（MoE）」の定義を教えてください。",
+    "term_id": null,
+    "gold": {
+      "answer": "この用語集には記載がありません。確認が必要です。",
+      "needs_review": true,
+      "must_include": [
+        "確認"
+      ]
+    },
+    "design_note": "実在するモデル構成だが、この用語集には登録されていない。用語集2026-draft-1の58項目の見出し・ID・別名に未登録で、定義本文にも対象名称を確認できない。モデルの一般知識として説明できても、この用語集に根拠があることとは区別し、needs_review=trueを正解とする。実在性の参照: https://arxiv.org/abs/1701.06538 。参照URLや正解情報はモデルの入力に含めない。"
+  },
+  {
+    "id": "out_of_glossary_beam_search",
+    "category": "out_of_glossary",
+    "question": "この用語集における「ビームサーチ」の定義を教えてください。",
+    "term_id": null,
+    "gold": {
+      "answer": "この用語集には記載がありません。確認が必要です。",
+      "needs_review": true,
+      "must_include": [
+        "確認"
+      ]
+    },
+    "design_note": "実在する生成時の探索方法だが、この用語集には登録されていない。用語集2026-draft-1の58項目の見出し・ID・別名に未登録で、定義本文にも対象名称を確認できない。モデルの一般知識として説明できても、この用語集に根拠があることとは区別し、needs_review=trueを正解とする。実在性の参照: https://huggingface.co/docs/transformers/main/en/generation_strategies#beam-search 。参照URLや正解情報はモデルの入力に含めない。"
+  }
+]

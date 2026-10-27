@@ -1,0 +1,203 @@
+{
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "dtype": "float32",
+    "quantization": null,
+    "seed": 42,
+    "num_train_epochs": 3,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "max_seq_len": 512,
+    "max_new_tokens": 256,
+    "gen": {
+      "do_sample": false
+    },
+    "enable_thinking": false,
+    "eos_policy": "tokenizer.eos_token_id_explicit_in_both_evaluations",
+    "fp16": false,
+    "bf16": false,
+    "packing": false,
+    "loss_scope": "full_sequence",
+    "completion_only_loss": false,
+    "assistant_only_loss": false,
+    "lr_scheduler_type": "cosine",
+    "logging_steps": 10,
+    "save_steps": 10,
+    "save_total_limit": 2,
+    "evaluation_context": "system_and_question_only_no_glossary"
+  },
+  "data": {
+    "dataset_sha256": "2a6640b47d51df67d45a7d09779b7685fe8514074af1720dfb074728328590ab",
+    "raw_dataset_sha256": "af6ac820e0331d8d9af376e3b4cccff1b31f2f0f8bb462839752e3282bbd1081",
+    "eval_cases_sha256": "9cd0dcc85f28d3f0b26b56b80218c57755e6e0cc979af8a1a97067dadcdbfd42",
+    "glossary_sha256": "4b614a08a754bf6cf714f905f185ad5ef22e0957c7e64434a4b418edb68c2319",
+    "manifest_sha256": "8eb36f307c665e5f275fd0896b790d9a9979bd27cc8eb8724aa8a1c8baf16f40",
+    "training_examples": 124,
+    "positive_examples": 116,
+    "negative_examples": 8,
+    "eval_examples": 24
+  },
+  "required_versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "accelerate": "1.15.0",
+    "datasets": "5.1.0"
+  }
+}
+
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/320 [00:00<04:07,  1.29it/s]
+Loading weights:  62%|██████▏   | 198/320 [00:00<00:00, 305.65it/s]
+Loading weights:  97%|█████████▋| 309/320 [00:01<00:00, 322.10it/s]
+Loading weights: 100%|██████████| 320/320 [00:01<00:00, 258.70it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[before] 1/24 known_lora 形式=False 内容=False 7.13秒
+[before] 2/24 known_peft 形式=False 内容=False 5.11秒
+[before] 3/24 known_sft 形式=False 内容=False 2.51秒
+[before] 4/24 known_quantization 形式=False 内容=False 4.05秒
+[before] 5/24 known_learning_rate 形式=False 内容=False 7.98秒
+[before] 6/24 known_overfitting 形式=False 内容=False 2.88秒
+[before] 7/24 known_context_window 形式=False 内容=False 3.75秒
+[before] 8/24 known_mcp 形式=False 内容=False 2.60秒
+[before] 9/24 paraphrase_lora 形式=False 内容=False 2.35秒
+[before] 10/24 paraphrase_peft 形式=False 内容=False 1.27秒
+[before] 11/24 paraphrase_sft 形式=False 内容=False 5.03秒
+[before] 12/24 paraphrase_quantization 形式=False 内容=False 10.78秒
+[before] 13/24 paraphrase_learning_rate 形式=False 内容=False 4.64秒
+[before] 14/24 paraphrase_overfitting 形式=False 内容=False 3.25秒
+[before] 15/24 paraphrase_context_window 形式=False 内容=False 3.49秒
+[before] 16/24 paraphrase_mcp 形式=False 内容=False 1.13秒
+[before] 17/24 out_of_glossary_dora 形式=False 内容=False 10.74秒
+[before] 18/24 out_of_glossary_adalora 形式=False 内容=False 5.77秒
+[before] 19/24 out_of_glossary_dpo 形式=False 内容=False 5.60秒
+[before] 20/24 out_of_glossary_rlhf 形式=False 内容=False 4.28秒
+[before] 21/24 out_of_glossary_rope 形式=False 内容=False 3.90秒
+[before] 22/24 out_of_glossary_knowledge_distillation 形式=False 内容=False 5.01秒
+[before] 23/24 out_of_glossary_mixture_of_experts 形式=False 内容=False 3.58秒
+[before] 24/24 out_of_glossary_beam_search 形式=False 内容=False 3.01秒
+
+Building labels for train dataset:   0%|          | 0/124 [00:00<?, ? examples/s]
+Building labels for train dataset: 100%|██████████| 124/124 [00:00<00:00, 4074.28 examples/s]
+
+Truncating train dataset:   0%|          | 0/124 [00:00<?, ? examples/s]
+Truncating train dataset: 100%|██████████| 124/124 [00:00<00:00, 7801.13 examples/s]
+
+Dropping fully masked examples from train dataset:   0%|          | 0/124 [00:00<?, ? examples/s]
+Dropping fully masked examples from train dataset: 100%|██████████| 124/124 [00:00<00:00, 20431.08 examples/s]
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046}.
+
+  0%|          | 0/48 [00:00<?, ?it/s]
+  2%|▏         | 1/48 [00:03<03:06,  3.97s/it]
+  4%|▍         | 2/48 [00:07<02:54,  3.80s/it]
+  6%|▋         | 3/48 [00:11<02:47,  3.72s/it]
+  8%|▊         | 4/48 [00:14<02:42,  3.70s/it]
+ 10%|█         | 5/48 [00:18<02:38,  3.70s/it]
+ 12%|█▎        | 6/48 [00:22<02:36,  3.72s/it]
+ 15%|█▍        | 7/48 [00:26<02:34,  3.76s/it]
+ 17%|█▋        | 8/48 [00:30<02:31,  3.79s/it]
+ 19%|█▉        | 9/48 [00:33<02:24,  3.70s/it]
+ 21%|██        | 10/48 [00:37<02:20,  3.69s/it]
+                                               
+{'loss': '2.275', 'grad_norm': '3.275', 'learning_rate': '0.0001975', 'entropy': '2.278', 'num_tokens': '1.479e+04', 'mean_token_accuracy': '0.5968', 'epoch': '0.6452'}
+
+ 21%|██        | 10/48 [00:37<02:20,  3.69s/it]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+ 23%|██▎       | 11/48 [00:41<02:24,  3.90s/it]
+ 25%|██▌       | 12/48 [00:45<02:16,  3.79s/it]
+ 27%|██▋       | 13/48 [00:48<02:11,  3.75s/it]
+ 29%|██▉       | 14/48 [00:52<02:04,  3.66s/it]
+ 31%|███▏      | 15/48 [00:55<02:01,  3.67s/it]
+ 33%|███▎      | 16/48 [00:57<01:37,  3.06s/it]
+ 35%|███▌      | 17/48 [01:01<01:38,  3.16s/it]
+ 38%|███▊      | 18/48 [01:04<01:39,  3.30s/it]
+ 40%|███▉      | 19/48 [01:08<01:37,  3.38s/it]
+ 42%|████▏     | 20/48 [01:11<01:37,  3.48s/it]
+                                               
+{'loss': '0.9419', 'grad_norm': '1.345', 'learning_rate': '0.0001563', 'entropy': '1.047', 'num_tokens': '2.87e+04', 'mean_token_accuracy': '0.8247', 'epoch': '1.258'}
+
+ 42%|████▏     | 20/48 [01:11<01:37,  3.48s/it]
+ 44%|████▍     | 21/48 [01:15<01:37,  3.61s/it]
+ 46%|████▌     | 22/48 [01:19<01:34,  3.62s/it]
+ 48%|████▊     | 23/48 [01:22<01:28,  3.54s/it]
+ 50%|█████     | 24/48 [01:26<01:25,  3.57s/it]
+ 52%|█████▏    | 25/48 [01:30<01:23,  3.63s/it]
+ 54%|█████▍    | 26/48 [01:33<01:19,  3.63s/it]
+ 56%|█████▋    | 27/48 [01:37<01:14,  3.55s/it]
+ 58%|█████▊    | 28/48 [01:40<01:11,  3.55s/it]
+ 60%|██████    | 29/48 [01:44<01:06,  3.49s/it]
+ 62%|██████▎   | 30/48 [01:47<01:03,  3.51s/it]
+                                               
+{'loss': '0.7499', 'grad_norm': '1.593', 'learning_rate': '8.51e-05', 'entropy': '0.8703', 'num_tokens': '4.354e+04', 'mean_token_accuracy': '0.8491', 'epoch': '1.903'}
+
+ 62%|██████▎   | 30/48 [01:47<01:03,  3.51s/it]
+ 65%|██████▍   | 31/48 [01:51<01:03,  3.72s/it]
+ 67%|██████▋   | 32/48 [01:53<00:50,  3.13s/it]
+ 69%|██████▉   | 33/48 [01:57<00:47,  3.20s/it]
+ 71%|███████   | 34/48 [02:00<00:45,  3.25s/it]
+ 73%|███████▎  | 35/48 [02:03<00:43,  3.35s/it]
+ 75%|███████▌  | 36/48 [02:07<00:41,  3.44s/it]
+ 77%|███████▋  | 37/48 [02:10<00:36,  3.36s/it]
+ 79%|███████▉  | 38/48 [02:14<00:34,  3.46s/it]
+ 81%|████████▏ | 39/48 [02:17<00:30,  3.43s/it]
+ 83%|████████▎ | 40/48 [02:21<00:28,  3.56s/it]
+                                               
+{'loss': '0.5701', 'grad_norm': '1.52', 'learning_rate': '2.182e-05', 'entropy': '0.7507', 'num_tokens': '5.762e+04', 'mean_token_accuracy': '0.8845', 'epoch': '2.516'}
+
+ 83%|████████▎ | 40/48 [02:21<00:28,  3.56s/it]
+ 85%|████████▌ | 41/48 [02:26<00:26,  3.86s/it]
+ 88%|████████▊ | 42/48 [02:29<00:22,  3.79s/it]
+ 90%|████████▉ | 43/48 [02:33<00:18,  3.67s/it]
+ 92%|█████████▏| 44/48 [02:36<00:14,  3.56s/it]
+ 94%|█████████▍| 45/48 [02:40<00:10,  3.58s/it]
+ 96%|█████████▌| 46/48 [02:43<00:07,  3.59s/it]
+ 98%|█████████▊| 47/48 [02:47<00:03,  3.68s/it]
+100%|██████████| 48/48 [02:49<00:00,  3.12s/it]
+                                               
+{'train_runtime': '170.2', 'train_samples_per_second': '2.186', 'train_steps_per_second': '0.282', 'train_loss': '1.029', 'entropy': '0.6689', 'num_tokens': '6.857e+04', 'mean_token_accuracy': '0.8958', 'epoch': '3'}
+
+100%|██████████| 48/48 [02:50<00:00,  3.12s/it]
+100%|██████████| 48/48 [02:50<00:00,  3.54s/it]
+[after] 1/24 known_lora 形式=True 内容=False 2.62秒
+[after] 2/24 known_peft 形式=True 内容=True 3.38秒
+[after] 3/24 known_sft 形式=True 内容=False 5.13秒
+[after] 4/24 known_quantization 形式=True 内容=False 4.15秒
+[after] 5/24 known_learning_rate 形式=True 内容=True 2.92秒
+[after] 6/24 known_overfitting 形式=True 内容=False 2.45秒
+[after] 7/24 known_context_window 形式=True 内容=False 3.62秒
+[after] 8/24 known_mcp 形式=True 内容=True 6.92秒
+[after] 9/24 paraphrase_lora 形式=True 内容=False 4.23秒
+[after] 10/24 paraphrase_peft 形式=True 内容=False 3.33秒
+[after] 11/24 paraphrase_sft 形式=True 内容=False 1.40秒
+[after] 12/24 paraphrase_quantization 形式=True 内容=False 4.59秒
+[after] 13/24 paraphrase_learning_rate 形式=True 内容=False 2.04秒
+[after] 14/24 paraphrase_overfitting 形式=True 内容=False 4.41秒
+[after] 15/24 paraphrase_context_window 形式=True 内容=False 3.60秒
+[after] 16/24 paraphrase_mcp 形式=True 内容=False 6.03秒
+[after] 17/24 out_of_glossary_dora 形式=True 内容=False 2.09秒
+[after] 18/24 out_of_glossary_adalora 形式=True 内容=False 4.52秒
+[after] 19/24 out_of_glossary_dpo 形式=True 内容=False 5.43秒
+[after] 20/24 out_of_glossary_rlhf 形式=True 内容=False 3.34秒
+[after] 21/24 out_of_glossary_rope 形式=True 内容=False 3.06秒
+[after] 22/24 out_of_glossary_knowledge_distillation 形式=True 内容=False 3.71秒
+[after] 23/24 out_of_glossary_mixture_of_experts 形式=True 内容=False 3.51秒
+[after] 24/24 out_of_glossary_beam_search 形式=True 内容=False 4.52秒
+学習と前後評価が完了しました。結果を確認し、自分の考察を追記してください。

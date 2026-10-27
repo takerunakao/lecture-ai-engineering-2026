@@ -1,0 +1,2528 @@
+{
+  "summary": {
+    "model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "versions": {
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.3",
+      "huggingface-hub": "2.3.0",
+      "jinja2": "3.1.6"
+    },
+    "torch_installed": false,
+    "tokenizer_class": "Qwen3_5Tokenizer",
+    "is_fast": true,
+    "train_sha256": "2a6640b47d51df67d45a7d09779b7685fe8514074af1720dfb074728328590ab",
+    "eval_sha256": "9cd0dcc85f28d3f0b26b56b80218c57755e6e0cc979af8a1a97067dadcdbfd42",
+    "train_full": {
+      "count": 124,
+      "min": 150,
+      "median": 183.5,
+      "max": 229,
+      "over_limit": 0,
+      "limit": 512,
+      "max_examples": [
+        {
+          "index": 112,
+          "id": null,
+          "question": "「ツールの名前空間」とは何ですか？"
+        },
+        {
+          "index": 113,
+          "id": null,
+          "question": "ツールの名前空間について簡単に説明してください。"
+        }
+      ]
+    },
+    "train_assistant_json": {
+      "count": 124,
+      "min": 21,
+      "median": 59.5,
+      "max": 106,
+      "over_limit": 0,
+      "limit": 256,
+      "max_examples": [
+        {
+          "index": 112,
+          "id": null,
+          "question": "「ツールの名前空間」とは何ですか？"
+        },
+        {
+          "index": 113,
+          "id": null,
+          "question": "ツールの名前空間について簡単に説明してください。"
+        }
+      ]
+    },
+    "train_answer_text": {
+      "count": 124,
+      "min": 10,
+      "median": 48.5,
+      "max": 95,
+      "over_limit": 0,
+      "limit": 256,
+      "max_examples": [
+        {
+          "index": 112,
+          "id": null,
+          "question": "「ツールの名前空間」とは何ですか？"
+        },
+        {
+          "index": 113,
+          "id": null,
+          "question": "ツールの名前空間について簡単に説明してください。"
+        }
+      ]
+    },
+    "train_generation_through_eos": {
+      "count": 124,
+      "min": 22,
+      "median": 60.5,
+      "max": 107,
+      "over_limit": 0,
+      "limit": 256,
+      "max_examples": [
+        {
+          "index": 112,
+          "id": null,
+          "question": "「ツールの名前空間」とは何ですか？"
+        },
+        {
+          "index": 113,
+          "id": null,
+          "question": "ツールの名前空間について簡単に説明してください。"
+        }
+      ]
+    },
+    "eval_prompts": {
+      "count": 24,
+      "min": 125,
+      "median": 127.5,
+      "max": 144,
+      "over_limit": 0,
+      "limit": 512,
+      "max_examples": [
+        {
+          "index": 9,
+          "id": "paraphrase_peft",
+          "question": "元の巨大なモデルを丸ごと更新せず、一部だけ、または後から足した小さな部分だけを学ばせる方法の総称を説明してください。"
+        }
+      ]
+    },
+    "eval_full_with_gold": {
+      "count": 24,
+      "min": 148,
+      "median": 178.5,
+      "max": 229,
+      "over_limit": 0,
+      "limit": 512,
+      "max_examples": [
+        {
+          "index": 8,
+          "id": "paraphrase_lora",
+          "question": "事前に学んだ重みは動かさず、更新する部分を二つの小さな行列の積で表す方法について説明してください。"
+        }
+      ]
+    },
+    "eval_gold_json": {
+      "count": 24,
+      "min": 21,
+      "median": 48.0,
+      "max": 88,
+      "over_limit": 0,
+      "limit": 256,
+      "max_examples": [
+        {
+          "index": 0,
+          "id": "known_lora",
+          "question": "用語集の「LoRA」について、定義と特徴を教えてください。"
+        },
+        {
+          "index": 8,
+          "id": "paraphrase_lora",
+          "question": "事前に学んだ重みは動かさず、更新する部分を二つの小さな行列の積で表す方法について説明してください。"
+        }
+      ]
+    },
+    "eval_gold_answer_text": {
+      "count": 24,
+      "min": 10,
+      "median": 37.0,
+      "max": 77,
+      "over_limit": 0,
+      "limit": 256,
+      "max_examples": [
+        {
+          "index": 0,
+          "id": "known_lora",
+          "question": "用語集の「LoRA」について、定義と特徴を教えてください。"
+        },
+        {
+          "index": 8,
+          "id": "paraphrase_lora",
+          "question": "事前に学んだ重みは動かさず、更新する部分を二つの小さな行列の積で表す方法について説明してください。"
+        }
+      ]
+    },
+    "eval_generation_through_eos": {
+      "count": 24,
+      "min": 22,
+      "median": 49.0,
+      "max": 89,
+      "over_limit": 0,
+      "limit": 256,
+      "max_examples": [
+        {
+          "index": 0,
+          "id": "known_lora",
+          "question": "用語集の「LoRA」について、定義と特徴を教えてください。"
+        },
+        {
+          "index": 8,
+          "id": "paraphrase_lora",
+          "question": "事前に学んだ重みは動かさず、更新する部分を二つの小さな行列の積で表す方法について説明してください。"
+        }
+      ]
+    },
+    "all_train_prefixes_match": true,
+    "all_eval_prefixes_match": true,
+    "generation_prompt_tail": "s_reviewをtrueにしてください。<|im_end|>\n<|im_start|>user\n「AIエンジニアリング」とは何ですか？<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "training_tail": "M）を部品として使い、実際に役立つアプリケーションやシステムを設計・構築・評価・運用する技術領域。モデルを一から作ることより、モデルの選択、データやツールとの接続、評価と改善のサイクルを回すことに重心がある。\", \"needs_review\": false}<|im_end|>\n",
+    "special_tokens": {
+      "eos_token": "<|im_end|>",
+      "eos_token_id": 248046,
+      "pad_token": "<|endoftext|>",
+      "pad_token_id": 248044
+    },
+    "validation_scope": "CPU tokenization only; no model weights, no GPU learning, no generated answers."
+  },
+  "train": [
+    {
+      "index": 0,
+      "question": "「AIエンジニアリング」とは何ですか？",
+      "full_tokens": 195,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 73,
+      "answer_text_tokens": 62,
+      "continuation_tokens": 75,
+      "continuation_through_eos_tokens": 74,
+      "prefix_matches": true
+    },
+    {
+      "index": 1,
+      "question": "AIエンジニアリングについて簡単に説明してください。",
+      "full_tokens": 195,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 73,
+      "answer_text_tokens": 62,
+      "continuation_tokens": 75,
+      "continuation_through_eos_tokens": 74,
+      "prefix_matches": true
+    },
+    {
+      "index": 2,
+      "question": "「評価と改善のサイクル」とは何ですか？",
+      "full_tokens": 215,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 91,
+      "answer_text_tokens": 80,
+      "continuation_tokens": 93,
+      "continuation_through_eos_tokens": 92,
+      "prefix_matches": true
+    },
+    {
+      "index": 3,
+      "question": "評価と改善のサイクルについて簡単に説明してください。",
+      "full_tokens": 215,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 91,
+      "answer_text_tokens": 80,
+      "continuation_tokens": 93,
+      "continuation_through_eos_tokens": 92,
+      "prefix_matches": true
+    },
+    {
+      "index": 4,
+      "question": "「LLM（大規模言語モデル）」とは何ですか？",
+      "full_tokens": 184,
+      "prompt_tokens": 125,
+      "assistant_json_tokens": 57,
+      "answer_text_tokens": 46,
+      "continuation_tokens": 59,
+      "continuation_through_eos_tokens": 58,
+      "prefix_matches": true
+    },
+    {
+      "index": 5,
+      "question": "LLM（大規模言語モデル）について簡単に説明してください。",
+      "full_tokens": 184,
+      "prompt_tokens": 125,
+      "assistant_json_tokens": 57,
+      "answer_text_tokens": 46,
+      "continuation_tokens": 59,
+      "continuation_through_eos_tokens": 58,
+      "prefix_matches": true
+    },
+    {
+      "index": 6,
+      "question": "「トークン」とは何ですか？",
+      "full_tokens": 191,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 70,
+      "answer_text_tokens": 59,
+      "continuation_tokens": 72,
+      "continuation_through_eos_tokens": 71,
+      "prefix_matches": true
+    },
+    {
+      "index": 7,
+      "question": "トークンについて簡単に説明してください。",
+      "full_tokens": 191,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 70,
+      "answer_text_tokens": 59,
+      "continuation_tokens": 72,
+      "continuation_through_eos_tokens": 71,
+      "prefix_matches": true
+    },
+    {
+      "index": 8,
+      "question": "「コンテキストウィンドウ」とは何ですか？",
+      "full_tokens": 180,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 56,
+      "answer_text_tokens": 45,
+      "continuation_tokens": 58,
+      "continuation_through_eos_tokens": 57,
+      "prefix_matches": true
+    },
+    {
+      "index": 9,
+      "question": "コンテキストウィンドウについて簡単に説明してください。",
+      "full_tokens": 180,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 56,
+      "answer_text_tokens": 45,
+      "continuation_tokens": 58,
+      "continuation_through_eos_tokens": 57,
+      "prefix_matches": true
+    },
+    {
+      "index": 10,
+      "question": "「プロンプト」とは何ですか？",
+      "full_tokens": 163,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 41,
+      "answer_text_tokens": 30,
+      "continuation_tokens": 43,
+      "continuation_through_eos_tokens": 42,
+      "prefix_matches": true
+    },
+    {
+      "index": 11,
+      "question": "プロンプトについて簡単に説明してください。",
+      "full_tokens": 163,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 41,
+      "answer_text_tokens": 30,
+      "continuation_tokens": 43,
+      "continuation_through_eos_tokens": 42,
+      "prefix_matches": true
+    },
+    {
+      "index": 12,
+      "question": "「システムプロンプト」とは何ですか？",
+      "full_tokens": 178,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 55,
+      "answer_text_tokens": 44,
+      "continuation_tokens": 57,
+      "continuation_through_eos_tokens": 56,
+      "prefix_matches": true
+    },
+    {
+      "index": 13,
+      "question": "システムプロンプトについて簡単に説明してください。",
+      "full_tokens": 178,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 55,
+      "answer_text_tokens": 44,
+      "continuation_tokens": 57,
+      "continuation_through_eos_tokens": 56,
+      "prefix_matches": true
+    },
+    {
+      "index": 14,
+      "question": "「temperature」とは何ですか？",
+      "full_tokens": 166,
+      "prompt_tokens": 118,
+      "assistant_json_tokens": 46,
+      "answer_text_tokens": 35,
+      "continuation_tokens": 48,
+      "continuation_through_eos_tokens": 47,
+      "prefix_matches": true
+    },
+    {
+      "index": 15,
+      "question": "temperatureについて簡単に説明してください。",
+      "full_tokens": 166,
+      "prompt_tokens": 118,
+      "assistant_json_tokens": 46,
+      "answer_text_tokens": 35,
+      "continuation_tokens": 48,
+      "continuation_through_eos_tokens": 47,
+      "prefix_matches": true
+    },
+    {
+      "index": 16,
+      "question": "「ハルシネーション」とは何ですか？",
+      "full_tokens": 198,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 74,
+      "answer_text_tokens": 63,
+      "continuation_tokens": 76,
+      "continuation_through_eos_tokens": 75,
+      "prefix_matches": true
+    },
+    {
+      "index": 17,
+      "question": "ハルシネーションについて簡単に説明してください。",
+      "full_tokens": 198,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 74,
+      "answer_text_tokens": 63,
+      "continuation_tokens": 76,
+      "continuation_through_eos_tokens": 75,
+      "prefix_matches": true
+    },
+    {
+      "index": 18,
+      "question": "「API」とは何ですか？",
+      "full_tokens": 156,
+      "prompt_tokens": 118,
+      "assistant_json_tokens": 36,
+      "answer_text_tokens": 25,
+      "continuation_tokens": 38,
+      "continuation_through_eos_tokens": 37,
+      "prefix_matches": true
+    },
+    {
+      "index": 19,
+      "question": "APIについて簡単に説明してください。",
+      "full_tokens": 156,
+      "prompt_tokens": 118,
+      "assistant_json_tokens": 36,
+      "answer_text_tokens": 25,
+      "continuation_tokens": 38,
+      "continuation_through_eos_tokens": 37,
+      "prefix_matches": true
+    },
+    {
+      "index": 20,
+      "question": "「APIキー」とは何ですか？",
+      "full_tokens": 193,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 72,
+      "answer_text_tokens": 61,
+      "continuation_tokens": 74,
+      "continuation_through_eos_tokens": 73,
+      "prefix_matches": true
+    },
+    {
+      "index": 21,
+      "question": "APIキーについて簡単に説明してください。",
+      "full_tokens": 193,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 72,
+      "answer_text_tokens": 61,
+      "continuation_tokens": 74,
+      "continuation_through_eos_tokens": 73,
+      "prefix_matches": true
+    },
+    {
+      "index": 22,
+      "question": "「環境変数」とは何ですか？",
+      "full_tokens": 176,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 54,
+      "answer_text_tokens": 43,
+      "continuation_tokens": 56,
+      "continuation_through_eos_tokens": 55,
+      "prefix_matches": true
+    },
+    {
+      "index": 23,
+      "question": "環境変数について簡単に説明してください。",
+      "full_tokens": 176,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 54,
+      "answer_text_tokens": 43,
+      "continuation_tokens": 56,
+      "continuation_through_eos_tokens": 55,
+      "prefix_matches": true
+    },
+    {
+      "index": 24,
+      "question": "「レート制限」とは何ですか？",
+      "full_tokens": 189,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 68,
+      "answer_text_tokens": 57,
+      "continuation_tokens": 70,
+      "continuation_through_eos_tokens": 69,
+      "prefix_matches": true
+    },
+    {
+      "index": 25,
+      "question": "レート制限について簡単に説明してください。",
+      "full_tokens": 189,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 68,
+      "answer_text_tokens": 57,
+      "continuation_tokens": 70,
+      "continuation_through_eos_tokens": 69,
+      "prefix_matches": true
+    },
+    {
+      "index": 26,
+      "question": "「GitHub Codespaces」とは何ですか？",
+      "full_tokens": 181,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 59,
+      "answer_text_tokens": 48,
+      "continuation_tokens": 61,
+      "continuation_through_eos_tokens": 60,
+      "prefix_matches": true
+    },
+    {
+      "index": 27,
+      "question": "GitHub Codespacesについて簡単に説明してください。",
+      "full_tokens": 181,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 59,
+      "answer_text_tokens": 48,
+      "continuation_tokens": 61,
+      "continuation_through_eos_tokens": 60,
+      "prefix_matches": true
+    },
+    {
+      "index": 28,
+      "question": "「devcontainer」とは何ですか？",
+      "full_tokens": 173,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 52,
+      "answer_text_tokens": 41,
+      "continuation_tokens": 54,
+      "continuation_through_eos_tokens": 53,
+      "prefix_matches": true
+    },
+    {
+      "index": 29,
+      "question": "devcontainerについて簡単に説明してください。",
+      "full_tokens": 173,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 52,
+      "answer_text_tokens": 41,
+      "continuation_tokens": 54,
+      "continuation_through_eos_tokens": 53,
+      "prefix_matches": true
+    },
+    {
+      "index": 30,
+      "question": "「Codespaces secret」とは何ですか？",
+      "full_tokens": 182,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 60,
+      "answer_text_tokens": 49,
+      "continuation_tokens": 62,
+      "continuation_through_eos_tokens": 61,
+      "prefix_matches": true
+    },
+    {
+      "index": 31,
+      "question": "Codespaces secretについて簡単に説明してください。",
+      "full_tokens": 182,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 60,
+      "answer_text_tokens": 49,
+      "continuation_tokens": 62,
+      "continuation_through_eos_tokens": 61,
+      "prefix_matches": true
+    },
+    {
+      "index": 32,
+      "question": "「fork」とは何ですか？",
+      "full_tokens": 160,
+      "prompt_tokens": 118,
+      "assistant_json_tokens": 40,
+      "answer_text_tokens": 29,
+      "continuation_tokens": 42,
+      "continuation_through_eos_tokens": 41,
+      "prefix_matches": true
+    },
+    {
+      "index": 33,
+      "question": "forkについて簡単に説明してください。",
+      "full_tokens": 160,
+      "prompt_tokens": 118,
+      "assistant_json_tokens": 40,
+      "answer_text_tokens": 29,
+      "continuation_tokens": 42,
+      "continuation_through_eos_tokens": 41,
+      "prefix_matches": true
+    },
+    {
+      "index": 34,
+      "question": "「ブランチ」とは何ですか？",
+      "full_tokens": 174,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 53,
+      "answer_text_tokens": 42,
+      "continuation_tokens": 55,
+      "continuation_through_eos_tokens": 54,
+      "prefix_matches": true
+    },
+    {
+      "index": 35,
+      "question": "ブランチについて簡単に説明してください。",
+      "full_tokens": 174,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 53,
+      "answer_text_tokens": 42,
+      "continuation_tokens": 55,
+      "continuation_through_eos_tokens": 54,
+      "prefix_matches": true
+    },
+    {
+      "index": 36,
+      "question": "「プルリクエスト（PR）」とは何ですか？",
+      "full_tokens": 183,
+      "prompt_tokens": 123,
+      "assistant_json_tokens": 58,
+      "answer_text_tokens": 47,
+      "continuation_tokens": 60,
+      "continuation_through_eos_tokens": 59,
+      "prefix_matches": true
+    },
+    {
+      "index": 37,
+      "question": "プルリクエスト（PR）について簡単に説明してください。",
+      "full_tokens": 183,
+      "prompt_tokens": 123,
+      "assistant_json_tokens": 58,
+      "answer_text_tokens": 47,
+      "continuation_tokens": 60,
+      "continuation_through_eos_tokens": 59,
+      "prefix_matches": true
+    },
+    {
+      "index": 38,
+      "question": "「GitHub Copilot」とは何ですか？",
+      "full_tokens": 181,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 59,
+      "answer_text_tokens": 48,
+      "continuation_tokens": 61,
+      "continuation_through_eos_tokens": 60,
+      "prefix_matches": true
+    },
+    {
+      "index": 39,
+      "question": "GitHub Copilotについて簡単に説明してください。",
+      "full_tokens": 181,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 59,
+      "answer_text_tokens": 48,
+      "continuation_tokens": 61,
+      "continuation_through_eos_tokens": 60,
+      "prefix_matches": true
+    },
+    {
+      "index": 40,
+      "question": "「コード補完」とは何ですか？",
+      "full_tokens": 171,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 49,
+      "answer_text_tokens": 38,
+      "continuation_tokens": 51,
+      "continuation_through_eos_tokens": 50,
+      "prefix_matches": true
+    },
+    {
+      "index": 41,
+      "question": "コード補完について簡単に説明してください。",
+      "full_tokens": 171,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 49,
+      "answer_text_tokens": 38,
+      "continuation_tokens": 51,
+      "continuation_through_eos_tokens": 50,
+      "prefix_matches": true
+    },
+    {
+      "index": 42,
+      "question": "「コーディングエージェント」とは何ですか？",
+      "full_tokens": 191,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 43,
+      "question": "コーディングエージェントについて簡単に説明してください。",
+      "full_tokens": 191,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 44,
+      "question": "「事前学習」とは何ですか？",
+      "full_tokens": 164,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 43,
+      "answer_text_tokens": 32,
+      "continuation_tokens": 45,
+      "continuation_through_eos_tokens": 44,
+      "prefix_matches": true
+    },
+    {
+      "index": 45,
+      "question": "事前学習について簡単に説明してください。",
+      "full_tokens": 164,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 43,
+      "answer_text_tokens": 32,
+      "continuation_tokens": 45,
+      "continuation_through_eos_tokens": 44,
+      "prefix_matches": true
+    },
+    {
+      "index": 46,
+      "question": "「ファインチューニング」とは何ですか？",
+      "full_tokens": 198,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 75,
+      "answer_text_tokens": 64,
+      "continuation_tokens": 77,
+      "continuation_through_eos_tokens": 76,
+      "prefix_matches": true
+    },
+    {
+      "index": 47,
+      "question": "ファインチューニングについて簡単に説明してください。",
+      "full_tokens": 198,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 75,
+      "answer_text_tokens": 64,
+      "continuation_tokens": 77,
+      "continuation_through_eos_tokens": 76,
+      "prefix_matches": true
+    },
+    {
+      "index": 48,
+      "question": "「教師ありファインチューニング（SFT）」とは何ですか？",
+      "full_tokens": 177,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 48,
+      "answer_text_tokens": 37,
+      "continuation_tokens": 50,
+      "continuation_through_eos_tokens": 49,
+      "prefix_matches": true
+    },
+    {
+      "index": 49,
+      "question": "教師ありファインチューニング（SFT）について簡単に説明してください。",
+      "full_tokens": 177,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 48,
+      "answer_text_tokens": 37,
+      "continuation_tokens": 50,
+      "continuation_through_eos_tokens": 49,
+      "prefix_matches": true
+    },
+    {
+      "index": 50,
+      "question": "「PEFT」とは何ですか？",
+      "full_tokens": 174,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 53,
+      "answer_text_tokens": 42,
+      "continuation_tokens": 55,
+      "continuation_through_eos_tokens": 54,
+      "prefix_matches": true
+    },
+    {
+      "index": 51,
+      "question": "PEFTについて簡単に説明してください。",
+      "full_tokens": 174,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 53,
+      "answer_text_tokens": 42,
+      "continuation_tokens": 55,
+      "continuation_through_eos_tokens": 54,
+      "prefix_matches": true
+    },
+    {
+      "index": 52,
+      "question": "「LoRA」とは何ですか？",
+      "full_tokens": 209,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 88,
+      "answer_text_tokens": 77,
+      "continuation_tokens": 90,
+      "continuation_through_eos_tokens": 89,
+      "prefix_matches": true
+    },
+    {
+      "index": 53,
+      "question": "LoRAについて簡単に説明してください。",
+      "full_tokens": 209,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 88,
+      "answer_text_tokens": 77,
+      "continuation_tokens": 90,
+      "continuation_through_eos_tokens": 89,
+      "prefix_matches": true
+    },
+    {
+      "index": 54,
+      "question": "「ランク（LoRAのr）」とは何ですか？",
+      "full_tokens": 173,
+      "prompt_tokens": 124,
+      "assistant_json_tokens": 47,
+      "answer_text_tokens": 36,
+      "continuation_tokens": 49,
+      "continuation_through_eos_tokens": 48,
+      "prefix_matches": true
+    },
+    {
+      "index": 55,
+      "question": "ランク（LoRAのr）について簡単に説明してください。",
+      "full_tokens": 173,
+      "prompt_tokens": 124,
+      "assistant_json_tokens": 47,
+      "answer_text_tokens": 36,
+      "continuation_tokens": 49,
+      "continuation_through_eos_tokens": 48,
+      "prefix_matches": true
+    },
+    {
+      "index": 56,
+      "question": "「QLoRA」とは何ですか？",
+      "full_tokens": 205,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 83,
+      "answer_text_tokens": 72,
+      "continuation_tokens": 85,
+      "continuation_through_eos_tokens": 84,
+      "prefix_matches": true
+    },
+    {
+      "index": 57,
+      "question": "QLoRAについて簡単に説明してください。",
+      "full_tokens": 205,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 83,
+      "answer_text_tokens": 72,
+      "continuation_tokens": 85,
+      "continuation_through_eos_tokens": 84,
+      "prefix_matches": true
+    },
+    {
+      "index": 58,
+      "question": "「量子化」とは何ですか？",
+      "full_tokens": 170,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 49,
+      "answer_text_tokens": 38,
+      "continuation_tokens": 51,
+      "continuation_through_eos_tokens": 50,
+      "prefix_matches": true
+    },
+    {
+      "index": 59,
+      "question": "量子化について簡単に説明してください。",
+      "full_tokens": 170,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 49,
+      "answer_text_tokens": 38,
+      "continuation_tokens": 51,
+      "continuation_through_eos_tokens": 50,
+      "prefix_matches": true
+    },
+    {
+      "index": 60,
+      "question": "「学習率」とは何ですか？",
+      "full_tokens": 169,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 48,
+      "answer_text_tokens": 37,
+      "continuation_tokens": 50,
+      "continuation_through_eos_tokens": 49,
+      "prefix_matches": true
+    },
+    {
+      "index": 61,
+      "question": "学習率について簡単に説明してください。",
+      "full_tokens": 169,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 48,
+      "answer_text_tokens": 37,
+      "continuation_tokens": 50,
+      "continuation_through_eos_tokens": 49,
+      "prefix_matches": true
+    },
+    {
+      "index": 62,
+      "question": "「エポック」とは何ですか？",
+      "full_tokens": 159,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 37,
+      "answer_text_tokens": 26,
+      "continuation_tokens": 39,
+      "continuation_through_eos_tokens": 38,
+      "prefix_matches": true
+    },
+    {
+      "index": 63,
+      "question": "エポックについて簡単に説明してください。",
+      "full_tokens": 159,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 37,
+      "answer_text_tokens": 26,
+      "continuation_tokens": 39,
+      "continuation_through_eos_tokens": 38,
+      "prefix_matches": true
+    },
+    {
+      "index": 64,
+      "question": "「過学習」とは何ですか？",
+      "full_tokens": 164,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 43,
+      "answer_text_tokens": 32,
+      "continuation_tokens": 45,
+      "continuation_through_eos_tokens": 44,
+      "prefix_matches": true
+    },
+    {
+      "index": 65,
+      "question": "過学習について簡単に説明してください。",
+      "full_tokens": 164,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 43,
+      "answer_text_tokens": 32,
+      "continuation_tokens": 45,
+      "continuation_through_eos_tokens": 44,
+      "prefix_matches": true
+    },
+    {
+      "index": 66,
+      "question": "「Hugging Face Hub」とは何ですか？",
+      "full_tokens": 168,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 45,
+      "answer_text_tokens": 34,
+      "continuation_tokens": 47,
+      "continuation_through_eos_tokens": 46,
+      "prefix_matches": true
+    },
+    {
+      "index": 67,
+      "question": "Hugging Face Hubについて簡単に説明してください。",
+      "full_tokens": 168,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 45,
+      "answer_text_tokens": 34,
+      "continuation_tokens": 47,
+      "continuation_through_eos_tokens": 46,
+      "prefix_matches": true
+    },
+    {
+      "index": 68,
+      "question": "「AIエージェント」とは何ですか？",
+      "full_tokens": 173,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 52,
+      "answer_text_tokens": 41,
+      "continuation_tokens": 54,
+      "continuation_through_eos_tokens": 53,
+      "prefix_matches": true
+    },
+    {
+      "index": 69,
+      "question": "AIエージェントについて簡単に説明してください。",
+      "full_tokens": 173,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 52,
+      "answer_text_tokens": 41,
+      "continuation_tokens": 54,
+      "continuation_through_eos_tokens": 53,
+      "prefix_matches": true
+    },
+    {
+      "index": 70,
+      "question": "「エージェントループ」とは何ですか？",
+      "full_tokens": 193,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 71,
+      "answer_text_tokens": 60,
+      "continuation_tokens": 73,
+      "continuation_through_eos_tokens": 72,
+      "prefix_matches": true
+    },
+    {
+      "index": 71,
+      "question": "エージェントループについて簡単に説明してください。",
+      "full_tokens": 193,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 71,
+      "answer_text_tokens": 60,
+      "continuation_tokens": 73,
+      "continuation_through_eos_tokens": 72,
+      "prefix_matches": true
+    },
+    {
+      "index": 72,
+      "question": "「ツール（Tool use / Function calling）」とは何ですか？",
+      "full_tokens": 196,
+      "prompt_tokens": 125,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 73,
+      "question": "ツール（Tool use / Function calling）について簡単に説明してください。",
+      "full_tokens": 196,
+      "prompt_tokens": 125,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 74,
+      "question": "「ツールの説明文」とは何ですか？",
+      "full_tokens": 192,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 75,
+      "question": "ツールの説明文について簡単に説明してください。",
+      "full_tokens": 192,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 76,
+      "question": "「構造化出力」とは何ですか？",
+      "full_tokens": 176,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 54,
+      "answer_text_tokens": 43,
+      "continuation_tokens": 56,
+      "continuation_through_eos_tokens": 55,
+      "prefix_matches": true
+    },
+    {
+      "index": 77,
+      "question": "構造化出力について簡単に説明してください。",
+      "full_tokens": 176,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 54,
+      "answer_text_tokens": 43,
+      "continuation_tokens": 56,
+      "continuation_through_eos_tokens": 55,
+      "prefix_matches": true
+    },
+    {
+      "index": 78,
+      "question": "「ハーネス」とは何ですか？",
+      "full_tokens": 193,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 72,
+      "answer_text_tokens": 61,
+      "continuation_tokens": 74,
+      "continuation_through_eos_tokens": 73,
+      "prefix_matches": true
+    },
+    {
+      "index": 79,
+      "question": "ハーネスについて簡単に説明してください。",
+      "full_tokens": 193,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 72,
+      "answer_text_tokens": 61,
+      "continuation_tokens": 74,
+      "continuation_through_eos_tokens": 73,
+      "prefix_matches": true
+    },
+    {
+      "index": 80,
+      "question": "「Pi」とは何ですか？",
+      "full_tokens": 198,
+      "prompt_tokens": 118,
+      "assistant_json_tokens": 78,
+      "answer_text_tokens": 67,
+      "continuation_tokens": 80,
+      "continuation_through_eos_tokens": 79,
+      "prefix_matches": true
+    },
+    {
+      "index": 81,
+      "question": "Piについて簡単に説明してください。",
+      "full_tokens": 198,
+      "prompt_tokens": 118,
+      "assistant_json_tokens": 78,
+      "answer_text_tokens": 67,
+      "continuation_tokens": 80,
+      "continuation_through_eos_tokens": 79,
+      "prefix_matches": true
+    },
+    {
+      "index": 82,
+      "question": "「Pydantic AI」とは何ですか？",
+      "full_tokens": 194,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 71,
+      "answer_text_tokens": 60,
+      "continuation_tokens": 73,
+      "continuation_through_eos_tokens": 72,
+      "prefix_matches": true
+    },
+    {
+      "index": 83,
+      "question": "Pydantic AIについて簡単に説明してください。",
+      "full_tokens": 194,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 71,
+      "answer_text_tokens": 60,
+      "continuation_tokens": 73,
+      "continuation_through_eos_tokens": 72,
+      "prefix_matches": true
+    },
+    {
+      "index": 84,
+      "question": "「ADK（Agent Development Kit）」とは何ですか？",
+      "full_tokens": 195,
+      "prompt_tokens": 124,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 85,
+      "question": "ADK（Agent Development Kit）について簡単に説明してください。",
+      "full_tokens": 195,
+      "prompt_tokens": 124,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 86,
+      "question": "「MCP（Model Context Protocol）」とは何ですか？",
+      "full_tokens": 203,
+      "prompt_tokens": 124,
+      "assistant_json_tokens": 77,
+      "answer_text_tokens": 66,
+      "continuation_tokens": 79,
+      "continuation_through_eos_tokens": 78,
+      "prefix_matches": true
+    },
+    {
+      "index": 87,
+      "question": "MCP（Model Context Protocol）について簡単に説明してください。",
+      "full_tokens": 203,
+      "prompt_tokens": 124,
+      "assistant_json_tokens": 77,
+      "answer_text_tokens": 66,
+      "continuation_tokens": 79,
+      "continuation_through_eos_tokens": 78,
+      "prefix_matches": true
+    },
+    {
+      "index": 88,
+      "question": "「ガードレール」とは何ですか？",
+      "full_tokens": 181,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 59,
+      "answer_text_tokens": 48,
+      "continuation_tokens": 61,
+      "continuation_through_eos_tokens": 60,
+      "prefix_matches": true
+    },
+    {
+      "index": 89,
+      "question": "ガードレールについて簡単に説明してください。",
+      "full_tokens": 181,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 59,
+      "answer_text_tokens": 48,
+      "continuation_tokens": 61,
+      "continuation_through_eos_tokens": 60,
+      "prefix_matches": true
+    },
+    {
+      "index": 90,
+      "question": "「Human-in-the-loop」とは何ですか？",
+      "full_tokens": 179,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 56,
+      "answer_text_tokens": 45,
+      "continuation_tokens": 58,
+      "continuation_through_eos_tokens": 57,
+      "prefix_matches": true
+    },
+    {
+      "index": 91,
+      "question": "Human-in-the-loopについて簡単に説明してください。",
+      "full_tokens": 179,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 56,
+      "answer_text_tokens": 45,
+      "continuation_tokens": 58,
+      "continuation_through_eos_tokens": 57,
+      "prefix_matches": true
+    },
+    {
+      "index": 92,
+      "question": "「TestModel」とは何ですか？",
+      "full_tokens": 195,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 74,
+      "answer_text_tokens": 63,
+      "continuation_tokens": 76,
+      "continuation_through_eos_tokens": 75,
+      "prefix_matches": true
+    },
+    {
+      "index": 93,
+      "question": "TestModelについて簡単に説明してください。",
+      "full_tokens": 195,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 74,
+      "answer_text_tokens": 63,
+      "continuation_tokens": 76,
+      "continuation_through_eos_tokens": 75,
+      "prefix_matches": true
+    },
+    {
+      "index": 94,
+      "question": "「宿題の3レベル」とは何ですか？",
+      "full_tokens": 195,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 71,
+      "answer_text_tokens": 60,
+      "continuation_tokens": 73,
+      "continuation_through_eos_tokens": 72,
+      "prefix_matches": true
+    },
+    {
+      "index": 95,
+      "question": "宿題の3レベルについて簡単に説明してください。",
+      "full_tokens": 195,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 71,
+      "answer_text_tokens": 60,
+      "continuation_tokens": 73,
+      "continuation_through_eos_tokens": 72,
+      "prefix_matches": true
+    },
+    {
+      "index": 96,
+      "question": "「answer.md」とは何ですか？",
+      "full_tokens": 190,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 97,
+      "question": "answer.mdについて簡単に説明してください。",
+      "full_tokens": 190,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 69,
+      "answer_text_tokens": 58,
+      "continuation_tokens": 71,
+      "continuation_through_eos_tokens": 70,
+      "prefix_matches": true
+    },
+    {
+      "index": 98,
+      "question": "「lecNN-start タグ」とは何ですか？",
+      "full_tokens": 187,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 63,
+      "answer_text_tokens": 52,
+      "continuation_tokens": 65,
+      "continuation_through_eos_tokens": 64,
+      "prefix_matches": true
+    },
+    {
+      "index": 99,
+      "question": "lecNN-start タグについて簡単に説明してください。",
+      "full_tokens": 187,
+      "prompt_tokens": 122,
+      "assistant_json_tokens": 63,
+      "answer_text_tokens": 52,
+      "continuation_tokens": 65,
+      "continuation_through_eos_tokens": 64,
+      "prefix_matches": true
+    },
+    {
+      "index": 100,
+      "question": "「既定モデル」とは何ですか？",
+      "full_tokens": 197,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 76,
+      "answer_text_tokens": 65,
+      "continuation_tokens": 78,
+      "continuation_through_eos_tokens": 77,
+      "prefix_matches": true
+    },
+    {
+      "index": 101,
+      "question": "既定モデルについて簡単に説明してください。",
+      "full_tokens": 197,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 76,
+      "answer_text_tokens": 65,
+      "continuation_tokens": 78,
+      "continuation_through_eos_tokens": 77,
+      "prefix_matches": true
+    },
+    {
+      "index": 102,
+      "question": "「外部ツール」とは何ですか？",
+      "full_tokens": 191,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 70,
+      "answer_text_tokens": 59,
+      "continuation_tokens": 72,
+      "continuation_through_eos_tokens": 71,
+      "prefix_matches": true
+    },
+    {
+      "index": 103,
+      "question": "外部ツールについて簡単に説明してください。",
+      "full_tokens": 191,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 70,
+      "answer_text_tokens": 59,
+      "continuation_tokens": 72,
+      "continuation_through_eos_tokens": 71,
+      "prefix_matches": true
+    },
+    {
+      "index": 104,
+      "question": "「MCPサーバー」とは何ですか？",
+      "full_tokens": 214,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 92,
+      "answer_text_tokens": 81,
+      "continuation_tokens": 94,
+      "continuation_through_eos_tokens": 93,
+      "prefix_matches": true
+    },
+    {
+      "index": 105,
+      "question": "MCPサーバーについて簡単に説明してください。",
+      "full_tokens": 214,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 92,
+      "answer_text_tokens": 81,
+      "continuation_tokens": 94,
+      "continuation_through_eos_tokens": 93,
+      "prefix_matches": true
+    },
+    {
+      "index": 106,
+      "question": "「MCPクライアント」とは何ですか？",
+      "full_tokens": 206,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 84,
+      "answer_text_tokens": 73,
+      "continuation_tokens": 86,
+      "continuation_through_eos_tokens": 85,
+      "prefix_matches": true
+    },
+    {
+      "index": 107,
+      "question": "MCPクライアントについて簡単に説明してください。",
+      "full_tokens": 206,
+      "prompt_tokens": 120,
+      "assistant_json_tokens": 84,
+      "answer_text_tokens": 73,
+      "continuation_tokens": 86,
+      "continuation_through_eos_tokens": 85,
+      "prefix_matches": true
+    },
+    {
+      "index": 108,
+      "question": "「トランスポート（stdio・Streamable HTTP）」とは何ですか？",
+      "full_tokens": 211,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 82,
+      "answer_text_tokens": 71,
+      "continuation_tokens": 84,
+      "continuation_through_eos_tokens": 83,
+      "prefix_matches": true
+    },
+    {
+      "index": 109,
+      "question": "トランスポート（stdio・Streamable HTTP）について簡単に説明してください。",
+      "full_tokens": 211,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 82,
+      "answer_text_tokens": 71,
+      "continuation_tokens": 84,
+      "continuation_through_eos_tokens": 83,
+      "prefix_matches": true
+    },
+    {
+      "index": 110,
+      "question": "「mcpServers設定」とは何ですか？",
+      "full_tokens": 221,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 98,
+      "answer_text_tokens": 87,
+      "continuation_tokens": 100,
+      "continuation_through_eos_tokens": 99,
+      "prefix_matches": true
+    },
+    {
+      "index": 111,
+      "question": "mcpServers設定について簡単に説明してください。",
+      "full_tokens": 221,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 98,
+      "answer_text_tokens": 87,
+      "continuation_tokens": 100,
+      "continuation_through_eos_tokens": 99,
+      "prefix_matches": true
+    },
+    {
+      "index": 112,
+      "question": "「ツールの名前空間」とは何ですか？",
+      "full_tokens": 229,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 106,
+      "answer_text_tokens": 95,
+      "continuation_tokens": 108,
+      "continuation_through_eos_tokens": 107,
+      "prefix_matches": true
+    },
+    {
+      "index": 113,
+      "question": "ツールの名前空間について簡単に説明してください。",
+      "full_tokens": 229,
+      "prompt_tokens": 121,
+      "assistant_json_tokens": 106,
+      "answer_text_tokens": 95,
+      "continuation_tokens": 108,
+      "continuation_through_eos_tokens": 107,
+      "prefix_matches": true
+    },
+    {
+      "index": 114,
+      "question": "「fetchサーバー」とは何ですか？",
+      "full_tokens": 203,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 82,
+      "answer_text_tokens": 71,
+      "continuation_tokens": 84,
+      "continuation_through_eos_tokens": 83,
+      "prefix_matches": true
+    },
+    {
+      "index": 115,
+      "question": "fetchサーバーについて簡単に説明してください。",
+      "full_tokens": 203,
+      "prompt_tokens": 119,
+      "assistant_json_tokens": 82,
+      "answer_text_tokens": 71,
+      "continuation_tokens": 84,
+      "continuation_through_eos_tokens": 83,
+      "prefix_matches": true
+    },
+    {
+      "index": 116,
+      "question": "「損失関数」という用語について、用語集に基づいて説明してください。",
+      "full_tokens": 151,
+      "prompt_tokens": 128,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_tokens": 23,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 117,
+      "question": "「AdamW」という用語について、用語集に基づいて説明してください。",
+      "full_tokens": 150,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_tokens": 23,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 118,
+      "question": "「勾配降下法」という用語について、用語集に基づいて説明してください。",
+      "full_tokens": 153,
+      "prompt_tokens": 130,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_tokens": 23,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 119,
+      "question": "「交差エントロピー」という用語について、用語集に基づいて説明してください。",
+      "full_tokens": 154,
+      "prompt_tokens": 131,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_tokens": 23,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 120,
+      "question": "「バッチ正規化」という用語について、用語集に基づいて説明してください。",
+      "full_tokens": 152,
+      "prompt_tokens": 129,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_tokens": 23,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 121,
+      "question": "「ドロップアウト」という用語について、用語集に基づいて説明してください。",
+      "full_tokens": 151,
+      "prompt_tokens": 128,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_tokens": 23,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 122,
+      "question": "「早期終了」という用語について、用語集に基づいて説明してください。",
+      "full_tokens": 150,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_tokens": 23,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 123,
+      "question": "「勾配クリッピング」という用語について、用語集に基づいて説明してください。",
+      "full_tokens": 152,
+      "prompt_tokens": 129,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_tokens": 23,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    }
+  ],
+  "eval": [
+    {
+      "index": 0,
+      "id": "known_lora",
+      "category": "known",
+      "question": "用語集の「LoRA」について、定義と特徴を教えてください。",
+      "full_with_gold_tokens": 217,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 88,
+      "answer_text_tokens": 77,
+      "continuation_through_eos_tokens": 89,
+      "prefix_matches": true
+    },
+    {
+      "index": 1,
+      "id": "known_peft",
+      "category": "known",
+      "question": "用語集の「PEFT」について、定義と特徴を教えてください。",
+      "full_with_gold_tokens": 182,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 53,
+      "answer_text_tokens": 42,
+      "continuation_through_eos_tokens": 54,
+      "prefix_matches": true
+    },
+    {
+      "index": 2,
+      "id": "known_sft",
+      "category": "known",
+      "question": "用語集の「教師ありファインチューニング（SFT）」について、定義と特徴を教えてください。",
+      "full_with_gold_tokens": 184,
+      "prompt_tokens": 134,
+      "assistant_json_tokens": 48,
+      "answer_text_tokens": 37,
+      "continuation_through_eos_tokens": 49,
+      "prefix_matches": true
+    },
+    {
+      "index": 3,
+      "id": "known_quantization",
+      "category": "known",
+      "question": "用語集の「量子化」について、定義と特徴を教えてください。",
+      "full_with_gold_tokens": 178,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 49,
+      "answer_text_tokens": 38,
+      "continuation_through_eos_tokens": 50,
+      "prefix_matches": true
+    },
+    {
+      "index": 4,
+      "id": "known_learning_rate",
+      "category": "known",
+      "question": "用語集の「学習率」について、定義と特徴を教えてください。",
+      "full_with_gold_tokens": 177,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 48,
+      "answer_text_tokens": 37,
+      "continuation_through_eos_tokens": 49,
+      "prefix_matches": true
+    },
+    {
+      "index": 5,
+      "id": "known_overfitting",
+      "category": "known",
+      "question": "用語集の「過学習」について、定義と特徴を教えてください。",
+      "full_with_gold_tokens": 172,
+      "prompt_tokens": 127,
+      "assistant_json_tokens": 43,
+      "answer_text_tokens": 32,
+      "continuation_through_eos_tokens": 44,
+      "prefix_matches": true
+    },
+    {
+      "index": 6,
+      "id": "known_context_window",
+      "category": "known",
+      "question": "用語集の「コンテキストウィンドウ」について、定義と特徴を教えてください。",
+      "full_with_gold_tokens": 188,
+      "prompt_tokens": 130,
+      "assistant_json_tokens": 56,
+      "answer_text_tokens": 45,
+      "continuation_through_eos_tokens": 57,
+      "prefix_matches": true
+    },
+    {
+      "index": 7,
+      "id": "known_mcp",
+      "category": "known",
+      "question": "用語集の「MCP（Model Context Protocol）」について、定義と特徴を教えてください。",
+      "full_with_gold_tokens": 210,
+      "prompt_tokens": 131,
+      "assistant_json_tokens": 77,
+      "answer_text_tokens": 66,
+      "continuation_through_eos_tokens": 78,
+      "prefix_matches": true
+    },
+    {
+      "index": 8,
+      "id": "paraphrase_lora",
+      "category": "paraphrase",
+      "question": "事前に学んだ重みは動かさず、更新する部分を二つの小さな行列の積で表す方法について説明してください。",
+      "full_with_gold_tokens": 229,
+      "prompt_tokens": 139,
+      "assistant_json_tokens": 88,
+      "answer_text_tokens": 77,
+      "continuation_through_eos_tokens": 89,
+      "prefix_matches": true
+    },
+    {
+      "index": 9,
+      "id": "paraphrase_peft",
+      "category": "paraphrase",
+      "question": "元の巨大なモデルを丸ごと更新せず、一部だけ、または後から足した小さな部分だけを学ばせる方法の総称を説明してください。",
+      "full_with_gold_tokens": 199,
+      "prompt_tokens": 144,
+      "assistant_json_tokens": 53,
+      "answer_text_tokens": 42,
+      "continuation_through_eos_tokens": 54,
+      "prefix_matches": true
+    },
+    {
+      "index": 10,
+      "id": "paraphrase_sft",
+      "category": "paraphrase",
+      "question": "「指示チューニング」と呼ばれる方法を、この用語集の説明に沿って教えてください。",
+      "full_with_gold_tokens": 179,
+      "prompt_tokens": 129,
+      "assistant_json_tokens": 48,
+      "answer_text_tokens": 37,
+      "continuation_through_eos_tokens": 49,
+      "prefix_matches": true
+    },
+    {
+      "index": 11,
+      "id": "paraphrase_quantization",
+      "category": "paraphrase",
+      "question": "この用語集でいう「quantization」の意味と主な特徴を教えてください。",
+      "full_with_gold_tokens": 179,
+      "prompt_tokens": 128,
+      "assistant_json_tokens": 49,
+      "answer_text_tokens": 38,
+      "continuation_through_eos_tokens": 50,
+      "prefix_matches": true
+    },
+    {
+      "index": 12,
+      "id": "paraphrase_learning_rate",
+      "category": "paraphrase",
+      "question": "重みを一度更新するとき、どの程度動かすかを決める設定について、大きすぎる場合と小さすぎる場合の違いも説明してください。",
+      "full_with_gold_tokens": 190,
+      "prompt_tokens": 140,
+      "assistant_json_tokens": 48,
+      "answer_text_tokens": 37,
+      "continuation_through_eos_tokens": 49,
+      "prefix_matches": true
+    },
+    {
+      "index": 13,
+      "id": "paraphrase_overfitting",
+      "category": "paraphrase",
+      "question": "「オーバーフィッティング」とはどのような状態なのか、この用語集に沿って説明してください。",
+      "full_with_gold_tokens": 176,
+      "prompt_tokens": 131,
+      "assistant_json_tokens": 43,
+      "answer_text_tokens": 32,
+      "continuation_through_eos_tokens": 44,
+      "prefix_matches": true
+    },
+    {
+      "index": 14,
+      "id": "paraphrase_context_window",
+      "category": "paraphrase",
+      "question": "この用語集にある「コンテキスト長」が何を表すのか、説明してください。",
+      "full_with_gold_tokens": 188,
+      "prompt_tokens": 130,
+      "assistant_json_tokens": 56,
+      "answer_text_tokens": 45,
+      "continuation_through_eos_tokens": 57,
+      "prefix_matches": true
+    },
+    {
+      "index": 15,
+      "id": "paraphrase_mcp",
+      "category": "paraphrase",
+      "question": "AIアプリが外部の機能やデータ源に共通の方式で接続するための、公開された標準的な通信規約を説明してください。",
+      "full_with_gold_tokens": 218,
+      "prompt_tokens": 139,
+      "assistant_json_tokens": 77,
+      "answer_text_tokens": 66,
+      "continuation_through_eos_tokens": 78,
+      "prefix_matches": true
+    },
+    {
+      "index": 16,
+      "id": "out_of_glossary_dora",
+      "category": "out_of_glossary",
+      "question": "この用語集における「DoRA」の定義を教えてください。",
+      "full_with_gold_tokens": 148,
+      "prompt_tokens": 125,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 17,
+      "id": "out_of_glossary_adalora",
+      "category": "out_of_glossary",
+      "question": "この用語集における「AdaLoRA」の定義を教えてください。",
+      "full_with_gold_tokens": 149,
+      "prompt_tokens": 126,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 18,
+      "id": "out_of_glossary_dpo",
+      "category": "out_of_glossary",
+      "question": "この用語集における「DPO」の定義を教えてください。",
+      "full_with_gold_tokens": 148,
+      "prompt_tokens": 125,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 19,
+      "id": "out_of_glossary_rlhf",
+      "category": "out_of_glossary",
+      "question": "この用語集における「RLHF」の定義を教えてください。",
+      "full_with_gold_tokens": 148,
+      "prompt_tokens": 125,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 20,
+      "id": "out_of_glossary_rope",
+      "category": "out_of_glossary",
+      "question": "この用語集における「RoPE」の定義を教えてください。",
+      "full_with_gold_tokens": 148,
+      "prompt_tokens": 125,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 21,
+      "id": "out_of_glossary_knowledge_distillation",
+      "category": "out_of_glossary",
+      "question": "この用語集における「知識蒸留」の定義を教えてください。",
+      "full_with_gold_tokens": 149,
+      "prompt_tokens": 126,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 22,
+      "id": "out_of_glossary_mixture_of_experts",
+      "category": "out_of_glossary",
+      "question": "この用語集における「Mixture of Experts（MoE）」の定義を教えてください。",
+      "full_with_gold_tokens": 153,
+      "prompt_tokens": 130,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    },
+    {
+      "index": 23,
+      "id": "out_of_glossary_beam_search",
+      "category": "out_of_glossary",
+      "question": "この用語集における「ビームサーチ」の定義を教えてください。",
+      "full_with_gold_tokens": 149,
+      "prompt_tokens": 126,
+      "assistant_json_tokens": 21,
+      "answer_text_tokens": 10,
+      "continuation_through_eos_tokens": 22,
+      "prefix_matches": true
+    }
+  ],
+  "runner_regression_validation": {
+    "created_at": "2026-10-26T18:17:17.299676+00:00",
+    "model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "versions": {
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.3"
+    },
+    "validation_scope": "CPU cached tokenizer only; actual runner.tokenize_all; no Torch, model weights, GPU, training or generation.",
+    "before": {
+      "runner_sha256": "553e78875c4c08799938f9dc806fd974a3ba7ee03342e8ad07ffcc7d14ce509d",
+      "runner_function_source": "def tokenize_all(tokenizer: Any, train: list, cases: list) -> tuple[list, list, dict]:\n    \"\"\"学習と生成で実際に使うtoken列を作り、切り捨て前に全件を検査する。\"\"\"\n    training = []\n    evaluation = []\n    lengths = {\"max_seq_len\": CONFIG[\"max_seq_len\"], \"training\": [], \"evaluation\": []}\n    for index, row in enumerate(train, 1):\n        ids = tokenizer.apply_chat_template(row[\"messages\"], tokenize=True,\n                                            add_generation_prompt=False, enable_thinking=False)\n        training.append({\"input_ids\": ids, \"attention_mask\": [1] * len(ids)})\n        lengths[\"training\"].append({\"row\": index, \"tokens\": len(ids)})\n    for case in cases:\n        ids = tokenizer.apply_chat_template(build_messages(case[\"question\"]), tokenize=True,\n                                            add_generation_prompt=True, enable_thinking=False)\n        evaluation.append(ids)\n        lengths[\"evaluation\"].append({\"id\": case[\"id\"], \"input_tokens\": len(ids)})\n    too_long = ([f\"train行{x['row']}={x['tokens']}\" for x in lengths[\"training\"]\n                 if x[\"tokens\"] > CONFIG[\"max_seq_len\"]] +\n                [f\"eval {x['id']}={x['input_tokens']}\" for x in lengths[\"evaluation\"]\n                 if x[\"input_tokens\"] > CONFIG[\"max_seq_len\"]])\n    lengths[\"all_fit\"] = not too_long\n    lengths[\"exceeds_limit\"] = too_long\n    return training, evaluation, lengths\n",
+      "train_count": 124,
+      "eval_count": 24,
+      "training_input_ids": {
+        "type": "BatchEncoding",
+        "len": 2,
+        "keys": [
+          "input_ids",
+          "attention_mask"
+        ],
+        "first_iterated_values": [
+          "input_ids",
+          "attention_mask"
+        ],
+        "nested_input_ids_type": "list",
+        "nested_input_ids_len": 195
+      },
+      "evaluation_input_ids": {
+        "type": "BatchEncoding",
+        "len": 2,
+        "keys": [
+          "input_ids",
+          "attention_mask"
+        ],
+        "first_iterated_values": [
+          "input_ids",
+          "attention_mask"
+        ],
+        "nested_input_ids_type": "list",
+        "nested_input_ids_len": 127
+      },
+      "training_attention_mask": [
+        1,
+        1
+      ],
+      "train_reported_max": 2,
+      "eval_reported_max": 2,
+      "all_fit_reported": true,
+      "apply_chat_template_return_dict_default": "True"
+    },
+    "after": {
+      "checked_at": "2026-10-26T18:18:58.873704+00:00",
+      "runner_sha256": "ff208b357bf71951ba7da0f09a4f7e4f4cc9a80c53c3fbe1765a2c3db4158b9b",
+      "runner_function_source": "def tokenize_all(tokenizer: Any, train: list, cases: list) -> tuple[list, list, dict]:\n    \"\"\"学習と生成で実際に使うtoken列を作り、切り捨て前に全件を検査する。\"\"\"\n    training = []\n    evaluation = []\n    lengths = {\"max_seq_len\": CONFIG[\"max_seq_len\"], \"training\": [], \"evaluation\": []}\n    for index, row in enumerate(train, 1):\n        ids = tokenize_ids(tokenizer, row[\"messages\"], add_generation_prompt=False)\n        training.append({\"input_ids\": ids, \"attention_mask\": [1] * len(ids)})\n        lengths[\"training\"].append({\"row\": index, \"tokens\": len(ids)})\n    for case in cases:\n        ids = tokenize_ids(tokenizer, build_messages(case[\"question\"]), add_generation_prompt=True)\n        evaluation.append(ids)\n        lengths[\"evaluation\"].append({\"id\": case[\"id\"], \"input_tokens\": len(ids)})\n    too_long = ([f\"train行{x['row']}={x['tokens']}\" for x in lengths[\"training\"]\n                 if x[\"tokens\"] > CONFIG[\"max_seq_len\"]] +\n                [f\"eval {x['id']}={x['input_tokens']}\" for x in lengths[\"evaluation\"]\n                 if x[\"input_tokens\"] > CONFIG[\"max_seq_len\"]])\n    lengths[\"all_fit\"] = not too_long\n    lengths[\"exceeds_limit\"] = too_long\n    return training, evaluation, lengths\n",
+      "tokenize_ids_function_source": "def tokenize_ids(tokenizer: Any, messages: list[dict], *, add_generation_prompt: bool) -> list[int]:\n    # transformers 5.18 defaults to BatchEncoding. len(mapping) counts fields,\n    # so explicitly request a flat list and validate it before any GPU work.\n    ids = tokenizer.apply_chat_template(\n        messages, tokenize=True, return_dict=False, return_tensors=None,\n        add_generation_prompt=add_generation_prompt, enable_thinking=False,\n    )\n    if (not isinstance(ids, list) or not ids\n            or any(type(token) is not int or token < 0 for token in ids)):\n        raise ExperimentError(\n            \"tokenizerが一次元の整数token ID列を返していません。\"\n            \"return_dict=Falseとreturn_tensors=None、およびtokenizerの版を確認してください。\"\n        )\n    return ids\n",
+      "train_count": 124,
+      "eval_count": 24,
+      "train_reported_max": 229,
+      "eval_reported_max": 144,
+      "training_input_ids_type": "list",
+      "evaluation_input_ids_type": "list",
+      "all_train_flat_nonempty_nonnegative_python_int_nonbool": true,
+      "all_eval_flat_nonempty_nonnegative_python_int_nonbool": true,
+      "all_training_attention_masks_correct": true,
+      "train_tokens_equal_independent_render_and_encode": true,
+      "eval_tokens_equal_independent_render_and_encode": true,
+      "all_reported_lengths_equal_actual_tokens": true,
+      "train_over_512": 0,
+      "eval_over_512": 0,
+      "all_fit_reported": true,
+      "training_lengths": [
+        {
+          "row": 1,
+          "tokens": 195
+        },
+        {
+          "row": 2,
+          "tokens": 195
+        },
+        {
+          "row": 3,
+          "tokens": 215
+        },
+        {
+          "row": 4,
+          "tokens": 215
+        },
+        {
+          "row": 5,
+          "tokens": 184
+        },
+        {
+          "row": 6,
+          "tokens": 184
+        },
+        {
+          "row": 7,
+          "tokens": 191
+        },
+        {
+          "row": 8,
+          "tokens": 191
+        },
+        {
+          "row": 9,
+          "tokens": 180
+        },
+        {
+          "row": 10,
+          "tokens": 180
+        },
+        {
+          "row": 11,
+          "tokens": 163
+        },
+        {
+          "row": 12,
+          "tokens": 163
+        },
+        {
+          "row": 13,
+          "tokens": 178
+        },
+        {
+          "row": 14,
+          "tokens": 178
+        },
+        {
+          "row": 15,
+          "tokens": 166
+        },
+        {
+          "row": 16,
+          "tokens": 166
+        },
+        {
+          "row": 17,
+          "tokens": 198
+        },
+        {
+          "row": 18,
+          "tokens": 198
+        },
+        {
+          "row": 19,
+          "tokens": 156
+        },
+        {
+          "row": 20,
+          "tokens": 156
+        },
+        {
+          "row": 21,
+          "tokens": 193
+        },
+        {
+          "row": 22,
+          "tokens": 193
+        },
+        {
+          "row": 23,
+          "tokens": 176
+        },
+        {
+          "row": 24,
+          "tokens": 176
+        },
+        {
+          "row": 25,
+          "tokens": 189
+        },
+        {
+          "row": 26,
+          "tokens": 189
+        },
+        {
+          "row": 27,
+          "tokens": 181
+        },
+        {
+          "row": 28,
+          "tokens": 181
+        },
+        {
+          "row": 29,
+          "tokens": 173
+        },
+        {
+          "row": 30,
+          "tokens": 173
+        },
+        {
+          "row": 31,
+          "tokens": 182
+        },
+        {
+          "row": 32,
+          "tokens": 182
+        },
+        {
+          "row": 33,
+          "tokens": 160
+        },
+        {
+          "row": 34,
+          "tokens": 160
+        },
+        {
+          "row": 35,
+          "tokens": 174
+        },
+        {
+          "row": 36,
+          "tokens": 174
+        },
+        {
+          "row": 37,
+          "tokens": 183
+        },
+        {
+          "row": 38,
+          "tokens": 183
+        },
+        {
+          "row": 39,
+          "tokens": 181
+        },
+        {
+          "row": 40,
+          "tokens": 181
+        },
+        {
+          "row": 41,
+          "tokens": 171
+        },
+        {
+          "row": 42,
+          "tokens": 171
+        },
+        {
+          "row": 43,
+          "tokens": 191
+        },
+        {
+          "row": 44,
+          "tokens": 191
+        },
+        {
+          "row": 45,
+          "tokens": 164
+        },
+        {
+          "row": 46,
+          "tokens": 164
+        },
+        {
+          "row": 47,
+          "tokens": 198
+        },
+        {
+          "row": 48,
+          "tokens": 198
+        },
+        {
+          "row": 49,
+          "tokens": 177
+        },
+        {
+          "row": 50,
+          "tokens": 177
+        },
+        {
+          "row": 51,
+          "tokens": 174
+        },
+        {
+          "row": 52,
+          "tokens": 174
+        },
+        {
+          "row": 53,
+          "tokens": 209
+        },
+        {
+          "row": 54,
+          "tokens": 209
+        },
+        {
+          "row": 55,
+          "tokens": 173
+        },
+        {
+          "row": 56,
+          "tokens": 173
+        },
+        {
+          "row": 57,
+          "tokens": 205
+        },
+        {
+          "row": 58,
+          "tokens": 205
+        },
+        {
+          "row": 59,
+          "tokens": 170
+        },
+        {
+          "row": 60,
+          "tokens": 170
+        },
+        {
+          "row": 61,
+          "tokens": 169
+        },
+        {
+          "row": 62,
+          "tokens": 169
+        },
+        {
+          "row": 63,
+          "tokens": 159
+        },
+        {
+          "row": 64,
+          "tokens": 159
+        },
+        {
+          "row": 65,
+          "tokens": 164
+        },
+        {
+          "row": 66,
+          "tokens": 164
+        },
+        {
+          "row": 67,
+          "tokens": 168
+        },
+        {
+          "row": 68,
+          "tokens": 168
+        },
+        {
+          "row": 69,
+          "tokens": 173
+        },
+        {
+          "row": 70,
+          "tokens": 173
+        },
+        {
+          "row": 71,
+          "tokens": 193
+        },
+        {
+          "row": 72,
+          "tokens": 193
+        },
+        {
+          "row": 73,
+          "tokens": 196
+        },
+        {
+          "row": 74,
+          "tokens": 196
+        },
+        {
+          "row": 75,
+          "tokens": 192
+        },
+        {
+          "row": 76,
+          "tokens": 192
+        },
+        {
+          "row": 77,
+          "tokens": 176
+        },
+        {
+          "row": 78,
+          "tokens": 176
+        },
+        {
+          "row": 79,
+          "tokens": 193
+        },
+        {
+          "row": 80,
+          "tokens": 193
+        },
+        {
+          "row": 81,
+          "tokens": 198
+        },
+        {
+          "row": 82,
+          "tokens": 198
+        },
+        {
+          "row": 83,
+          "tokens": 194
+        },
+        {
+          "row": 84,
+          "tokens": 194
+        },
+        {
+          "row": 85,
+          "tokens": 195
+        },
+        {
+          "row": 86,
+          "tokens": 195
+        },
+        {
+          "row": 87,
+          "tokens": 203
+        },
+        {
+          "row": 88,
+          "tokens": 203
+        },
+        {
+          "row": 89,
+          "tokens": 181
+        },
+        {
+          "row": 90,
+          "tokens": 181
+        },
+        {
+          "row": 91,
+          "tokens": 179
+        },
+        {
+          "row": 92,
+          "tokens": 179
+        },
+        {
+          "row": 93,
+          "tokens": 195
+        },
+        {
+          "row": 94,
+          "tokens": 195
+        },
+        {
+          "row": 95,
+          "tokens": 195
+        },
+        {
+          "row": 96,
+          "tokens": 195
+        },
+        {
+          "row": 97,
+          "tokens": 190
+        },
+        {
+          "row": 98,
+          "tokens": 190
+        },
+        {
+          "row": 99,
+          "tokens": 187
+        },
+        {
+          "row": 100,
+          "tokens": 187
+        },
+        {
+          "row": 101,
+          "tokens": 197
+        },
+        {
+          "row": 102,
+          "tokens": 197
+        },
+        {
+          "row": 103,
+          "tokens": 191
+        },
+        {
+          "row": 104,
+          "tokens": 191
+        },
+        {
+          "row": 105,
+          "tokens": 214
+        },
+        {
+          "row": 106,
+          "tokens": 214
+        },
+        {
+          "row": 107,
+          "tokens": 206
+        },
+        {
+          "row": 108,
+          "tokens": 206
+        },
+        {
+          "row": 109,
+          "tokens": 211
+        },
+        {
+          "row": 110,
+          "tokens": 211
+        },
+        {
+          "row": 111,
+          "tokens": 221
+        },
+        {
+          "row": 112,
+          "tokens": 221
+        },
+        {
+          "row": 113,
+          "tokens": 229
+        },
+        {
+          "row": 114,
+          "tokens": 229
+        },
+        {
+          "row": 115,
+          "tokens": 203
+        },
+        {
+          "row": 116,
+          "tokens": 203
+        },
+        {
+          "row": 117,
+          "tokens": 151
+        },
+        {
+          "row": 118,
+          "tokens": 150
+        },
+        {
+          "row": 119,
+          "tokens": 153
+        },
+        {
+          "row": 120,
+          "tokens": 154
+        },
+        {
+          "row": 121,
+          "tokens": 152
+        },
+        {
+          "row": 122,
+          "tokens": 151
+        },
+        {
+          "row": 123,
+          "tokens": 150
+        },
+        {
+          "row": 124,
+          "tokens": 152
+        }
+      ],
+      "evaluation_lengths": [
+        {
+          "id": "known_lora",
+          "input_tokens": 127
+        },
+        {
+          "id": "known_peft",
+          "input_tokens": 127
+        },
+        {
+          "id": "known_sft",
+          "input_tokens": 134
+        },
+        {
+          "id": "known_quantization",
+          "input_tokens": 127
+        },
+        {
+          "id": "known_learning_rate",
+          "input_tokens": 127
+        },
+        {
+          "id": "known_overfitting",
+          "input_tokens": 127
+        },
+        {
+          "id": "known_context_window",
+          "input_tokens": 130
+        },
+        {
+          "id": "known_mcp",
+          "input_tokens": 131
+        },
+        {
+          "id": "paraphrase_lora",
+          "input_tokens": 139
+        },
+        {
+          "id": "paraphrase_peft",
+          "input_tokens": 144
+        },
+        {
+          "id": "paraphrase_sft",
+          "input_tokens": 129
+        },
+        {
+          "id": "paraphrase_quantization",
+          "input_tokens": 128
+        },
+        {
+          "id": "paraphrase_learning_rate",
+          "input_tokens": 140
+        },
+        {
+          "id": "paraphrase_overfitting",
+          "input_tokens": 131
+        },
+        {
+          "id": "paraphrase_context_window",
+          "input_tokens": 130
+        },
+        {
+          "id": "paraphrase_mcp",
+          "input_tokens": 139
+        },
+        {
+          "id": "out_of_glossary_dora",
+          "input_tokens": 125
+        },
+        {
+          "id": "out_of_glossary_adalora",
+          "input_tokens": 126
+        },
+        {
+          "id": "out_of_glossary_dpo",
+          "input_tokens": 125
+        },
+        {
+          "id": "out_of_glossary_rlhf",
+          "input_tokens": 125
+        },
+        {
+          "id": "out_of_glossary_rope",
+          "input_tokens": 125
+        },
+        {
+          "id": "out_of_glossary_knowledge_distillation",
+          "input_tokens": 126
+        },
+        {
+          "id": "out_of_glossary_mixture_of_experts",
+          "input_tokens": 130
+        },
+        {
+          "id": "out_of_glossary_beam_search",
+          "input_tokens": 126
+        }
+      ],
+      "dataset_sha256": "2a6640b47d51df67d45a7d09779b7685fe8514074af1720dfb074728328590ab",
+      "eval_cases_sha256": "9cd0dcc85f28d3f0b26b56b80218c57755e6e0cc979af8a1a97067dadcdbfd42"
+    },
+    "earlier_validation_limitation": "The prior independent token length check used apply_chat_template(tokenize=False) and then tokenizer(text,add_special_tokens=False)[input_ids]; it did not execute runner.tokenize_all and therefore did not cover the default return_dict behavior of tokenize=True.",
+    "status": "completed_cpu_runner_regression_validation",
+    "conclusion": "The original actual runner counted BatchEncoding keys (2) instead of token IDs; the repaired actual runner emits flat integer token ID lists for all 148 items, with max training length 229 and max evaluation input length 144. This verifies tokenization only and does not assert model execution success."
+  }
+}
