@@ -1,0 +1,24 @@
+{"id": "known_lora", "category": "known", "question": "用語集の「LoRA」について、定義と特徴を教えてください。"}
+{"id": "known_peft", "category": "known", "question": "用語集の「PEFT」について、定義と特徴を教えてください。"}
+{"id": "known_sft", "category": "known", "question": "用語集の「教師ありファインチューニング（SFT）」について、定義と特徴を教えてください。"}
+{"id": "known_quantization", "category": "known", "question": "用語集の「量子化」について、定義と特徴を教えてください。"}
+{"id": "known_learning_rate", "category": "known", "question": "用語集の「学習率」について、定義と特徴を教えてください。"}
+{"id": "known_overfitting", "category": "known", "question": "用語集の「過学習」について、定義と特徴を教えてください。"}
+{"id": "known_context_window", "category": "known", "question": "用語集の「コンテキストウィンドウ」について、定義と特徴を教えてください。"}
+{"id": "known_mcp", "category": "known", "question": "用語集の「MCP（Model Context Protocol）」について、定義と特徴を教えてください。"}
+{"id": "paraphrase_lora", "category": "paraphrase", "question": "事前に学んだ重みは動かさず、更新する部分を二つの小さな行列の積で表す方法について説明してください。"}
+{"id": "paraphrase_peft", "category": "paraphrase", "question": "元の巨大なモデルを丸ごと更新せず、一部だけ、または後から足した小さな部分だけを学ばせる方法の総称を説明してください。"}
+{"id": "paraphrase_sft", "category": "paraphrase", "question": "「指示チューニング」と呼ばれる方法を、この用語集の説明に沿って教えてください。"}
+{"id": "paraphrase_quantization", "category": "paraphrase", "question": "この用語集でいう「quantization」の意味と主な特徴を教えてください。"}
+{"id": "paraphrase_learning_rate", "category": "paraphrase", "question": "重みを一度更新するとき、どの程度動かすかを決める設定について、大きすぎる場合と小さすぎる場合の違いも説明してください。"}
+{"id": "paraphrase_overfitting", "category": "paraphrase", "question": "「オーバーフィッティング」とはどのような状態なのか、この用語集に沿って説明してください。"}
+{"id": "paraphrase_context_window", "category": "paraphrase", "question": "この用語集にある「コンテキスト長」が何を表すのか、説明してください。"}
+{"id": "paraphrase_mcp", "category": "paraphrase", "question": "AIアプリが外部の機能やデータ源に共通の方式で接続するための、公開された標準的な通信規約を説明してください。"}
+{"id": "out_of_glossary_dora", "category": "out_of_glossary", "question": "この用語集における「DoRA」の定義を教えてください。"}
+{"id": "out_of_glossary_adalora", "category": "out_of_glossary", "question": "この用語集における「AdaLoRA」の定義を教えてください。"}
+{"id": "out_of_glossary_dpo", "category": "out_of_glossary", "question": "この用語集における「DPO」の定義を教えてください。"}
+{"id": "out_of_glossary_rlhf", "category": "out_of_glossary", "question": "この用語集における「RLHF」の定義を教えてください。"}
+{"id": "out_of_glossary_rope", "category": "out_of_glossary", "question": "この用語集における「RoPE」の定義を教えてください。"}
+{"id": "out_of_glossary_knowledge_distillation", "category": "out_of_glossary", "question": "この用語集における「知識蒸留」の定義を教えてください。"}
+{"id": "out_of_glossary_mixture_of_experts", "category": "out_of_glossary", "question": "この用語集における「Mixture of Experts（MoE）」の定義を教えてください。"}
+{"id": "out_of_glossary_beam_search", "category": "out_of_glossary", "question": "この用語集における「ビームサーチ」の定義を教えてください。"}

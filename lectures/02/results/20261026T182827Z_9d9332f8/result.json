@@ -1,0 +1,277 @@
+{
+  "status": "completed",
+  "completed": true,
+  "executed_training_myself": true,
+  "started_at": "2026-10-26T18:28:38+00:00",
+  "finished_at": "2026-10-26T18:34:54+00:00",
+  "stage": "completed",
+  "method": "LoRA（量子化なし・float32）",
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "dtype": "float32",
+    "quantization": null,
+    "seed": 42,
+    "num_train_epochs": 3,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 2,
+    "max_seq_len": 512,
+    "max_new_tokens": 256,
+    "gen": {
+      "do_sample": false
+    },
+    "enable_thinking": false,
+    "eos_policy": "tokenizer.eos_token_id_explicit_in_both_evaluations",
+    "fp16": false,
+    "bf16": false,
+    "packing": false,
+    "loss_scope": "full_sequence",
+    "completion_only_loss": false,
+    "assistant_only_loss": false,
+    "lr_scheduler_type": "cosine",
+    "logging_steps": 10,
+    "save_steps": 10,
+    "save_total_limit": 2,
+    "evaluation_context": "system_and_question_only_no_glossary"
+  },
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "accelerate": "1.15.0",
+    "datasets": "5.1.0",
+    "torch": "2.11.0+cu130",
+    "python": "3.13.16"
+  },
+  "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "git_commit": null,
+  "runner_sha256": "ff208b357bf71951ba7da0f09a4f7e4f4cc9a80c53c3fbe1765a2c3db4158b9b",
+  "gpu": "Tesla T4",
+  "gpu_total_memory_bytes": 15637086208,
+  "dataset_sha256": "2a6640b47d51df67d45a7d09779b7685fe8514074af1720dfb074728328590ab",
+  "raw_dataset_sha256": "af6ac820e0331d8d9af376e3b4cccff1b31f2f0f8bb462839752e3282bbd1081",
+  "eval_cases_sha256": "9cd0dcc85f28d3f0b26b56b80218c57755e6e0cc979af8a1a97067dadcdbfd42",
+  "glossary_sha256": "4b614a08a754bf6cf714f905f185ad5ef22e0957c7e64434a4b418edb68c2319",
+  "manifest_sha256": "8eb36f307c665e5f275fd0896b790d9a9979bd27cc8eb8724aa8a1c8baf16f40",
+  "training_examples": 124,
+  "positive_examples": 116,
+  "negative_examples": 8,
+  "eval_examples": 24,
+  "manifest": {
+    "schema_version": 1,
+    "glossary_version": "2026-draft-1",
+    "glossary_terms": 58,
+    "source_records": 116,
+    "train_records": 124,
+    "positive_records": 116,
+    "negative_records": 8,
+    "negative_training_terms": [
+      "損失関数",
+      "AdamW",
+      "勾配降下法",
+      "交差エントロピー",
+      "バッチ正規化",
+      "ドロップアウト",
+      "早期終了",
+      "勾配クリッピング"
+    ],
+    "evaluation_records": 24,
+    "evaluation_by_category": {
+      "known": 8,
+      "paraphrase": 8,
+      "out_of_glossary": 8
+    },
+    "system": "あなたはAIエンジニアリング実践講座2026の用語集回答係です。講座の用語集に基づき、必ずJSONで答えてください。形式は {\"answer\": 文字列, \"needs_review\": 真偽値} です。用語集の登録語については定義を説明し、needs_reviewをfalseにしてください。用語集に根拠があると確認できない質問には、answerに「確認が必要」と書き、needs_reviewをtrueにしてください。",
+    "input_policy": "Before/after: same system plus question; no glossary text. Search: same question plus source glossary.",
+    "format_metric": "JSON object containing exactly answer:str and needs_review:bool; same schema as the lecture.",
+    "content_metric": "Strict boolean needs_review match and all case-sensitive must_include substrings; keyword proxy, not complete factuality.",
+    "split_policy": "Evaluation questions are disjoint from train; known concepts are in training. Unknown evaluation terms differ from negative training terms.",
+    "source_glossary_sha256": "4b614a08a754bf6cf714f905f185ad5ef22e0957c7e64434a4b418edb68c2319",
+    "source_script_sha256": "d048bac47de883d9c97ab9f24e912f54e086c508d509820866d6483d2a74635e",
+    "raw_dataset_sha256": "af6ac820e0331d8d9af376e3b4cccff1b31f2f0f8bb462839752e3282bbd1081",
+    "train_dataset_sha256": "2a6640b47d51df67d45a7d09779b7685fe8514074af1720dfb074728328590ab",
+    "eval_cases_sha256": "9cd0dcc85f28d3f0b26b56b80218c57755e6e0cc979af8a1a97067dadcdbfd42",
+    "provenance": "Original make_sft_dataset.py output retained; definitions wrapped in JSON, a shared system added, eight disjoint review examples appended."
+  },
+  "before": {
+    "label": "before",
+    "n": 24,
+    "format_rate": 0.0,
+    "content_rate": 0.0,
+    "both_rate": 0.0,
+    "review_accuracy": 0.625,
+    "unsupported_assertions": 7,
+    "over_refusals": 0,
+    "by_category": {
+      "known": {
+        "n": 8,
+        "format_rate": 0.0,
+        "content_rate": 0.0,
+        "both_rate": 0.0,
+        "review_accuracy": 1.0,
+        "unsupported_assertions": 0,
+        "over_refusals": 0
+      },
+      "paraphrase": {
+        "n": 8,
+        "format_rate": 0.0,
+        "content_rate": 0.0,
+        "both_rate": 0.0,
+        "review_accuracy": 0.875,
+        "unsupported_assertions": 0,
+        "over_refusals": 0
+      },
+      "out_of_glossary": {
+        "n": 8,
+        "format_rate": 0.0,
+        "content_rate": 0.0,
+        "both_rate": 0.0,
+        "review_accuracy": 0.0,
+        "unsupported_assertions": 7,
+        "over_refusals": 0
+      }
+    },
+    "seconds": 109.87661213000001,
+    "generation_seconds": 109.82482511600006,
+    "truncated_n": 2
+  },
+  "after": {
+    "label": "after",
+    "n": 24,
+    "format_rate": 1.0,
+    "content_rate": 0.125,
+    "both_rate": 0.125,
+    "review_accuracy": 0.5833333333333334,
+    "unsupported_assertions": 8,
+    "over_refusals": 2,
+    "by_category": {
+      "known": {
+        "n": 8,
+        "format_rate": 1.0,
+        "content_rate": 0.375,
+        "both_rate": 0.375,
+        "review_accuracy": 1.0,
+        "unsupported_assertions": 0,
+        "over_refusals": 0
+      },
+      "paraphrase": {
+        "n": 8,
+        "format_rate": 1.0,
+        "content_rate": 0.0,
+        "both_rate": 0.0,
+        "review_accuracy": 0.75,
+        "unsupported_assertions": 0,
+        "over_refusals": 2
+      },
+      "out_of_glossary": {
+        "n": 8,
+        "format_rate": 1.0,
+        "content_rate": 0.0,
+        "both_rate": 0.0,
+        "review_accuracy": 0.0,
+        "unsupported_assertions": 8,
+        "over_refusals": 0
+      }
+    },
+    "seconds": 91.05540223499997,
+    "generation_seconds": 91.01068689099998,
+    "truncated_n": 0
+  },
+  "search": {
+    "label": "search",
+    "n": 24,
+    "format_rate": 1.0,
+    "content_rate": 0.8333333333333334,
+    "both_rate": 0.8333333333333334,
+    "review_accuracy": 0.8333333333333334,
+    "unsupported_assertions": 0,
+    "over_refusals": 4,
+    "by_category": {
+      "known": {
+        "n": 8,
+        "format_rate": 1.0,
+        "content_rate": 1.0,
+        "both_rate": 1.0,
+        "review_accuracy": 1.0,
+        "unsupported_assertions": 0,
+        "over_refusals": 0
+      },
+      "paraphrase": {
+        "n": 8,
+        "format_rate": 1.0,
+        "content_rate": 0.5,
+        "both_rate": 0.5,
+        "review_accuracy": 0.5,
+        "unsupported_assertions": 0,
+        "over_refusals": 4
+      },
+      "out_of_glossary": {
+        "n": 8,
+        "format_rate": 1.0,
+        "content_rate": 1.0,
+        "both_rate": 1.0,
+        "review_accuracy": 1.0,
+        "unsupported_assertions": 0,
+        "over_refusals": 0
+      }
+    },
+    "seconds": 0.010679075000098237
+  },
+  "train": {
+    "status": "completed",
+    "completed": true,
+    "planned_optimizer_steps": 48,
+    "global_step": 48,
+    "epoch": 3.0,
+    "seconds": 170.50272872799997,
+    "final_logged_loss": 0.57005615234375,
+    "final_logged_loss_step": 40,
+    "train_loss": 1.0285063584645588,
+    "trainable_parameters": 6389760,
+    "total_parameters": 758782784,
+    "trainable_fraction": 0.008421066126877227,
+    "metrics": {
+      "train_runtime": 170.1543,
+      "train_samples_per_second": 2.186,
+      "train_steps_per_second": 0.282,
+      "total_flos": 227547044003328.0,
+      "train_loss": 1.0285063584645588,
+      "entropy": 0.668942129611969,
+      "num_tokens": 68571.0,
+      "mean_token_accuracy": 0.8957774082819621,
+      "epoch": 3.0
+    }
+  },
+  "regressed_ids": [],
+  "tokenizer_special_tokens": {
+    "eos_token_id": 248046,
+    "pad_token_id": 248044
+  },
+  "token_lengths": {
+    "all_fit": true,
+    "train_max": 229,
+    "eval_input_max": 144
+  },
+  "base_memory_bytes": 3009572352,
+  "wall_seconds": 376.15730605600015,
+  "source_bundle": {
+    "sha256": "c177ffda63e5650f5920a9afaa1df1b6351d3f21e9311325c3d13631e04e897b",
+    "manifest": "source_bundle_manifest.json",
+    "base_repository_commit": "f9ab3d5288ba5d4cd6fecd5e30515192a5cb05b6",
+    "git_commit": null
+  }
+}

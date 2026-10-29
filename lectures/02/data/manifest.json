@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "glossary_version": "2026-draft-1",
+  "glossary_terms": 58,
+  "source_records": 116,
+  "train_records": 124,
+  "positive_records": 116,
+  "negative_records": 8,
+  "negative_training_terms": [
+    "損失関数",
+    "AdamW",
+    "勾配降下法",
+    "交差エントロピー",
+    "バッチ正規化",
+    "ドロップアウト",
+    "早期終了",
+    "勾配クリッピング"
+  ],
+  "evaluation_records": 24,
+  "evaluation_by_category": {
+    "known": 8,
+    "paraphrase": 8,
+    "out_of_glossary": 8
+  },
+  "system": "あなたはAIエンジニアリング実践講座2026の用語集回答係です。講座の用語集に基づき、必ずJSONで答えてください。形式は {\"answer\": 文字列, \"needs_review\": 真偽値} です。用語集の登録語については定義を説明し、needs_reviewをfalseにしてください。用語集に根拠があると確認できない質問には、answerに「確認が必要」と書き、needs_reviewをtrueにしてください。",
+  "input_policy": "Before/after: same system plus question; no glossary text. Search: same question plus source glossary.",
+  "format_metric": "JSON object containing exactly answer:str and needs_review:bool; same schema as the lecture.",
+  "content_metric": "Strict boolean needs_review match and all case-sensitive must_include substrings; keyword proxy, not complete factuality.",
+  "split_policy": "Evaluation questions are disjoint from train; known concepts are in training. Unknown evaluation terms differ from negative training terms.",
+  "source_glossary_sha256": "4b614a08a754bf6cf714f905f185ad5ef22e0957c7e64434a4b418edb68c2319",
+  "source_script_sha256": "d048bac47de883d9c97ab9f24e912f54e086c508d509820866d6483d2a74635e",
+  "raw_dataset_sha256": "af6ac820e0331d8d9af376e3b4cccff1b31f2f0f8bb462839752e3282bbd1081",
+  "train_dataset_sha256": "2a6640b47d51df67d45a7d09779b7685fe8514074af1720dfb074728328590ab",
+  "eval_cases_sha256": "9cd0dcc85f28d3f0b26b56b80218c57755e6e0cc979af8a1a97067dadcdbfd42",
+  "provenance": "Original make_sft_dataset.py output retained; definitions wrapped in JSON, a shared system added, eight disjoint review examples appended."
+}
