@@ -1,0 +1,4 @@
+/home/vscode/.cache/uv/archive-v0/w3u8f_xyZezpojuA/lib/python3.12/site-packages/google/adk/cli/cli.py:351: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  credential_service = InMemoryCredentialService()
+/home/vscode/.cache/uv/archive-v0/w3u8f_xyZezpojuA/lib/python3.12/site-packages/google/adk/auth/credential_service/in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__()

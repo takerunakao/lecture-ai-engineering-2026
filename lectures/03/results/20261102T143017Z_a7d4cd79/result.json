@@ -1,0 +1,449 @@
+{
+  "schema_version": 1,
+  "run_id": "20261102T143017Z_a7d4cd79",
+  "started_at": "2026-11-02T14:30:17.034096+00:00",
+  "status": "failed",
+  "completed": false,
+  "model_execution_attempted": true,
+  "model": "gemini-3.5-flash-lite",
+  "versions": {
+    "python": "3.12.16",
+    "pydantic-ai-slim": "2.57.0",
+    "google-genai": "2.31.0",
+    "google-adk": "2.13.0",
+    "httpx": "0.28.1"
+  },
+  "preflight": {
+    "status": "ready",
+    "model": "gemini-3.5-flash-lite",
+    "versions": {
+      "python": "3.12.16",
+      "pydantic-ai-slim": "2.57.0",
+      "google-genai": "2.31.0",
+      "google-adk": "2.13.0",
+      "httpx": "0.28.1"
+    },
+    "instructions_sha256": "60ba3a414fcfda67929a1dc4ba965c39d3596832e733c0d13da0353d2d7e6568",
+    "tools": [
+      "search_glossary",
+      "get_lecture_summary"
+    ]
+  },
+  "git_commit": "bb810b0f851ef7d45f339d9a5e27df15927ca03e",
+  "git_branch": "lec03",
+  "source_sha256": {
+    "adk_agent/glossary_agent/__init__.py": "148d2ae36db6cc6a1363334da22ea89ea3f8c5c4f4e2b26c060454bf6f6e0068",
+    "adk_agent/glossary_agent/agent.py": "f572326a766b9b27f505b10e2b3aa0f1551a47874f7806d08b08c057d67d167f",
+    "scripts/run_day3_comparison.py": "f9cad3ecc1c73669b45aac44cd60ec3f2768202638fdaac7f49f7fbf85ac87d3",
+    "scripts/day3_pydantic_worker.py": "05dd4a9c59a3306342af04b4c7ab334e779d42f554089dc493a5f9a243854aeb",
+    "scripts/day3_trace.py": "da01713468bb0b6f1a50819150ea0e37f97ea7948e07a04a068a0df92ee26f6e",
+    "scripts/day3_report.py": "d11bb3b9785734b5e9a8bf42000512d4b80d0a8e2605973a5f4357145a3bc024",
+    "scripts/prepare_day3_answer.py": "29d78970165669212dddda2bfe8d4a2c4839c474fce51fccc3b04b64725e0c35",
+    "tests/test_day3_trace.py": "010dd55a87c0f74f413202377ce4b05ac52f59f789f70294ee2b04f9605211f6",
+    "tests/test_day3_submission.py": "38b156df9bfb1b8d855fdb1dfb441d6688267f61d008412d7a5642e2f58a0d51",
+    "lectures/03/comparison_cases.json": "12708a048691fdb1b0b29f6255986734acfd954d83d9f0413306523e12a2cd7b",
+    "lectures/03/README_day3.md": "a509ad6ee6b4318e90ce32122085073d5a903417b98a8946c382a57775df62ee",
+    "app/agent.py": "d0ecb032ae371e807bd1c7516577edecff4af02a4c459eb2b575373fc484a057",
+    "app/tools.py": "76fe15419707e59d437d9f834b013a6b9c4c56ae7ad964a25dd94154abf9323e",
+    "app/config.py": "1d589149a7421f2fb75c9dec3f49bf1cb9f1640d82104a9511ce91edc4c4cdaa",
+    "data/glossary.json": "4b614a08a754bf6cf714f905f185ad5ef22e0957c7e64434a4b418edb68c2319",
+    "data/lectures/01.md": "73d619cd233e8288b45cc720c6bb5776494f895ed9f3822946bfb4daa3086de0",
+    "data/lectures/02.md": "11de4b334b3936e398165f318cb441d6825d599d29b9046153b9a89c8d4cd531",
+    "data/lectures/03.md": "9add2cadedccb8aa3613bc9cfa6ef5d7705b5e01249e5f6eb32dead8efafb92e",
+    "pyproject.toml": "43c5ff6945ba1f56fb01c803c1c45494631dc8aecc430bd51857a03fb72c3260",
+    "uv.lock": "dd3e258db9c737f0bd5975bfe1465984ac7c831daa8076c62e34b47835d986ff"
+  },
+  "cases": [
+    {
+      "id": "q1",
+      "question": "AIE2026の講座の宿題にある「3レベル」とは何ですか？",
+      "observe": "用語集を確認し、基礎・実装・発展と、どれか1つで完了することを説明できたか。関連回は第1回。"
+    },
+    {
+      "id": "q2",
+      "question": "LoRAとQLoRAの違いは？",
+      "observe": "小さな行列を学習するLoRAと、ベース重みの量子化も利用するQLoRAを区別できたか。関連回は第2回。LoRAの検索だけでQLoRAの定義も返り得るので、検索回数だけで良否を決めない。"
+    },
+    {
+      "id": "q3",
+      "question": "第3回では何を学びますか？",
+      "observe": "get_lecture_summary(lecture=3)の利用と、モデル・ループ・ツールという説明を確認する。"
+    },
+    {
+      "id": "q4",
+      "question": "DoRAとは何ですか？この講座での扱いも教えてください。",
+      "observe": "用語集にないことを明示できたか。根拠なしに講座での採用や講義回を断定しなかったか。一般知識を加える場合、用語集の根拠と区別したか。"
+    }
+  ],
+  "runs": [
+    {
+      "question_id": "q1",
+      "question": "AIE2026の講座の宿題にある「3レベル」とは何ですか？",
+      "framework": "pydantic_ai",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "--with",
+        "google-adk==2.13.0",
+        "python",
+        "scripts/day3_pydantic_worker.py",
+        "AIE2026の講座の宿題にある「3レベル」とは何ですか？"
+      ],
+      "status": "completed",
+      "final_answer": "AIE2026の宿題における「3レベル」とは、宿題の難易度や取り組み方の構成のことです。\n\n具体的には以下の3つの段階に分かれており、ご自身の学習状況や目標に合わせて**どれか1つ**に取り組めば、その回の宿題は完了となります。\n\n1. **基礎**：講義内容の確認\n2. **実装**：自分でコードを書く\n3. **発展**：調査や試行\n\nなお、原則として宿題の採点は行われませんので、ご自身のペースに合わせて無理のないレベルから取り組んでみてくださいね。\n\n関係する回：第1回",
+      "tool_calls": [
+        {
+          "name": "search_glossary",
+          "arguments": {
+            "query": "3レベル"
+          },
+          "call_id": "call_496204"
+        }
+      ],
+      "tool_results": [
+        {
+          "name": "search_glossary",
+          "result": "[{\"term\": \"宿題の3レベル\", \"lecture\": 1, \"definition\": \"AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。\", \"related\": [\"answer-md\"]}]",
+          "call_id": "call_496204"
+        }
+      ],
+      "usage": {
+        "requests": 2,
+        "input_tokens": 783,
+        "output_tokens": 156,
+        "model_response_events": 2,
+        "measurement_note": "requests は Pydantic AI RunUsage.requests。model_response_events は取得した ModelResponse 数。input_tokens/output_tokens は RunUsage 報告値だが、全応答に正の値があり完了した場合のみ採用。SDKは欠測を0に変換するため、0は実測0と区別できず null とする。output_tokens は思考トークンを含み得るため、ADK candidatesTokenCount と同じ定義ではない。"
+      },
+      "errors": [],
+      "events": [
+        {
+          "parts": [
+            {
+              "tool_name": "search_glossary",
+              "args": {
+                "query": "3レベル"
+              },
+              "tool_call_id": "call_496204",
+              "tool_kind": null,
+              "id": null,
+              "provider_name": "google",
+              "provider_details": {
+                "thought_signature": "EmAKXgFpFH0TzF327m1qRpmajn2XvLTwbeprSfc2qEZPglQZS4cZjhp64QhndNDkbhSZY83+1C9dAJ8NlInKH9ZzYq6U1w8LJcxJRpuD5Fs+WPXRL0Ce0bz/h+2wtuKvJGk="
+              },
+              "part_kind": "tool-call"
+            }
+          ],
+          "usage": {
+            "input_tokens": 329,
+            "cache_write_tokens": 0,
+            "cache_read_tokens": 0,
+            "output_tokens": 18,
+            "input_audio_tokens": 0,
+            "cache_audio_read_tokens": 0,
+            "output_audio_tokens": 0,
+            "audio_seconds": 0.0,
+            "details": {
+              "text_prompt_tokens": 329
+            },
+            "cost": "0.0001437",
+            "input_text_tokens": 329
+          },
+          "model_name": "gemini-3.5-flash-lite",
+          "timestamp": "2026-11-02T14:30:42.986040Z",
+          "kind": "response",
+          "provider_name": "google",
+          "provider_url": "https://generativelanguage.googleapis.com/",
+          "provider_details": {
+            "finish_reason": "STOP",
+            "service_tier": "standard"
+          },
+          "provider_response_id": "fZ7oatOHPLmIjuMPxeW7-Ag",
+          "finish_reason": "stop",
+          "run_id": "01a19cab-1a5b-72b8-b087-f3ce981662ec",
+          "conversation_id": "01a19cab-1a5b-72b8-b087-f3cfe725e5b7",
+          "metadata": null,
+          "workspace_ref": null,
+          "failed_attempts": null,
+          "state": "complete"
+        },
+        {
+          "parts": [
+            {
+              "tool_name": "search_glossary",
+              "content": "[{\"term\": \"宿題の3レベル\", \"lecture\": 1, \"definition\": \"AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。\", \"related\": [\"answer-md\"]}]",
+              "tool_call_id": "call_496204",
+              "tool_kind": null,
+              "metadata": null,
+              "timestamp": "2026-11-02T14:30:42.992253Z",
+              "outcome": "success",
+              "part_kind": "tool-return"
+            }
+          ],
+          "timestamp": "2026-11-02T14:30:42.992706Z",
+          "kind": "request",
+          "run_id": "01a19cab-1a5b-72b8-b087-f3ce981662ec",
+          "conversation_id": "01a19cab-1a5b-72b8-b087-f3cfe725e5b7",
+          "metadata": null,
+          "state": "complete"
+        },
+        {
+          "parts": [
+            {
+              "content": "AIE2026の宿題における「3レベル」とは、宿題の難易度や取り組み方の構成のことです。\n\n具体的には以下の3つの段階に分かれており、ご自身の学習状況や目標に合わせて**どれか1つ**に取り組めば、その回の宿題は完了となります。\n\n1. **基礎**：講義内容の確認\n2. **実装**：自分でコードを書く\n3. **発展**：調査や試行\n\nなお、原則として宿題の採点は行われませんので、ご自身のペースに合わせて無理のないレベルから取り組んでみてくださいね。\n\n関係する回：第1回",
+              "id": null,
+              "provider_name": "google",
+              "provider_details": {
+                "thought_signature": "EmAKXgFpFH0T2gAnAMVyY8TO+d6Dd/CYRqWJMJbvdWgZUK3RSikJRo68kKqKbIeeINhC1bttj8FJ+/nibMFQNa9ww3hk84nmY9i97bBh69P3nqlFkAJRG3Ylh1gsJ7SeF1M="
+              },
+              "part_kind": "text"
+            }
+          ],
+          "usage": {
+            "input_tokens": 454,
+            "cache_write_tokens": 0,
+            "cache_read_tokens": 0,
+            "output_tokens": 138,
+            "input_audio_tokens": 0,
+            "cache_audio_read_tokens": 0,
+            "output_audio_tokens": 0,
+            "audio_seconds": 0.0,
+            "details": {
+              "text_prompt_tokens": 454
+            },
+            "cost": "0.0004812",
+            "input_text_tokens": 454
+          },
+          "model_name": "gemini-3.5-flash-lite",
+          "timestamp": "2026-11-02T14:30:48.287053Z",
+          "kind": "response",
+          "provider_name": "google",
+          "provider_url": "https://generativelanguage.googleapis.com/",
+          "provider_details": {
+            "finish_reason": "STOP",
+            "service_tier": "standard"
+          },
+          "provider_response_id": "k57oaqCOEvzx4-EP8Ibd4Qk",
+          "finish_reason": "stop",
+          "run_id": "01a19cab-1a5b-72b8-b087-f3ce981662ec",
+          "conversation_id": "01a19cab-1a5b-72b8-b087-f3cfe725e5b7",
+          "metadata": null,
+          "workspace_ref": null,
+          "failed_attempts": null,
+          "state": "complete"
+        }
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 31.642,
+      "timed_out": false,
+      "interrupted": false
+    },
+    {
+      "question_id": "q1",
+      "question": "AIE2026の講座の宿題にある「3レベル」とは何ですか？",
+      "framework": "adk",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "--with",
+        "google-adk==2.13.0",
+        "adk",
+        "run",
+        "--jsonl",
+        "--in_memory",
+        "--timeout",
+        "120s",
+        "--log_level",
+        "error",
+        "adk_agent/glossary_agent",
+        "AIE2026の講座の宿題にある「3レベル」とは何ですか？"
+      ],
+      "status": "failed",
+      "final_answer": "",
+      "tool_calls": [],
+      "tool_results": [],
+      "usage": {
+        "requests": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "model_response_events": 0,
+        "measurement_note": "ADK requests は未取得。model_response_events は partial でない role=model の出力イベント数であり、HTTP/APIリクエスト数ではない。input_tokens/output_tokens はその全イベントの usageMetadata が各項目について揃う場合だけ合計する。candidatesTokenCount は思考トークン等を含む総出力トークンの代用ではない。"
+      },
+      "errors": [
+        "ADK complete final answer was not found.",
+        "プロセス終了コード=143, timeout=True, interrupted=False"
+      ],
+      "events": [
+        {
+          "kind": "stdout",
+          "text": "Help improve the ADK (CLI and Web UI) by allowing Google to collect pseudonymized usage data?"
+        },
+        {
+          "kind": "stdout",
+          "text": "What is collected: Names of subcommands and flags (no user-provided values or arguments), execution metrics (duration, exit state), environment specs (OS, Python version), and aggregated Web UI feature interactions. No personally identifiable information (PII) is collected."
+        },
+        {
+          "kind": "stdout",
+          "text": "This is OFF by default. You can opt out at any time using the 'adk telemetry disable' command or Web UI user settings."
+        },
+        {
+          "kind": "stdout",
+          "text": "Enable telemetry? [Y/n]: "
+        }
+      ],
+      "returncode": 143,
+      "elapsed_seconds": 150.084,
+      "timed_out": true,
+      "interrupted": false
+    },
+    {
+      "question_id": "q2",
+      "question": "LoRAとQLoRAの違いは？",
+      "framework": "adk",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "--with",
+        "google-adk==2.13.0",
+        "adk",
+        "run",
+        "--jsonl",
+        "--in_memory",
+        "--timeout",
+        "120s",
+        "--log_level",
+        "error",
+        "adk_agent/glossary_agent",
+        "LoRAとQLoRAの違いは？"
+      ],
+      "status": "not_started",
+      "final_answer": "",
+      "tool_calls": [],
+      "tool_results": [],
+      "usage": {},
+      "errors": []
+    },
+    {
+      "question_id": "q2",
+      "question": "LoRAとQLoRAの違いは？",
+      "framework": "pydantic_ai",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "--with",
+        "google-adk==2.13.0",
+        "python",
+        "scripts/day3_pydantic_worker.py",
+        "LoRAとQLoRAの違いは？"
+      ],
+      "status": "not_started",
+      "final_answer": "",
+      "tool_calls": [],
+      "tool_results": [],
+      "usage": {},
+      "errors": []
+    },
+    {
+      "question_id": "q3",
+      "question": "第3回では何を学びますか？",
+      "framework": "pydantic_ai",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "--with",
+        "google-adk==2.13.0",
+        "python",
+        "scripts/day3_pydantic_worker.py",
+        "第3回では何を学びますか？"
+      ],
+      "status": "not_started",
+      "final_answer": "",
+      "tool_calls": [],
+      "tool_results": [],
+      "usage": {},
+      "errors": []
+    },
+    {
+      "question_id": "q3",
+      "question": "第3回では何を学びますか？",
+      "framework": "adk",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "--with",
+        "google-adk==2.13.0",
+        "adk",
+        "run",
+        "--jsonl",
+        "--in_memory",
+        "--timeout",
+        "120s",
+        "--log_level",
+        "error",
+        "adk_agent/glossary_agent",
+        "第3回では何を学びますか？"
+      ],
+      "status": "not_started",
+      "final_answer": "",
+      "tool_calls": [],
+      "tool_results": [],
+      "usage": {},
+      "errors": []
+    },
+    {
+      "question_id": "q4",
+      "question": "DoRAとは何ですか？この講座での扱いも教えてください。",
+      "framework": "adk",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "--with",
+        "google-adk==2.13.0",
+        "adk",
+        "run",
+        "--jsonl",
+        "--in_memory",
+        "--timeout",
+        "120s",
+        "--log_level",
+        "error",
+        "adk_agent/glossary_agent",
+        "DoRAとは何ですか？この講座での扱いも教えてください。"
+      ],
+      "status": "not_started",
+      "final_answer": "",
+      "tool_calls": [],
+      "tool_results": [],
+      "usage": {},
+      "errors": []
+    },
+    {
+      "question_id": "q4",
+      "question": "DoRAとは何ですか？この講座での扱いも教えてください。",
+      "framework": "pydantic_ai",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "--with",
+        "google-adk==2.13.0",
+        "python",
+        "scripts/day3_pydantic_worker.py",
+        "DoRAとは何ですか？この講座での扱いも教えてください。"
+      ],
+      "status": "not_started",
+      "final_answer": "",
+      "tool_calls": [],
+      "tool_results": [],
+      "usage": {},
+      "errors": []
+    }
+  ],
+  "finished_at": "2026-11-02T14:33:18.784378+00:00"
+}
