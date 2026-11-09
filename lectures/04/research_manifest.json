@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "research_date_jst": "2026-11-10",
+  "assignment_level": "Advanced",
+  "assignment_kind": "benchmark research report",
+  "model_api_executed": false,
+  "benchmark_solution_implemented": false,
+  "benchmark_tests_executed": false,
+  "ai_assistance": [
+    "source discovery",
+    "problem summarization",
+    "public annotation aggregation",
+    "analysis and writing"
+  ],
+  "course_reference": {
+    "repository": "matsuolab/lecture-ai-engineering-2026",
+    "commit": "bc41dfac203acff0706b7da10d09339d91830bfe",
+    "problem_path": "lectures/04/problem.md",
+    "rubric_path": "data/eval/rubric.md"
+  },
+  "dataset": {
+    "name": "princeton-nlp/SWE-bench_Verified",
+    "url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified",
+    "config": "default",
+    "split": "test",
+    "metadata_revision_before": "c104f840cc67f8b6eec6f759ebc8b2693d585d4a",
+    "metadata_revision_after": "c104f840cc67f8b6eec6f759ebc8b2693d585d4a",
+    "unique_rows_read": 500,
+    "gated": false,
+    "retrieval_method": "Official Dataset Viewer rows API, 5 pages of 100 rows. The API was not revision-pinned; metadata revisions before and after were checked to match.",
+    "source_metadata_url": "https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified"
+  },
+  "selected_problem_count": 5,
+  "selection_method": "Purposive selection of four scientific-computing projects and one web framework; no claim of representativeness or measured solving performance.",
+  "selected_problems": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "repo": "astropy/astropy",
+      "canonical_row_index": 0,
+      "canonical_base_commit": "d16bfe05a744909de4b27f5875fe0d4ed41ce607",
+      "problem_statement_sha256": "c01334ec1b21a089c650cf2e7b96ab974469076bf1260d23885799e1f0a7551f",
+      "problem_statement_chars": 1246,
+      "issue_url": "https://github.com/astropy/astropy/issues/12906",
+      "pr_url": "https://github.com/astropy/astropy/pull/12907"
+    },
+    {
+      "instance_id": "sympy__sympy-11618",
+      "repo": "sympy/sympy",
+      "canonical_row_index": 425,
+      "canonical_base_commit": "360290c4c401e386db60723ddb0109ed499c9f6e",
+      "problem_statement_sha256": "7eec6e997311bf1014a07659710714c0a891fd0e5b9d58dadb31a83b23746330",
+      "problem_statement_chars": 252,
+      "issue_url": "https://github.com/sympy/sympy/issues/11617",
+      "pr_url": "https://github.com/sympy/sympy/pull/11618"
+    },
+    {
+      "instance_id": "scikit-learn__scikit-learn-12585",
+      "repo": "scikit-learn/scikit-learn",
+      "canonical_row_index": 354,
+      "canonical_base_commit": "bfc4a566423e036fbdc9fb02765fd893e4860c85",
+      "problem_statement_sha256": "0bd52ce53c9612da5326a0742940720ef9520cb2c0f8893e2e49f1513706b4a6",
+      "problem_statement_chars": 1422,
+      "issue_url": "https://github.com/scikit-learn/scikit-learn/issues/12521",
+      "pr_url": "https://github.com/scikit-learn/scikit-learn/pull/12585"
+    },
+    {
+      "instance_id": "matplotlib__matplotlib-26113",
+      "repo": "matplotlib/matplotlib",
+      "canonical_row_index": 282,
+      "canonical_base_commit": "5ca694b38d861c0e24cd8743753427dda839b90b",
+      "problem_statement_sha256": "dd3266ec4a7c3e8cc3d0b7ccb0bd76d85b33814bedadceb4277d755db08479ca",
+      "problem_statement_chars": 9424,
+      "issue_url": "https://github.com/matplotlib/matplotlib/issues/12926",
+      "pr_url": "https://github.com/matplotlib/matplotlib/pull/26113"
+    },
+    {
+      "instance_id": "django__django-12125",
+      "repo": "django/django",
+      "canonical_row_index": 71,
+      "canonical_base_commit": "89d41cba392b759732ba9f1db4ff29ed47da6a56",
+      "problem_statement_sha256": "d466ceb9860bfb421821c9bab47b1fa2c11295523365b174ea0b2a5a3b125a65",
+      "problem_statement_chars": 1589,
+      "issue_url": "https://code.djangoproject.com/ticket/27914",
+      "pr_url": "https://github.com/django/django/pull/12125"
+    }
+  ],
+  "annotation_audit": {
+    "source_url": "https://cdn.openai.com/introducing-swe-bench-verified/swe-bench-annotation-results.zip",
+    "zip_sha256": "b9297c31f6c2ef712218b5bb2830bd47a7f600dedf6b927191d0170177266ab9",
+    "ensemble_csv_filename": "ensembled_annotations_public.csv",
+    "ensemble_csv_sha256": "d2743650f6b2d31eeaf6d9952c3766b022930964d9d9452fc35cfbeb1967827c",
+    "reviewed_instances": 1699,
+    "filter_out_true": 1160,
+    "filter_out_false": 539,
+    "excluded_rate_unrounded": 0.6827545615067687,
+    "final_verified_instances": 500,
+    "all_verified_ids_within_passed_filter_ids": true,
+    "passed_but_not_selected": 39,
+    "raw_annotation_rows": 5097,
+    "distinct_annotator_ids": 93,
+    "every_instance_has_three_distinct_annotators": true,
+    "filter_rule": "underspecified >= 2 OR false_negative >= 2 OR other_major_issues == 1",
+    "filter_rule_agrees_with_filter_out_all_rows": true,
+    "aggregation_note": "Counts were recomputed from published CSVs. The 39 passed-but-not-selected instances are not counted as rejected for quality."
+  },
+  "later_audit_context": {
+    "source_url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+    "publication_date": "2026-02-23",
+    "audited_instances": 138,
+    "reported_material_issue_percentage": 59.4,
+    "selection_condition": "Tasks that OpenAI o3 did not consistently solve over 64 independent runs.",
+    "reviewers_per_case_minimum": 6,
+    "generalization_note": "The 138 instances form a selected failure-prone subset; 59.4% is not an estimate of the defect rate for all 500 instances."
+  },
+  "self_assessment_scope": "Tentative difficulty assessments based on reading the problem statements; no assertion of personally implemented or successful fixes."
+}
