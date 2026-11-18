@@ -1,0 +1,55 @@
+{
+  "purpose": "人手確認用。検索と回答生成にはこの正解候補を渡していません。",
+  "pages": [
+    {
+      "page_id": "lec02-main-p051",
+      "document_id": "lec02-main",
+      "lecture": 2,
+      "document_title": "基盤モデルの仕組み",
+      "section": "選んだモデルを、いつ・どう直すか",
+      "title": "PEFT ：モデル全体ではなく、一部だけを学習する",
+      "page": 51,
+      "content": "4/4 　選んだモデルを、いつ・どう直すか\nPEFT ：モデル全体ではなく、一部だけを学習する\n全パラメータを更新する FT は重い。少数のパラメータだけを学習する方法（ PEFT ）が主流になった\n出典：各手法の原論文（ Houlsby+ 2019 ／ Li & Liang 2021 ／ Lester+ 2021 ／ Hu+ 2022 ）。 Hugging Face PEFT ライブラリで利用可能\nどこを学習するか（ Dettmers et al. Fig.1 ）\nFull Fine-Tuning\n全パラメータを更新。メモリも保存容量も大きい\nLoRA\n本体は固定し、小さな追加部分だけ更新\nQLoRA\nさらに本体を 4bit に圧縮して省メモリ\nPEFT の主な方法\nアダプタ\n層の間に小さな層を差し込み、そこだけ学習\nHoulsby et al. 2019\nプレフィックス／プロンプトチューニング\n入力の前に学習できる「仮想トークン」を付ける\nLi & Liang 2021 ／ Lester et al. 2021\nLoRA\n重みの変化を、細長い 2 つの小さな行列の積（低ランク）で表して学習\nHu et al. 2022 　← 現在最も広く使われる\nQLoRA\nLoRA ＋元の重みを 4bit に圧縮。さらに少ないメモリで\nDettmers et al. 2023 　← 次のスライド\n© Matsuo-Iwasawa Lab, The University of Tokyo 51\n\n【図表・画像内の補足文字起こし】\n比較図：Full Finetuning (No Adapters)／LoRA／QLoRA。Optimizer、Adapters、16-bit Transformer、4-bit Transformer。"
+    },
+    {
+      "page_id": "lec02-main-p052",
+      "document_id": "lec02-main",
+      "lecture": 2,
+      "document_title": "基盤モデルの仕組み",
+      "section": "選んだモデルを、いつ・どう直すか",
+      "title": "LoRA と QLoRA ：大きなモデルも GPU 1 台で調整できる",
+      "page": 52,
+      "content": "4/4 　選んだモデルを、いつ・どう直すか\nLoRA と QLoRA ：大きなモデルも GPU 1 台で調整できる\n元の重みは固定し、小さな「差分」だけを学習する（ LoRA ）。さらに元の重みを 4bit に圧縮する（ QLoRA ）\n出典： E. J. Hu et al. 「 LoRA 」（ ICLR 2022 ）／ T. Dettmers et al. 「 QLoRA 」（ NeurIPS 2023 ）。演習では transformers ・ peft ・ bitsandbytes ・ TRL を使用\nLoRA （ Hu et al. Fig.1 ）： A と B だけを学習する\n青：元の重み W\n固定して学習しない。 QLoRA では\n4bit （数値を粗く保存）にして\n約 1/4 。 7B なら約 4GB\n橙：小さな行列 A ・ B\nこれだけを学習。細長い 2 つの\n行列の積で、変化分を表す（低ランク）\nイメージ\n本体はそのままに、薄い「付箋」を\n書き足す。学習するのは全体の\n1% 未満にもできる\n650 億\nパラメータのモデルを\n48GB GPU 1 台\nで微調整（ QLoRA 論文）\n• Colab の GPU （例： 16GB ）でも、\n数十億パラメータ級なら調整できる。今日の\n演習はこれ\n• データの準備・評価・運用の手間は別にかかる\n© Matsuo-Iwasawa Lab, The University of Tokyo 52\n\n【図表・画像内の補足文字起こし】\nLoRA図：Pretrained Weights W ∈ R^(d×d)、x、h、A ~ N(0, σ²)、B = 0、d、r。"
+    },
+    {
+      "page_id": "lec03-main-p013",
+      "document_id": "lec03-main",
+      "lecture": 3,
+      "document_title": "AIエージェント",
+      "section": "Part 2 エージェントを組み立てる",
+      "title": "メモリ",
+      "page": 13,
+      "content": "メモリ\nコンテキストは有限である。新しいチャットで始めたときに、過去のコンテキストを参照するシステムが欲しい。\n出典）説明用の模式図。保存先（ファイル、データベースなど）と探し方（全件、検索など）は実装により異なる。\n©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO\n過去のチャット\n昨日：テストの修正を依頼\n・pytest で実行したい\n・原因は range の範囲だった\n・「コメントは日本語で」と\n言われた\n①\n書き出す\nメモリ（外の保存先）\nテストは pytest で実行する\nrange の境界に注意\nコメントは日本語で書く\n②\n戻す\n新しいコンテキスト\nメモリ：pytest で実行／\nコメントは日本語\nメッセージ：別のテストも\n落ちたので直して\n覚えている ≠ 学習。"
+    },
+    {
+      "page_id": "lec03-main-p039",
+      "document_id": "lec03-main",
+      "lecture": 3,
+      "document_title": "AIエージェント",
+      "section": "Part 6 メモリ",
+      "title": "実装例：Claude",
+      "page": 39,
+      "content": "実装例：Claude\nClaude の例。1つのセッションの中で効くものと、セッションをまたいで効くものがある\n出典）Anthropic「Compaction overview」「Memory tool」（Claude Platform Docs）、「How Claude remembers your project」（Claude Code Docs）、いずれも 2026/10/21 確認。Packer et al.（2023）\narXiv:2310.08560。\n©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO\nコンテキストの中（同じセッション）\nコンパクション（履歴を要約して詰める）\n古い履歴を、要約に置き換える。\n外の保存先（セッションをまたぐ）\nメモリツール（Claude API）\n/memories のファイルを、モデルが要求し\nアプリが自分の保存先で実行する\n自動メモリ（Claude Code）\nClaude が自分でメモを書き、\n毎回先頭200行か25KBまで読む\n書き出す\n必要に応じて\nエージェントが読み戻\nす\n書いたメモリは次回のコンテキストに入る。中身を人が確かめる。 外から書き込まれる危険もある。"
+    },
+    {
+      "page_id": "lec03-main-p040",
+      "document_id": "lec03-main",
+      "lecture": 3,
+      "document_title": "AIエージェント",
+      "section": "Part 6 メモリ",
+      "title": "実装例：OpenClaw",
+      "page": 40,
+      "content": "実装例：OpenClaw\n毎晩過去のやり取りを読み直し、残すものだけを長期メモリに移す。\n出典）OpenClaw Docs「Memory overview」「Memory architecture」。2026/10 時点。各段階の説明は要約。\n©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO\n日々のメモ（memory/日付.md）\n10/24 のメモ 10/25 のメモ 10/26 のメモ\n毎晩、自動で\n見直し（dreaming）\n1 集める：重複を除いて、候補を並べる\n2 見比べる：何度も出てくるテーマを探す\n3 移す：基準を超えたものだけ残す\nMEMORY.md（長期メモリ） 次の会話の最初に読み込む\n人が手で整理しなくていい\n全部は残さない\n一度きりの調べものは、日々のメモに残るだけ。長期メ\nモリが膨らまない。"
+    }
+  ]
+}

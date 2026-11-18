@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "run_id": "20261117T234818Z_3c60667f",
+  "started_at_utc": "2026-11-17T23:48:18+00:00",
+  "started_at_jst": "2026-11-18T08:48:18+09:00",
+  "model": "gemini-3.5-flash-lite",
+  "embedding_model": "gemini-embedding-001",
+  "embedding_dimensions": 768,
+  "repeats": 2,
+  "top_k": 5,
+  "temperature": 0,
+  "max_output_tokens": 4096,
+  "pause_seconds": 10,
+  "timeout_seconds": 120,
+  "corpus_document_ids": [
+    "lec01-main",
+    "lec02-main",
+    "lec03-main"
+  ],
+  "corpus_pages": 214,
+  "upstream_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+  "source_data": {
+    "upstream_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "files": [
+      {
+        "name": "lectures.json",
+        "sha256": "f6022c177ec1b5575b56d21307a5ae2aa09c586047398a17e1e4b86a56e99dce",
+        "size_bytes": 463652
+      },
+      {
+        "name": "graph.json",
+        "sha256": "6d32f92f97470d9febbdb076face22b9c74eb2c57d4950d3ed31978c57007e81",
+        "size_bytes": 324952
+      },
+      {
+        "name": "tree.json",
+        "sha256": "8d16e7f6a6b5c4864591fbfe0ac55598f6117ff226e4b1e2bd47b0401be79dfc",
+        "size_bytes": 89154
+      },
+      {
+        "name": "index.sqlite3",
+        "sha256": "600d7a3633d84c21b6b26d511f9cd701d7dbee32bfe8eab0fd6fee3affb0f69e",
+        "size_bytes": 1069056
+      }
+    ]
+  },
+  "code_fingerprints": {
+    "day5_lab/__init__.py": "490d542ca347c8563c4a05a33d660c15ff768a95b4db88b4a96c3091b50fbd1b",
+    "day5_lab/experiment.py": "587d1fe7fb2032266d93d452416ecf07d686b5cff3a7fe61fba64795b022dbfd",
+    "day5_lab/gemini.py": "f0b3088f511183fda665b400d73f2cfa57d4ec9181b7803de7f672d13d3f5ea7",
+    "day5_lab/io_utils.py": "f65321ee9612b57b0ae5109321542e2b1fab05a9e4b1963a20c714300f92e84d",
+    "day5_lab/reporting.py": "1155a25d340618d3e4b2f9464e656235a0eaca9ab8ee9933e5c85cb7b980619d",
+    "day5_lab/retrieval.py": "f1cc281eb0882dd1148b7cf1ca260f8df2188e95bfb4df233a58e3a6bcae59ad",
+    "scripts/run_day5_comparison.py": "dc92fad5164d231e5d6c1f373059e2b272e9d1a5f61acca5db00aae96bff7a29",
+    "scripts/prepare_day5_answer.py": "052144f279965a5eb298fa266290ac9ffae384299b239be9eb63354926d151c5",
+    "lectures/05/questions.json": "1cce9ea1fe01d099aba984a0154489d8eb902bb885f8fbb62078caf21f845047",
+    "lectures/05/source_manifest.json": "73a71997ae8660b335cec91dd184e79162edd09942914525e946b9443bd74e09"
+  },
+  "git_head_before_run": "9070a231fb24701ec68393ee81f10b2a898512c8",
+  "python": "3.12.16",
+  "implementation_version": "1.0.0",
+  "generation_protocol": "One deterministic retrieval followed by one generation request per trial. No model-directed query rewriting or agent tool loop.",
+  "timing_protocol": "Each trial independently embeds the same raw question; total includes embedding, retrieval and generation; excludes setup and inter-trial pause.",
+  "execution_order": "For each question the method order alternates; repetition 2 reverses repetition 1.",
+  "cost_scope": "Paid Standard generation list-price estimate; excludes query embedding and index construction; actual invoices/free tier may differ.",
+  "cases": [
+    {
+      "id": "q1",
+      "kind": "single_page",
+      "question": "第2回の説明では、LoRAは何を固定し、何を学習しますか。QLoRAはLoRAに何を加えますか。講義資料の根拠ページを示して説明してください。",
+      "reference_groups": [
+        {
+          "label": "LoRAとQLoRAの学習対象",
+          "page_ids": [
+            "lec02-main-p051",
+            "lec02-main-p052"
+          ],
+          "expected_fact": "LoRAは元の重みを固定し、低ランクの小さな追加行列を学習する。QLoRAは元の重みの4bit量子化を組み合わせ、必要メモリを抑える。"
+        }
+      ],
+      "answer_criteria": [
+        "元のモデルの重みを固定することと、小さな追加行列・低ランクの差分を学習することを区別する。",
+        "QLoRAが元の重みを4bitに量子化することを説明する。",
+        "元の重みをすべて学習する、または単に入力文を保存する方法だとは説明しない。",
+        "回答の根拠となる講義回とページを引用する。"
+      ],
+      "expected_behavior": "一つのページで必要な根拠を満たせる質問として、固定対象・学習対象・QLoRAの追加要素を簡潔に説明する。参照ページを増やすこと自体は加点しない。",
+      "reference_note": "主な確認箇所は第2回PDF p.52。教材JSONのp.51にも同じ主要事実があるため、p.51とp.52を同じORグループにした。この参照集合は網羅的な正解ページ一覧ではない。"
+    },
+    {
+      "id": "q2",
+      "kind": "multi_page",
+      "question": "第3回の講義資料では、コンパクションとセッションをまたぐメモリはどう違いますか。また、紹介されたOpenClawの例では、日々のメモはすべて長期メモリに移されますか。それぞれの根拠ページを示してください。",
+      "reference_groups": [
+        {
+          "label": "コンパクションの対象",
+          "page_ids": [
+            "lec03-main-p039"
+          ],
+          "expected_fact": "コンパクションは同じセッション内の古い履歴を要約に置き換え、コンテキストを詰める。"
+        },
+        {
+          "label": "セッションをまたぐ外部メモリ",
+          "page_ids": [
+            "lec03-main-p013",
+            "lec03-main-p039"
+          ],
+          "expected_fact": "メモリは情報をファイルやデータベースなどの外部保存先に書き出し、新しい会話のコンテキストへ読み戻す。"
+        },
+        {
+          "label": "日々のメモからの選別",
+          "page_ids": [
+            "lec03-main-p040"
+          ],
+          "expected_fact": "紹介されたOpenClawの例は日々のメモを見直し、基準を超えたものだけを長期メモリに残す。全てを移すわけではない。"
+        }
+      ],
+      "answer_criteria": [
+        "同じセッションの履歴の要約と、セッションをまたぐ外部保存・読み戻しを区別する。",
+        "紹介されたOpenClawの例では全てを長期メモリに移さず、選別して残すことを説明する。",
+        "一度きりの調べもの等が日々のメモにとどまるという例、または基準を満たすものだけ移すという手順で選別の意味を説明する。",
+        "資料に記載された実装例の説明として述べ、全ての製品・実装が同じ動作をするとは一般化しない。",
+        "コンパクションと長期メモリへの選別について、それぞれを支えるページを引用する。"
+      ],
+      "expected_behavior": "関連用語が似ていても、同じセッションの処理・外部保存・長期保存への選別を混同せず、複数の根拠をつなぐ。",
+      "reference_note": "教材JSONの第3回PDF p.13、p.39、p.40を事前に確認した。p.39はコンパクションと外部メモリの両方を説明するため、同じページが複数グループを満たしてよい。ORはグループ内、ANDはグループ間。"
+    },
+    {
+      "id": "q3",
+      "kind": "cross_lecture",
+      "question": "第2回のLoRAと、第3回のセッションをまたぐメモリは、どちらも過去の情報を活かすように見えます。この二つは、何を変更・保存する点で異なりますか。モデルで固定するものと学習するもの、外に保存して次の会話へ戻すものを分け、両方の講義から根拠を示して説明してください。",
+      "reference_groups": [
+        {
+          "label": "LoRAの固定パラメータと学習パラメータ",
+          "page_ids": [
+            "lec02-main-p051",
+            "lec02-main-p052"
+          ],
+          "expected_fact": "LoRAは元の重みを固定し、重みの変化を表す低ランクの追加行列を学習する。"
+        },
+        {
+          "label": "外部保存から次のコンテキストへの読み戻し",
+          "page_ids": [
+            "lec03-main-p013",
+            "lec03-main-p039"
+          ],
+          "expected_fact": "セッションをまたぐメモリは情報を外部保存し、必要な内容を次の会話のコンテキストへ戻す仕組みである。"
+        }
+      ],
+      "answer_criteria": [
+        "LoRAで元の重みは固定し、追加の低ランク行列を学習することを説明する。",
+        "外部メモリで保存するのはメモ等の情報であり、それを後から会話の入力・コンテキストへ戻すことを説明する。",
+        "追加パラメータを学習することと、情報を保存・再提示することの違いを明示する。",
+        "メモリを読み戻しただけでモデルの重みが学習・更新されたとは述べない。",
+        "第2回と第3回の両方から、比較に使った事実を支えるページを引用する。"
+      ],
+      "expected_behavior": "別の講義に分かれた根拠を統合し、パラメータの学習とコンテキストへの情報追加の違いを説明する。",
+      "reference_note": "第2回PDF p.51・52と第3回PDF p.13・39を本文確認して設定した。p.13には『覚えている≠学習』の区別が明示され、p.39も外部保存した情報を次のコンテキストへ戻す流れを示す。比較の結論自体は両側の根拠を合わせた説明として人が判定する。"
+    },
+    {
+      "id": "q4",
+      "kind": "unanswerable",
+      "question": "今回この環境で実行した講義資料RAGの実測平均応答時間と正答率は、それぞれいくつですか。講義資料だけを根拠に教えてください。",
+      "reference_groups": [],
+      "answer_criteria": [
+        "講義資料だけでは、今回の環境における実測平均応答時間と正答率を確認できないと明示する。",
+        "今回の測定値として秒数・割合を作り出さない。講義内の例や他の環境の数値を今回の実測値に置き換えない。",
+        "必要に応じて、今回の実行ログ、評価対象、正答判定などを確認する必要があると説明する。"
+      ],
+      "expected_behavior": "必要な測定ログが資料にないため、求められた数値を断定せず、確認できる範囲と追加で必要な情報を伝える。一般的なRAGの説明を引用して測定値の根拠としない。",
+      "reference_note": "演習資料が挙げる『資料にない質問』に対応する。期待する根拠ページの集合は空なので、参照グループ取得率は計算対象外とし、1.0や合格へ自動変換しない。安全な回答保留は引用なしでも妥当となり得る。"
+    }
+  ],
+  "task_plan": [
+    {
+      "task_id": "r1_q1_baseline",
+      "repeat": 1,
+      "case_id": "q1",
+      "method": "baseline"
+    },
+    {
+      "task_id": "r1_q1_graph",
+      "repeat": 1,
+      "case_id": "q1",
+      "method": "graph"
+    },
+    {
+      "task_id": "r1_q2_graph",
+      "repeat": 1,
+      "case_id": "q2",
+      "method": "graph"
+    },
+    {
+      "task_id": "r1_q2_baseline",
+      "repeat": 1,
+      "case_id": "q2",
+      "method": "baseline"
+    },
+    {
+      "task_id": "r1_q3_baseline",
+      "repeat": 1,
+      "case_id": "q3",
+      "method": "baseline"
+    },
+    {
+      "task_id": "r1_q3_graph",
+      "repeat": 1,
+      "case_id": "q3",
+      "method": "graph"
+    },
+    {
+      "task_id": "r1_q4_graph",
+      "repeat": 1,
+      "case_id": "q4",
+      "method": "graph"
+    },
+    {
+      "task_id": "r1_q4_baseline",
+      "repeat": 1,
+      "case_id": "q4",
+      "method": "baseline"
+    },
+    {
+      "task_id": "r2_q1_graph",
+      "repeat": 2,
+      "case_id": "q1",
+      "method": "graph"
+    },
+    {
+      "task_id": "r2_q1_baseline",
+      "repeat": 2,
+      "case_id": "q1",
+      "method": "baseline"
+    },
+    {
+      "task_id": "r2_q2_baseline",
+      "repeat": 2,
+      "case_id": "q2",
+      "method": "baseline"
+    },
+    {
+      "task_id": "r2_q2_graph",
+      "repeat": 2,
+      "case_id": "q2",
+      "method": "graph"
+    },
+    {
+      "task_id": "r2_q3_graph",
+      "repeat": 2,
+      "case_id": "q3",
+      "method": "graph"
+    },
+    {
+      "task_id": "r2_q3_baseline",
+      "repeat": 2,
+      "case_id": "q3",
+      "method": "baseline"
+    },
+    {
+      "task_id": "r2_q4_baseline",
+      "repeat": 2,
+      "case_id": "q4",
+      "method": "baseline"
+    },
+    {
+      "task_id": "r2_q4_graph",
+      "repeat": 2,
+      "case_id": "q4",
+      "method": "graph"
+    }
+  ],
+  "configuration_sha256": "984097ccac54723a12f3cb2650d56c8c29f4a954e01930694c24ecd55d3acd7a"
+}
