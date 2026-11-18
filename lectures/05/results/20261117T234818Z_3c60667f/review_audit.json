@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "run_id": "20261117T234818Z_3c60667f",
+  "review_tool_version": "day5-final-review-1.0.0",
+  "records_sha256": "cbecf0e2164b92571c3ba7722dcbc0b151a6a756bc086d3da05f36afb950e380",
+  "original_record_metrics_unchanged": true,
+  "note": "引用一覧は回答本文を照合した補足。取得本文内のID一致と、引用内容の意味的裏付けは別の判定。",
+  "methods": {
+    "baseline": {
+      "completed": 8,
+      "answer_pass": 6,
+      "answer_fail": 2,
+      "citation_support_verdicts": {
+        "pass": 7,
+        "unsure": 1
+      },
+      "abstention_pass": 2,
+      "mean_seconds": 4.584591128500108,
+      "median_seconds": 4.48607106050008,
+      "min_seconds": 3.4556760729997222,
+      "max_seconds": 5.697696337000252,
+      "mean_embedding_seconds": 1.374248432999991,
+      "mean_retrieval_seconds": 0.014889316249877993,
+      "mean_generation_seconds": 3.1834486633750316,
+      "input_tokens": 17268,
+      "output_tokens": 1016,
+      "estimated_generation_usd": 0.0077204,
+      "reference_groups_hit": 12,
+      "reference_groups_total": 12,
+      "automatic_citation_count": 14,
+      "reviewed_citation_count": 19
+    },
+    "graph": {
+      "completed": 8,
+      "answer_pass": 6,
+      "answer_fail": 2,
+      "citation_support_verdicts": {
+        "pass": 8
+      },
+      "abstention_pass": 2,
+      "mean_seconds": 4.58186962987503,
+      "median_seconds": 4.672378048999917,
+      "min_seconds": 3.540573996999683,
+      "max_seconds": 5.446031454000149,
+      "mean_embedding_seconds": 1.7610021133749,
+      "mean_retrieval_seconds": 0.02689484874997561,
+      "mean_generation_seconds": 2.7849434092499337,
+      "input_tokens": 17268,
+      "output_tokens": 1256,
+      "estimated_generation_usd": 0.008320399999999999,
+      "reference_groups_hit": 12,
+      "reference_groups_total": 12,
+      "automatic_citation_count": 15,
+      "reviewed_citation_count": 20
+    }
+  },
+  "page_comparisons": [
+    {
+      "repeat": 1,
+      "case_id": "q1",
+      "baseline_pages": [
+        "lec02-main-p052",
+        "lec02-main-p051",
+        "lec02-main-p060",
+        "lec02-main-p061",
+        "lec02-main-p047"
+      ],
+      "graph_pages": [
+        "lec02-main-p052",
+        "lec02-main-p051",
+        "lec02-main-p060",
+        "lec02-main-p061",
+        "lec02-main-p047"
+      ],
+      "same_set": true,
+      "same_order": true,
+      "new_graph_pages": [],
+      "graph_candidates": 11,
+      "same_generation_request": true
+    },
+    {
+      "repeat": 1,
+      "case_id": "q2",
+      "baseline_pages": [
+        "lec03-main-p040",
+        "lec03-main-p039",
+        "lec03-main-p065",
+        "lec03-main-p038",
+        "lec03-main-p041"
+      ],
+      "graph_pages": [
+        "lec03-main-p040",
+        "lec03-main-p065",
+        "lec03-main-p039",
+        "lec03-main-p038",
+        "lec03-main-p041"
+      ],
+      "same_set": true,
+      "same_order": false,
+      "new_graph_pages": [],
+      "graph_candidates": 15,
+      "same_generation_request": false
+    },
+    {
+      "repeat": 1,
+      "case_id": "q3",
+      "baseline_pages": [
+        "lec03-main-p013",
+        "lec03-main-p065",
+        "lec03-main-p039",
+        "lec02-main-p052",
+        "lec03-main-p040"
+      ],
+      "graph_pages": [
+        "lec03-main-p013",
+        "lec02-main-p052",
+        "lec03-main-p065",
+        "lec03-main-p039",
+        "lec03-main-p040"
+      ],
+      "same_set": true,
+      "same_order": false,
+      "new_graph_pages": [],
+      "graph_candidates": 13,
+      "same_generation_request": false
+    },
+    {
+      "repeat": 1,
+      "case_id": "q4",
+      "baseline_pages": [
+        "lec02-main-p013",
+        "lec01-main-p019",
+        "lec03-main-p064",
+        "lec01-main-p049",
+        "lec02-main-p003"
+      ],
+      "graph_pages": [
+        "lec02-main-p013",
+        "lec01-main-p019",
+        "lec03-main-p064",
+        "lec01-main-p049",
+        "lec02-main-p003"
+      ],
+      "same_set": true,
+      "same_order": true,
+      "new_graph_pages": [],
+      "graph_candidates": 23,
+      "same_generation_request": true
+    },
+    {
+      "repeat": 2,
+      "case_id": "q1",
+      "baseline_pages": [
+        "lec02-main-p052",
+        "lec02-main-p051",
+        "lec02-main-p060",
+        "lec02-main-p061",
+        "lec02-main-p047"
+      ],
+      "graph_pages": [
+        "lec02-main-p052",
+        "lec02-main-p051",
+        "lec02-main-p060",
+        "lec02-main-p061",
+        "lec02-main-p047"
+      ],
+      "same_set": true,
+      "same_order": true,
+      "new_graph_pages": [],
+      "graph_candidates": 11,
+      "same_generation_request": true
+    },
+    {
+      "repeat": 2,
+      "case_id": "q2",
+      "baseline_pages": [
+        "lec03-main-p040",
+        "lec03-main-p039",
+        "lec03-main-p065",
+        "lec03-main-p038",
+        "lec03-main-p041"
+      ],
+      "graph_pages": [
+        "lec03-main-p040",
+        "lec03-main-p065",
+        "lec03-main-p039",
+        "lec03-main-p038",
+        "lec03-main-p041"
+      ],
+      "same_set": true,
+      "same_order": false,
+      "new_graph_pages": [],
+      "graph_candidates": 15,
+      "same_generation_request": false
+    },
+    {
+      "repeat": 2,
+      "case_id": "q3",
+      "baseline_pages": [
+        "lec03-main-p013",
+        "lec03-main-p065",
+        "lec03-main-p039",
+        "lec02-main-p052",
+        "lec03-main-p040"
+      ],
+      "graph_pages": [
+        "lec03-main-p013",
+        "lec02-main-p052",
+        "lec03-main-p065",
+        "lec03-main-p039",
+        "lec03-main-p040"
+      ],
+      "same_set": true,
+      "same_order": false,
+      "new_graph_pages": [],
+      "graph_candidates": 13,
+      "same_generation_request": false
+    },
+    {
+      "repeat": 2,
+      "case_id": "q4",
+      "baseline_pages": [
+        "lec02-main-p013",
+        "lec01-main-p019",
+        "lec03-main-p064",
+        "lec01-main-p049",
+        "lec02-main-p003"
+      ],
+      "graph_pages": [
+        "lec02-main-p013",
+        "lec01-main-p019",
+        "lec03-main-p064",
+        "lec01-main-p049",
+        "lec02-main-p003"
+      ],
+      "same_set": true,
+      "same_order": true,
+      "new_graph_pages": [],
+      "graph_candidates": 23,
+      "same_generation_request": true
+    }
+  ],
+  "citations": [
+    {
+      "task_id": "r1_q1_baseline",
+      "automatic_page_ids": [
+        "lec02-main-p052"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p052"
+      ],
+      "omitted_by_automatic_parser": [],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r1_q1_graph",
+      "automatic_page_ids": [
+        "lec02-main-p051"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p051",
+        "lec02-main-p052"
+      ],
+      "omitted_by_automatic_parser": [
+        "lec02-main-p052"
+      ],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r1_q2_graph",
+      "automatic_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p065",
+        "lec03-main-p040"
+      ],
+      "reviewed_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p065",
+        "lec03-main-p040"
+      ],
+      "omitted_by_automatic_parser": [],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r1_q2_baseline",
+      "automatic_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p040"
+      ],
+      "reviewed_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p040"
+      ],
+      "omitted_by_automatic_parser": [],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r1_q3_baseline",
+      "automatic_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p013"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p013",
+        "lec03-main-p065",
+        "lec03-main-p039"
+      ],
+      "omitted_by_automatic_parser": [
+        "lec03-main-p065",
+        "lec03-main-p039"
+      ],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r1_q3_graph",
+      "automatic_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p065",
+        "lec03-main-p013"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p065",
+        "lec03-main-p013",
+        "lec03-main-p039"
+      ],
+      "omitted_by_automatic_parser": [
+        "lec03-main-p039"
+      ],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r1_q4_graph",
+      "automatic_page_ids": [
+        "lec02-main-p013"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p013"
+      ],
+      "omitted_by_automatic_parser": [],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r1_q4_baseline",
+      "automatic_page_ids": [
+        "lec02-main-p013"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p013"
+      ],
+      "omitted_by_automatic_parser": [],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r2_q1_graph",
+      "automatic_page_ids": [
+        "lec02-main-p051"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p051",
+        "lec02-main-p052"
+      ],
+      "omitted_by_automatic_parser": [
+        "lec02-main-p052"
+      ],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r2_q1_baseline",
+      "automatic_page_ids": [
+        "lec02-main-p051"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p051",
+        "lec02-main-p052"
+      ],
+      "omitted_by_automatic_parser": [
+        "lec02-main-p052"
+      ],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r2_q2_baseline",
+      "automatic_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p040"
+      ],
+      "reviewed_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p065",
+        "lec03-main-p040"
+      ],
+      "omitted_by_automatic_parser": [
+        "lec03-main-p065"
+      ],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r2_q2_graph",
+      "automatic_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p040"
+      ],
+      "reviewed_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p065",
+        "lec03-main-p040"
+      ],
+      "omitted_by_automatic_parser": [
+        "lec03-main-p065"
+      ],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r2_q3_graph",
+      "automatic_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p065",
+        "lec03-main-p013"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p065",
+        "lec03-main-p013",
+        "lec03-main-p039"
+      ],
+      "omitted_by_automatic_parser": [
+        "lec03-main-p039"
+      ],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r2_q3_baseline",
+      "automatic_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p013"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p013",
+        "lec03-main-p039"
+      ],
+      "omitted_by_automatic_parser": [
+        "lec03-main-p039"
+      ],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    },
+    {
+      "task_id": "r2_q4_baseline",
+      "automatic_page_ids": [
+        "lec02-main-p013",
+        "lec01-main-p019",
+        "lec03-main-p064"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p013",
+        "lec01-main-p019",
+        "lec03-main-p064"
+      ],
+      "omitted_by_automatic_parser": [],
+      "reviewed_out_of_context": [],
+      "citations_supported": "unsure"
+    },
+    {
+      "task_id": "r2_q4_graph",
+      "automatic_page_ids": [
+        "lec02-main-p013"
+      ],
+      "reviewed_page_ids": [
+        "lec02-main-p013"
+      ],
+      "omitted_by_automatic_parser": [],
+      "reviewed_out_of_context": [],
+      "citations_supported": "pass"
+    }
+  ],
+  "reviewed_at": "2026-11-18T09:17:23+09:00",
+  "reviewer": "takerunakao（AI支援の確認案を読み、判定・観察を確認）",
+  "tool_sha256": "2e95323a6b5721a414761b289dcba8f0946166ff185a1ebc757248db114ee356"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "run_id": "20261117T234818Z_3c60667f",
+  "status": "completed",
+  "completed": true,
+  "model_api_executed": true,
+  "planned_trials": 16,
+  "completed_trials": 16,
+  "recorded_attempts": 16,
+  "updated_at_utc": "2026-11-18T00:17:24+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "upstream_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+  "configuration_sha256": "984097ccac54723a12f3cb2650d56c8c29f4a954e01930694c24ecd55d3acd7a",
+  "human_review_status": "reviewed",
+  "ready_for_submission": true,
+  "error": null,
+  "cost_note": "Failed/aborted requests can still be billed; missing usage is not zero. See all attempts in records.jsonl."
+}

@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "run_id": "20261117T234818Z_3c60667f",
+  "status": "reviewed",
+  "reviewer": "takerunakao（AI支援の確認案を読み、判定・観察を確認）",
+  "reviewed_at": "2026-11-18T09:17:23+09:00",
+  "records": [
+    {
+      "task_id": "r1_q1_baseline",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "元の重みの固定、小さな行列A・Bの学習、QLoRAの4bit圧縮を説明しており、第2回p.52がすべてを裏付ける。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p052"
+      ]
+    },
+    {
+      "task_id": "r1_q1_graph",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "元の重みの固定、小さな差分の学習、QLoRAの4bit圧縮を説明しており、第2回p.51・52が支える。実引用2ページに対し自動抽出はp.51の1ページだけである。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p051",
+        "lec02-main-p052"
+      ]
+    },
+    {
+      "task_id": "r1_q2_graph",
+      "answer_correct": "fail",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "同じセッション内の履歴要約と外部保存、OpenClawの選別保存は正しく、p.39・65・40が裏付ける。ただし事前基準の「次の会話のコンテキストへの読み戻し」を明示していないため、完全性の基準は未達。誤情報による不合格ではない。",
+      "reviewed_citation_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p065",
+        "lec03-main-p040"
+      ]
+    },
+    {
+      "task_id": "r1_q2_baseline",
+      "answer_correct": "fail",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "コンパクション、外部保存、OpenClawの選別保存は正しく、p.39・40が裏付ける。ただし外部メモリの読み戻しと次のコンテキストへの再注入の説明が欠け、事前基準の一部を満たさない。",
+      "reviewed_citation_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p040"
+      ]
+    },
+    {
+      "task_id": "r1_q3_baseline",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "第2回p.52のW固定・A/B学習と、第3回p.13・39・65の外部保存・読み戻しを区別し、メモリ利用を重みの学習と混同していない。実引用4ページに対し自動抽出は2ページである。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p013",
+        "lec03-main-p065",
+        "lec03-main-p039"
+      ]
+    },
+    {
+      "task_id": "r1_q3_graph",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "第2回p.52のW固定・低ランク行列の学習、第3回p.65の重み不変、p.13・39の保存と再注入を正しく比較する。実引用4ページは取得本文に裏付けられるが、自動抽出では3ページである。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p065",
+        "lec03-main-p013",
+        "lec03-main-p039"
+      ]
+    },
+    {
+      "task_id": "r1_q4_graph",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "pass",
+      "notes": "今回の実測値を確認できないと明言し、数値を作っていない。第2回p.13の3/5を説明例として実測と区別する。引用はこの例を支えるもので、資料全体に記録がないことを証明するものではない。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p013"
+      ]
+    },
+    {
+      "task_id": "r1_q4_baseline",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "pass",
+      "notes": "実測値を断定せず、第2回p.13の3/5を説明用の例と明確に区別する。例示への引用は本文と一致する。回答保留は適切だが、次に確認すべき実行ログや正答判定への案内はない。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p013"
+      ]
+    },
+    {
+      "task_id": "r2_q1_graph",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "元の重みの固定、低ランクの差分の学習、QLoRAの4bit圧縮を正しく区別する。A/Bの詳細は第2回p.52にあり、p.51・52の併記が支える。実引用2ページに対し自動抽出は1ページである。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p051",
+        "lec02-main-p052"
+      ]
+    },
+    {
+      "task_id": "r2_q1_baseline",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "元の重みと小さな行列A・Bを区別し、QLoRAの4bit圧縮も説明する。第2回p.51・52が裏付ける。実引用2ページに対し、自動抽出はp.51の1ページだけである。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p051",
+        "lec02-main-p052"
+      ]
+    },
+    {
+      "task_id": "r2_q2_baseline",
+      "answer_correct": "fail",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "同一セッションの要約、外部ファイルへの保存、メモの選別は正しく、p.39・65・40が裏付ける。ただし次の会話への読み戻しが欠ける。実引用3ページに対し自動抽出は2ページである。",
+      "reviewed_citation_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p065",
+        "lec03-main-p040"
+      ]
+    },
+    {
+      "task_id": "r2_q2_graph",
+      "answer_correct": "fail",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "履歴要約と外部記録、OpenClawの見直し・選別は資料に沿うが、次のコンテキストへの読み戻しを明示していない。p.39・65・40は記述を支える。実引用3ページに対し自動抽出は2ページである。",
+      "reviewed_citation_page_ids": [
+        "lec03-main-p039",
+        "lec03-main-p065",
+        "lec03-main-p040"
+      ]
+    },
+    {
+      "task_id": "r2_q3_graph",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "固定するW、学習するA/B、外部に保存して再注入する情報を区別できる。第2回p.52と第3回p.13・39・65が裏付ける。「A 和 B」は軽微な表記揺れ。実引用4ページに対し自動抽出は3ページである。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p065",
+        "lec03-main-p013",
+        "lec03-main-p039"
+      ]
+    },
+    {
+      "task_id": "r2_q3_baseline",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "not_applicable",
+      "notes": "第2回p.52のW固定・A/B学習と第3回p.13・39の外部保存・読み戻しを区別する。「会話の最初に」は資料の実装例の説明として解釈し、全メモリ実装のタイミングへ一般化しない。実引用3ページに対し自動抽出は2ページである。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p052",
+        "lec03-main-p013",
+        "lec03-main-p039"
+      ]
+    },
+    {
+      "task_id": "r2_q4_baseline",
+      "answer_correct": "pass",
+      "citations_supported": "unsure",
+      "abstention_ok": "pass",
+      "notes": "回答を保留し、秒数や正答率を作っていない。一方、第2回p.13、第1回p.19、第3回p.64を列挙するだけで、説明例・別システム・別指標と実測不明の判断との対応を説明していない。すべて取得済みだが、引用の意味的裏付けはunsureとした。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p013",
+        "lec01-main-p019",
+        "lec03-main-p064"
+      ]
+    },
+    {
+      "task_id": "r2_q4_graph",
+      "answer_correct": "pass",
+      "citations_supported": "pass",
+      "abstention_ok": "pass",
+      "notes": "第2回p.13の3/5を説明用の例と区別し、今回の実測値は確認できないとして保留する。数値の捏造はない。引用は説明例を支えるが、確認可能な範囲は取得資料に限られ、実測を答えるには別途今回のログが必要である。",
+      "reviewed_citation_page_ids": [
+        "lec02-main-p013"
+      ]
+    }
+  ],
+  "observations": {
+    "comparison_summary": "4問×2方式×2回の16回答はすべて正常完了した。事前根拠グループはq1〜q3で両方式とも12/12取得し、q4は対象外とした。事前の回答基準をすべて満たす回答は双方6/8（75%、回答保留を含む）で、q2の各2回答は読み戻しの説明不足により未達だった。これは本評価セットでの完全性の集計であり、モデルの一般的な正答率ではない。取得5ページの集合は8比較ペアすべて同じで、新規根拠の採用は0件。平均総時間は基本4.584591秒、Graph4.581870秒で、速度差は確認できない。入力は各17,268tokens、出力は基本1,016・Graph1,256tokens、生成API推定費用合計はそれぞれ0.0077204・0.0083204米ドルだった。",
+    "improved_example": "q3ではGraphがLoRAの根拠lec02-main-p052を4位から2位へ上げ、メモリの根拠の直後に置く動作を確認した。ただし基本RAGも同じページを取得し、両方式とも回答基準を満たしたため、取得率・回答品質の改善例とはしない。q2はp.39とp.65の順が入れ替わったが、両方式とも「外部保存した情報を次の会話へ読み戻す」という説明が欠けた。p.39には必要な根拠があるため、検索漏れではなく、回答へ必要事項を反映する段階の不足である。q4は全回答が実測値の作り話を避けた。基本RAGの反復2は引用を列挙するだけで判断との対応が不明瞭だったが、同一の取得内容からの生成差であり、Graphの優位とは結論しない。",
+    "remaining_failure_or_limitation": "基本RAGの根拠取得がすでに100%で、この質問集合では取得率の改善余地がなかった。独立な質問は4問だけで、反復を増やした16回答を16種類の問題とは数えない。q1・q4は生成リクエストのハッシュまで同じでも回答が変わり、temperature=0でも生成の揺れが残った。平均総時間差は約0.00272秒、中央値は基本4.486秒・Graph4.672秒で、API側の変動と検索方式の影響を切り分けられない。Graphの推定生成費用は今回7.77%多かったが、入力は同数で、出力240tokensの差に対応する。一般的な費用増加とはしない。元の自動引用抽出は「p.13, p.39」の後続ページを落としていた。回答ごとの重複除外引用数は自動29件に対し本文照合39件（基本19、Graph20）で、欠落10件もすべて取得済みだった。原記録は変更せず、実引用一覧と見落としをreview_addendum.md・review_audit.jsonへ補足する。引用先の存在は39/39でも、意味的な裏付けは15回答pass・1回答unsureであり、100%正しい引用とは扱わない。",
+    "adoption_decision": "今回の用途では基本RAGを当面採用し、Graph併用は比較実装として保管する。",
+    "adoption_reason": "根拠取得・回答の完全性に改善を確認できず、時間も同等であるため、実装と保守が単純な基本RAGを選ぶ。Graphの検索候補拡張とq3の順位変更は動作したが、有効性の立証には至っていない。次は、関連根拠がベクトル上位5件から漏れる未使用の質問集合を事前に定め、関係種類・hop数・取得枠の比較を行いたい。q2の不足には、必要な説明要素を網羅したかを確かめる共通の生成・検証手順も検討する。これらは今後の案であり、今回実施済みの改善結果ではない。",
+    "q3": "AI支援を用い、基本RAGとGraph併用RAGを同じ214ページ・モデル・取得5ページで4問×各2回比較しました。対象3問の根拠取得率は双方100%でも、問2は読み戻しの説明が欠け、事前基準を満たす回答は双方6/8件でした。Graphで根拠の順序は変わりましたが新規取得はなく、平均時間も約4.58秒で同等でした。引用抽出の見落としを本文との照合で補足し、取得・回答・引用を分けて評価しました。今回の結果では基本RAGを採用し、Graphは未使用の質問で再検証すると整理しました。"
+  },
+  "review_origin": "ChatGPTによる原回答・取得本文・事前基準の照合案。提出者が確認・採用するまでは人手確認完了と扱わない。",
+  "rubric": "answer_correctのpassは、事前登録した回答基準の必須要素をすべて満たした場合。説明の省略はfail、判定不能はunsure。q4の適切な回答保留はpass。citations_supportedは引用対象の記述を裏付けるかを別に判定する。",
+  "original_records_preserved": true,
+  "confirmation": {
+    "accepted_by_user_command": true,
+    "tool_version": "day5-final-review-1.0.0",
+    "command_flag": "--accept-review",
+    "accepted_at_jst": "2026-11-18T09:17:23+09:00"
+  }
+}

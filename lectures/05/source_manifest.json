@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_date_jst": "2026-11-17",
+  "upstream_repository": "matsuolab/lecture-ai-engineering-2026",
+  "upstream_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+  "data_files": [
+    {
+      "name": "lectures.json",
+      "url": "https://raw.githubusercontent.com/matsuolab/lecture-ai-engineering-2026/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/lectures.json",
+      "sha256": "f6022c177ec1b5575b56d21307a5ae2aa09c586047398a17e1e4b86a56e99dce",
+      "git_blob_sha": "1cdcd2372108a5a17ba364276c0a55fae54af0ac",
+      "size_bytes": 463652
+    },
+    {
+      "name": "graph.json",
+      "url": "https://raw.githubusercontent.com/matsuolab/lecture-ai-engineering-2026/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/graph.json",
+      "sha256": "6d32f92f97470d9febbdb076face22b9c74eb2c57d4950d3ed31978c57007e81",
+      "git_blob_sha": "4a9d69cf9583b73bc7aec1d17076d8775cf4a2f0",
+      "size_bytes": 324952
+    },
+    {
+      "name": "tree.json",
+      "url": "https://raw.githubusercontent.com/matsuolab/lecture-ai-engineering-2026/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/tree.json",
+      "sha256": "8d16e7f6a6b5c4864591fbfe0ac55598f6117ff226e4b1e2bd47b0401be79dfc",
+      "git_blob_sha": "6f9fbe36d7696e5a7958eb3d119e9d4b03417fca",
+      "size_bytes": 89154
+    },
+    {
+      "name": "index.sqlite3",
+      "url": "https://raw.githubusercontent.com/matsuolab/lecture-ai-engineering-2026/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/index.sqlite3",
+      "sha256": "600d7a3633d84c21b6b26d511f9cd701d7dbee32bfe8eab0fd6fee3affb0f69e",
+      "git_blob_sha": "1eca2bf60d78177aed73163d9348f089e798ed50",
+      "size_bytes": 1069056
+    }
+  ],
+  "corpus_document_ids": [
+    "lec01-main",
+    "lec02-main",
+    "lec03-main"
+  ],
+  "corpus_pages": 214,
+  "embedding": {
+    "model": "gemini-embedding-001",
+    "dimensions": 768,
+    "task_type": "RETRIEVAL_QUERY"
+  },
+  "course_sources": {
+    "requirements": "https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/lectures/05/problem.md",
+    "retrieval": "https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/app/retrieval.py",
+    "config": "https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/app/config.py",
+    "build_index": "https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/scripts/build_rag_index.py"
+  },
+  "api_sources": [
+    "https://ai.google.dev/api/generate-content",
+    "https://ai.google.dev/api/embeddings",
+    "https://ai.google.dev/gemini-api/docs/pricing"
+  ],
+  "source_notes": "Course data is downloaded read-only into .cache; no PDF or whole index is included in submitted results."
+}
