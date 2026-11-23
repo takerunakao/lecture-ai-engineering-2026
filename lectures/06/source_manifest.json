@@ -1,0 +1,106 @@
+{
+  "research_date_jst": "2026-11-23",
+  "selected_software": "Visual Studio Code",
+  "primary_configuration_target": "Copilot harness native portable MCP configuration",
+  "comparison_target": "Official course Day6 app/mcp_servers.json plus reader app/mcp_agent.py",
+  "upstream_commit": "03d0fd36d58ada1ac1366c0d485ac103ef44ca52",
+  "sources": [
+    {
+      "id": "S1",
+      "kind": "official_course_source",
+      "title": "lectures/06/problem.md",
+      "url": "https://github.com/matsuolab/lecture-ai-engineering-2026/blob/03d0fd36d58ada1ac1366c0d485ac103ef44ca52/lectures/06/problem.md",
+      "commit": "03d0fd36d58ada1ac1366c0d485ac103ef44ca52",
+      "git_blob_sha": "467d39f9fdf0dbb1de047c1c650072214694a229",
+      "sha256": "911e0eb49fe339e7ee28ab8500fca4cf5054bd13f951db98011431c9eada6e99"
+    },
+    {
+      "id": "S2",
+      "kind": "official_course_source",
+      "title": "app/mcp_servers.json",
+      "url": "https://github.com/matsuolab/lecture-ai-engineering-2026/blob/03d0fd36d58ada1ac1366c0d485ac103ef44ca52/app/mcp_servers.json",
+      "commit": "03d0fd36d58ada1ac1366c0d485ac103ef44ca52",
+      "git_blob_sha": "3329846108b7cf1544883d667edfdb1060054ab6",
+      "sha256": "d1641986ab00fd3fe14786d9ba9c9a0bb933026e99a42238a06710046ecb4dc7"
+    },
+    {
+      "id": "S3",
+      "kind": "official_course_source",
+      "title": "app/mcp_agent.py",
+      "url": "https://github.com/matsuolab/lecture-ai-engineering-2026/blob/03d0fd36d58ada1ac1366c0d485ac103ef44ca52/app/mcp_agent.py",
+      "commit": "03d0fd36d58ada1ac1366c0d485ac103ef44ca52",
+      "git_blob_sha": "b4a3225b70a51632b6f4216c42f1917e9b93081d",
+      "sha256": "cdbe7ebeac9c861f8c43a61c871df05031f51f73ace05a1997e90bf49afbfdc0"
+    },
+    {
+      "id": "S4",
+      "kind": "official_documentation",
+      "publisher": "Microsoft",
+      "title": "MCP configuration reference",
+      "url": "https://code.visualstudio.com/docs/agents/reference/mcp-configuration",
+      "sections_consulted": [
+        "native file locations",
+        "stdio/http fields",
+        "editor-managed compatibility"
+      ],
+      "accessed_on_jst": "2026-11-23",
+      "version_note": "Live documentation; installed VS Code version was not observed."
+    },
+    {
+      "id": "S5",
+      "kind": "official_documentation",
+      "publisher": "Microsoft",
+      "title": "Add and use MCP servers in VS Code",
+      "url": "https://code.visualstudio.com/docs/agent-customization/mcp-servers",
+      "sections_consulted": [
+        "guided setup",
+        "configuration scope",
+        "verify actual tool calls"
+      ],
+      "accessed_on_jst": "2026-11-23",
+      "version_note": "Live documentation; installed VS Code version was not observed."
+    },
+    {
+      "id": "S6",
+      "kind": "official_documentation",
+      "publisher": "Microsoft",
+      "title": "Manage and troubleshoot MCP servers",
+      "url": "https://code.visualstudio.com/docs/agents/run/manage-mcp-servers",
+      "sections_consulted": [
+        "configuration sharing",
+        "remote workspaces and Dev Containers"
+      ],
+      "accessed_on_jst": "2026-11-23",
+      "version_note": "Live documentation; installed VS Code version was not observed."
+    },
+    {
+      "id": "S7",
+      "kind": "official_documentation",
+      "publisher": "Microsoft",
+      "title": "Migrate customizations to the Copilot harness in VS Code",
+      "url": "https://code.visualstudio.com/docs/agent-customization/migrate-customizations",
+      "sections_consulted": [
+        "native vs legacy configuration",
+        "migration limitations",
+        "remote execution host"
+      ],
+      "accessed_on_jst": "2026-11-23",
+      "version_note": "Live documentation; installed VS Code version was not observed."
+    }
+  ],
+  "scope": {
+    "documentation_research": true,
+    "published_source_review": true,
+    "examples_are_inactive_comparison_material": true,
+    "mcp_connection_executed": false,
+    "model_api_called": false,
+    "installed_vscode_version_observed": false
+  },
+  "fork_observation": {
+    "repository": "takerunakao/lecture-ai-engineering-2026",
+    "commit_at_research": "a29cfcc8fd127b157d6d2868ade20879823cc36d",
+    "mcp_servers_json_matches_upstream": true,
+    "day6_directory_at_research": "absent",
+    "source_note": "The Day6 loader is inspected from the pinned upstream URL, not claimed to be present in the older fork."
+  }
+}

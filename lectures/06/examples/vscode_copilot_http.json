@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "aws": {
+      "type": "http",
+      "url": "https://knowledge-mcp.global.api.aws",
+      "tools": ["*"]
+    }
+  }
+}

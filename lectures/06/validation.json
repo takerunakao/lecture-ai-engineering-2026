@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-23T14:33:41.147351+00:00",
+  "validation_kind": "offline_static_checks_for_these_six_examples",
+  "mcp_connection_executed": false,
+  "model_api_called": false,
+  "official_full_schema_validation": false,
+  "examples_checked": 6,
+  "examples": [
+    {
+      "file": "examples/course_stdio.json",
+      "root_key": "mcpServers",
+      "transport": "stdio",
+      "format": "course",
+      "status": "passed",
+      "sha256": "d1641986ab00fd3fe14786d9ba9c9a0bb933026e99a42238a06710046ecb4dc7"
+    },
+    {
+      "file": "examples/course_http.json",
+      "root_key": "mcpServers",
+      "transport": "http",
+      "format": "course",
+      "status": "passed",
+      "sha256": "670dc62722a612d2699188821a4ecde97f6e1c6d49d4d6b5c8b70271a1471657"
+    },
+    {
+      "file": "examples/vscode_copilot_stdio.json",
+      "root_key": "mcpServers",
+      "transport": "stdio",
+      "format": "copilot",
+      "status": "passed",
+      "sha256": "9d145a3c3ea1bcf3c10e0610148364777d3ed75131902569e0cafe742135d435"
+    },
+    {
+      "file": "examples/vscode_copilot_http.json",
+      "root_key": "mcpServers",
+      "transport": "http",
+      "format": "copilot",
+      "status": "passed",
+      "sha256": "6921cb0d856b48fa4b85693aec0c85bab430411c6db24461c7c049d8c0a9d43b"
+    },
+    {
+      "file": "examples/vscode_legacy_stdio.json",
+      "root_key": "servers",
+      "transport": "stdio",
+      "format": "legacy",
+      "status": "passed",
+      "sha256": "cb0e5b98d3e816c5f50731e09ca40b0b57604254620c3f5816ee4c33679be2f9"
+    },
+    {
+      "file": "examples/vscode_legacy_http.json",
+      "root_key": "servers",
+      "transport": "http",
+      "format": "legacy",
+      "status": "passed",
+      "sha256": "bc4a74d28695fe6f346d47dd2ace6e5406413e1acc0017c2ff4a05412276b96c"
+    }
+  ],
+  "q3_characters": 194,
+  "checker_sha256": "a8fb521632ce76b0cf26a88f0d47488f665faaaf7cb9d1762cb752eeb261507d",
+  "errors": []
+}
