@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "glossary": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "python", "-m", "app.mcp_server"],
+      "cwd": "/workspaces/lecture-ai-engineering-2026",
+      "tools": ["*"]
+    }
+  }
+}

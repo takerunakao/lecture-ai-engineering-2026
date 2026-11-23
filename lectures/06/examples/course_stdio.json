@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "glossary": {
+      "command": "uv",
+      "args": [
+        "run",
+        "python",
+        "-m",
+        "app.mcp_server"
+      ]
+    }
+  }
+}
