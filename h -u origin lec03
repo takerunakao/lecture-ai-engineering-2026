@@ -1,0 +1,80 @@
+ adk_agent/glossary_agent/__init__.py              |    1 [32m+[m
+ adk_agent/glossary_agent/agent.py                 |   32 [32m+[m
+ lectures/03/PR_BODY.md                            |   19 [32m+[m
+ lectures/03/README_day3.md                        |  177 [32m++[m
+ lectures/03/answer.md                             |  632 [32m++++++[m[31m-[m
+ lectures/03/comparison_cases.json                 |   22 [32m+[m
+ lectures/03/quri_answers.md                       |   19 [32m+[m
+ .../20261102T143017Z_a7d4cd79/q1_adk.stderr.log   |    0
+ .../20261102T143017Z_a7d4cd79/q1_adk.stdout.log   |    7 [32m+[m
+ .../q1_pydantic_ai.stderr.log                     |    0
+ .../q1_pydantic_ai.stdout.log                     |    1 [32m+[m
+ .../results/20261102T143017Z_a7d4cd79/report.md   |  292 [32m++++[m
+ .../results/20261102T143017Z_a7d4cd79/result.json |  449 [32m+++++[m
+ .../adk_agent/glossary_agent/__init__.py          |    1 [32m+[m
+ .../adk_agent/glossary_agent/agent.py             |   32 [32m+[m
+ .../source_snapshot/app/agent.py                  |  141 [32m++[m
+ .../source_snapshot/app/config.py                 |   36 [32m+[m
+ .../source_snapshot/app/tools.py                  |   79 [32m+[m
+ .../source_snapshot/data/glossary.json            |  528 [32m++++++[m
+ .../source_snapshot/data/lectures/01.md           |   23 [32m+[m
+ .../source_snapshot/data/lectures/02.md           |   24 [32m+[m
+ .../source_snapshot/data/lectures/03.md           |   25 [32m+[m
+ .../source_snapshot/lectures/03/README_day3.md    |  177 [32m++[m
+ .../lectures/03/comparison_cases.json             |   22 [32m+[m
+ .../source_snapshot/pyproject.toml                |   19 [32m+[m
+ .../scripts/day3_pydantic_worker.py               |  220 [32m+++[m
+ .../source_snapshot/scripts/day3_report.py        |  147 [32m++[m
+ .../source_snapshot/scripts/day3_trace.py         |  234 [32m+++[m
+ .../scripts/prepare_day3_answer.py                |   76 [32m+[m
+ .../scripts/run_day3_comparison.py                |  223 [32m+++[m
+ .../source_snapshot/tests/test_day3_submission.py |  109 [32m++[m
+ .../source_snapshot/tests/test_day3_trace.py      |  306 [32m++++[m
+ .../source_snapshot/uv.lock                       | 1552 [32m++++++++++++++++++[m
+ .../20261102T145709Z_59df7021/q1_adk.stderr.log   |    4 [32m+[m
+ .../20261102T145709Z_59df7021/q1_adk.stdout.log   |    5 [32m+[m
+ .../q1_pydantic_ai.stderr.log                     |    0
+ .../q1_pydantic_ai.stdout.log                     |    1 [32m+[m
+ .../20261102T145709Z_59df7021/q2_adk.stderr.log   |    4 [32m+[m
+ .../20261102T145709Z_59df7021/q2_adk.stdout.log   |    5 [32m+[m
+ .../q2_pydantic_ai.stderr.log                     |    0
+ .../q2_pydantic_ai.stdout.log                     |    1 [32m+[m
+ .../20261102T145709Z_59df7021/q3_adk.stderr.log   |    4 [32m+[m
+ .../20261102T145709Z_59df7021/q3_adk.stdout.log   |    5 [32m+[m
+ .../q3_pydantic_ai.stderr.log                     |    0
+ .../q3_pydantic_ai.stdout.log                     |    1 [32m+[m
+ .../20261102T145709Z_59df7021/q4_adk.stderr.log   |    4 [32m+[m
+ .../20261102T145709Z_59df7021/q4_adk.stdout.log   |    5 [32m+[m
+ .../q4_pydantic_ai.stderr.log                     |    0
+ .../q4_pydantic_ai.stdout.log                     |    1 [32m+[m
+ .../results/20261102T145709Z_59df7021/report.md   |  505 [32m++++++[m
+ .../results/20261102T145709Z_59df7021/result.json | 1443 [32m++++++++++++++++[m
+ .../adk_agent/glossary_agent/__init__.py          |    1 [32m+[m
+ .../adk_agent/glossary_agent/agent.py             |   32 [32m+[m
+ .../source_snapshot/app/agent.py                  |  141 [32m++[m
+ .../source_snapshot/app/config.py                 |   36 [32m+[m
+ .../source_snapshot/app/tools.py                  |   79 [32m+[m
+ .../source_snapshot/data/glossary.json            |  528 [32m++++++[m
+ .../source_snapshot/data/lectures/01.md           |   23 [32m+[m
+ .../source_snapshot/data/lectures/02.md           |   24 [32m+[m
+ .../source_snapshot/data/lectures/03.md           |   25 [32m+[m
+ .../source_snapshot/lectures/03/README_day3.md    |  177 [32m++[m
+ .../lectures/03/comparison_cases.json             |   22 [32m+[m
+ .../source_snapshot/pyproject.toml                |   19 [32m+[m
+ .../scripts/day3_pydantic_worker.py               |  220 [32m+++[m
+ .../source_snapshot/scripts/day3_report.py        |  147 [32m++[m
+ .../source_snapshot/scripts/day3_trace.py         |  234 [32m+++[m
+ .../scripts/prepare_day3_answer.py                |   76 [32m+[m
+ .../scripts/run_day3_comparison.py                |  225 [32m+++[m
+ .../source_snapshot/tests/test_day3_submission.py |  145 [32m++[m
+ .../source_snapshot/tests/test_day3_trace.py      |  307 [32m++++[m
+ .../source_snapshot/uv.lock                       | 1552 [32m++++++++++++++++++[m
+ lectures/03/results/latest.json                   |    1 [32m+[m
+ scripts/day3_pydantic_worker.py                   |  220 [32m+++[m
+ scripts/day3_report.py                            |  147 [32m++[m
+ scripts/day3_trace.py                             |  234 [32m+++[m
+ scripts/prepare_day3_answer.py                    |   76 [32m+[m
+ scripts/run_day3_comparison.py                    |  225 [32m+++[m
+ tests/test_day3_submission.py                     |  145 [32m++[m
+ tests/test_day3_trace.py                          |  307 [32m++++[m
+ 79 files changed, 12973 insertions(+), 8 deletions(-)
